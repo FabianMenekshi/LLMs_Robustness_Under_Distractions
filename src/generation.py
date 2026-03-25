@@ -392,3 +392,29 @@ def save_candidates_to_jsonl(candidates: List[CandidateExample], output_path: st
     with open(output_path, "w", encoding="utf-8") as f:
         for example in candidates:
             f.write(json.dumps(example_to_dict(example), ensure_ascii=False) + "\n")
+
+# Helper to inspect per-task counts
+def count_examples_by_task(candidates: List[CandidateExample]) -> Dict[str, int]:
+    counts = {}
+    for example in candidates:
+        counts[example.task_name] = counts.get(example.task_name, 0) + 1
+    return counts
+
+
+def count_examples_by_status(candidates: List[CandidateExample]) -> Dict[str, int]:
+    counts = {}
+    for example in candidates:
+        counts[example.review_status] = counts.get(example.review_status, 0) + 1
+    return counts
+
+
+# Task-and-status summary helper
+def count_by_task_and_status(candidates: List[CandidateExample]) -> Dict[str, Dict[str, int]]:
+    summary = {}
+    for example in candidates:
+        task = example.task_name
+        status = example.review_status
+        if task not in summary:
+            summary[task] = {}
+        summary[task][status] = summary[task].get(status, 0) + 1
+    return summary
