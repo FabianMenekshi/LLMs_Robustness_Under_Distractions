@@ -3,6 +3,7 @@ import random
 import re
 from dataclasses import asdict
 from typing import List, Dict, Any
+import os
 
 from src.templates import (
     CandidateExample,
@@ -373,6 +374,10 @@ def select_final_base_examples(
             for example in candidates
             if example.task_name == task_name and example.review_status == "approved"
         ]
+
+        if len(approved) < n_per_task:
+            print(f"Warning: task '{task_name}' has only {len(approved)} approved examples.")
+
         selected.extend(approved[:n_per_task])
 
     return selected
@@ -383,6 +388,7 @@ def example_to_dict(example: CandidateExample) -> Dict[str, Any]:
 
 # Save candidate examples to a JSONL file.
 def save_candidates_to_jsonl(candidates: List[CandidateExample], output_path: str) -> None:
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         for example in candidates:
             f.write(json.dumps(example_to_dict(example), ensure_ascii=False) + "\n")
