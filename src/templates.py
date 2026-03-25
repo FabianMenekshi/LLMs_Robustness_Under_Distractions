@@ -1,12 +1,5 @@
-from dataclasses import dataclass, field, asdict
-from dataclasses import dataclass, asdict
-from typing import List, Dict, Any, Callable, Optional
-import json
-import random
-import re
-from itertools import product
-
-from numpy import positive
+from dataclasses import dataclass
+from typing import Dict, Any
 
 @dataclass
 class CandidateExample:
@@ -64,7 +57,7 @@ companies = [
 "Northwind Labs", "BlueRiver Health", "Atlas Finance", "Civic Data Group", "Urban Sports Media"
 ]
 
-sports = ["football", "tennis", "basketball", "cycling", "swimming"]
+sports_items = ["football", "tennis", "basketball", "cycling", "swimming"]
 tech_items = ["AI system", "cloud platform", "mobile app", "data pipeline", "robotics tool"]
 finance_items = ["bank loan", "tax policy", "stock market", "budget plan", "investment fund"]
 health_items = ["hospital policy", "vaccine program", "mental health service", "medical device", "nutrition study"]
@@ -139,11 +132,11 @@ multi_label_templates = [
 
 # For the multi-label templates, we will fill the {topic_item} and {secondary_item} slots with items from the topic_pool. Each item in the topic_pool is associated with one of the five topics, so we can determine which labels apply based on which items are used in the template.
 topic_pool = {
-"politics": politics_items,
-"tech": tech_items,
-"health": health_items,
-"sports": sports,
-"finance": finance_items
+    "politics": politics_items,
+    "tech": tech_items,
+    "health": health_items,
+    "sports": sports_items,
+    "finance": finance_items
 }
 
 # We create a list of all possible multi-label combinations for the 5 topics, excluding the empty set. This will be used to generate examples with multiple labels.
@@ -245,4 +238,3 @@ qa_templates = [
 "instruction": "Answer the question using an exact span from the passage."
 }
 ]
-
