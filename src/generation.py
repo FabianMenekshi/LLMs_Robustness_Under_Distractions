@@ -27,7 +27,7 @@ from src.templates import (
     qa_templates,
 )
 
-# Reproducibility: generation will be deterministic across runs
+# For reproducibility
 random.seed(42)
 
 TARGET_CANDIDATES_PER_TASK = 50
