@@ -257,13 +257,19 @@ def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -
     for issue in dataset_level_issues:
         all_issue_counts[issue] += 1
 
-    is_valid = (len(record_issues) == 0) and (len(dataset_level_issues) == 0)
+    fatal_dataset_level_issues = [
+    issue for issue in dataset_level_issues
+    if not issue.startswith("instruction_inconsistency:")
+    ]
 
+    is_valid = (len(record_issues) == 0) and (len(fatal_dataset_level_issues) == 0)
+    
     return {
-        "is_valid": is_valid,
-        "total_records": len(records),
-        "num_records_with_issues": len(record_issues),
-        "record_issues": record_issues,
-        "dataset_level_issues": dataset_level_issues,
-        "issue_counts": dict(all_issue_counts),
+    "is_valid": is_valid,
+    "total_records": len(records),
+    "num_records_with_issues": len(record_issues),
+    "record_issues": record_issues,
+    "dataset_level_issues": dataset_level_issues,
+    "fatal_dataset_level_issues": fatal_dataset_level_issues,
+    "issue_counts": dict(all_issue_counts),
     }
