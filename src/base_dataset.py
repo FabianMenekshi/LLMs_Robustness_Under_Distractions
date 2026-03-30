@@ -6,11 +6,9 @@ from typing import List, Dict, Any
 
 from src.templates import CandidateExample
 
+# Convert a CandidateExample into the final clean base-dataset record format.
 
 def candidate_to_base_record(example: CandidateExample) -> Dict[str, Any]:
-    """
-    Convert a CandidateExample into the final clean base-dataset record format.
-    """
     return {
         "example_id": example.example_id,
         "task_name": example.task_name,
@@ -21,26 +19,17 @@ def candidate_to_base_record(example: CandidateExample) -> Dict[str, Any]:
         "metadata": example.metadata,
     }
 
-
+# Convert a list of CandidateExample objects into final dataset records.
 def build_base_dataset(candidates: List[CandidateExample]) -> List[Dict[str, Any]]:
-    """
-    Convert a list of CandidateExample objects into final dataset records.
-    """
     return [candidate_to_base_record(example) for example in candidates]
 
-
+# Count how many records belong to each task.
 def count_records_by_task(records: List[Dict[str, Any]]) -> Dict[str, int]:
-    """
-    Count how many records belong to each task.
-    """
     counter = Counter(record["task_name"] for record in records)
     return dict(counter)
 
-
+# Collect unique instructions used for each task.
 def collect_instructions_by_task(records: List[Dict[str, Any]]) -> Dict[str, List[str]]:
-    """
-    Collect unique instructions used for each task.
-    """
     by_task: Dict[str, set] = {}
 
     for record in records:
@@ -50,43 +39,31 @@ def collect_instructions_by_task(records: List[Dict[str, Any]]) -> Dict[str, Lis
 
     return {task: sorted(list(instructions)) for task, instructions in by_task.items()}
 
-
+# Build a compact summary of the clean base dataset
 def build_dataset_summary(records: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """
-    Build a compact summary of the clean base dataset.
-    """
     return {
         "total_records": len(records),
         "counts_by_task": count_records_by_task(records),
         "instructions_by_task": collect_instructions_by_task(records),
     }
 
-
+# Save records as JSONL.
 def save_jsonl(records: List[Dict[str, Any]], output_path: str) -> None:
-    """
-    Save records as JSONL.
-    """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     with open(output_path, "w", encoding="utf-8") as f:
         for record in records:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
-
+# Save any JSON-serializable object as pretty JSON.
 def save_json(data: Any, output_path: str) -> None:
-    """
-    Save any JSON-serializable object as pretty JSON.
-    """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-
+# Load JSONL records from disk.
 def load_jsonl(input_path: str) -> List[Dict[str, Any]]:
-    """
-    Load JSONL records from disk.
-    """
     records = []
     with open(input_path, "r", encoding="utf-8") as f:
         for line in f:
