@@ -42,11 +42,35 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
     counter = start_id
 
     for template in single_label_templates:
+        uses_product = "{product}" in template["pattern"]
+
         for label, value_options in single_label_value_map.items():
             for values in value_options:
-                for product in products:
+                if uses_product:
+                    for product in products:
+                        text = template["pattern"].format(
+                            product=product,
+                            adjective=values["adjective"],
+                            ending=values["ending"]
+                        )
+
+                        candidate = CandidateExample(
+                            example_id=f"slc_{counter:03d}",
+                            task_name="single_label_classification",
+                            template_name=template["template_name"],
+                            instruction=template["instruction"],
+                            input_data={"text": text},
+                            gold_output={"label": label},
+                            metadata={"label_set": SINGLE_LABEL_SET}
+                        )
+
+                        candidates.append(candidate)
+                        counter += 1
+
+                        if len(candidates) == TARGET_CANDIDATES_PER_TASK:
+                            return candidates
+                else:
                     text = template["pattern"].format(
-                        product=product,
                         adjective=values["adjective"],
                         ending=values["ending"]
                     )
@@ -73,6 +97,7 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
 def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
+    seen_texts = set()
 
     actors = ["government", "committee", "startup", "university", "city council"]
 
@@ -86,7 +111,7 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
                 else:
                     secondary_label = combo[0]
 
-                secondary_item = topic_pool[secondary_label][(combo_idx + actor_idx) % len(topic_pool[secondary_label])]
+                secondary_item = topic_pool[secondary_label][(combo_idx + actor_idx + template_idx) % len(topic_pool[secondary_label])]
                 company = companies[(combo_idx + template_idx + actor_idx) % len(companies)]
 
                 text = template["pattern"].format(
@@ -95,6 +120,11 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
                     topic_item=topic_item,
                     secondary_item=secondary_item
                 )
+
+                if text in seen_texts:
+                    continue
+
+                seen_texts.add(text)
 
                 candidate = CandidateExample(
                     example_id=f"mlc_{counter:03d}",
@@ -118,38 +148,43 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
 def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
+    seen_texts = set()
 
     for template_idx, template in enumerate(ie_templates):
-        for idx in range(13):
-            person = people[idx % len(people)]
-            date = dates[(idx + template_idx) % len(dates)]
-            location = locations[(idx + 2 * template_idx) % len(locations)]
+        for person_idx, person in enumerate(people):
+            for date_idx, date in enumerate(dates):
+                location = locations[(person_idx + date_idx + template_idx) % len(locations)]
 
-            text = template["pattern"].format(
-                person=person,
-                date=date,
-                location=location
-            )
+                text = template["pattern"].format(
+                    person=person,
+                    date=date,
+                    location=location
+                )
 
-            candidate = CandidateExample(
-                example_id=f"ie_{counter:03d}",
-                task_name="information_extraction",
-                template_name=template["template_name"],
-                instruction=template["instruction"],
-                input_data={"text": text},
-                gold_output={
-                    "person": person,
-                    "date": date,
-                    "location": location
-                },
-                metadata={"schema_keys": IE_SCHEMA_KEYS}
-            )
+                if text in seen_texts:
+                    continue
 
-            candidates.append(candidate)
-            counter += 1
+                seen_texts.add(text)
 
-            if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                return candidates
+                candidate = CandidateExample(
+                    example_id=f"ie_{counter:03d}",
+                    task_name="information_extraction",
+                    template_name=template["template_name"],
+                    instruction=template["instruction"],
+                    input_data={"text": text},
+                    gold_output={
+                        "person": person,
+                        "date": date,
+                        "location": location
+                    },
+                    metadata={"schema_keys": IE_SCHEMA_KEYS}
+                )
+
+                candidates.append(candidate)
+                counter += 1
+
+                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
+                    return candidates
 
     return candidates
 
@@ -178,20 +213,44 @@ def apply_rule(text: str, rule_name: str) -> str:
 def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
+    seen_inputs = set()
 
-    number_pairs = [(3, 12), (7, 25), (10, 42), (15, 99)]
+    # We need enough unique visible input texts to reach 50 examples.
+    # So we create a larger pool of numeric pairs and rotate people/locations.
+    number_pairs = [
+        (3, 12), (7, 25), (10, 42), (15, 99), (21, 5),
+        (8, 14), (11, 37), (19, 44), (23, 61), (30, 2)
+    ]
 
-    # First generate varied examples from the first three templates
-    for template in transformation_input_templates[:3]:
-        for rule_name in RULE_SET:
-            for n, n2 in number_pairs:
+    # Use only the first three templates because they contain slots and can
+    # generate many distinct visible inputs.
+    usable_templates = transformation_input_templates[:3]
+
+    # Cycle through rules while generating new visible inputs.
+    rule_cycle = [
+        "lowercase",
+        "remove_punctuation",
+        "replace_numbers_with_NUM",
+        "remove_words_longer_than_6"
+    ]
+
+    for template_idx, template in enumerate(usable_templates):
+        for pair_idx, (n, n2) in enumerate(number_pairs):
+            for person_idx, person in enumerate(people):
+                location = locations[(template_idx + pair_idx + person_idx) % len(locations)]
+                rule_name = rule_cycle[(template_idx + pair_idx + person_idx) % len(rule_cycle)]
+
                 text = template["pattern"].format(
-                    person=people[counter % len(people)],
-                    location=locations[counter % len(locations)],
+                    person=person,
+                    location=location,
                     n=n,
                     n2=n2
                 )
 
+                if text in seen_inputs:
+                    continue
+
+                seen_inputs.add(text)
                 gold_text = apply_rule(text, rule_name)
 
                 candidate = CandidateExample(
@@ -207,34 +266,8 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
                 candidates.append(candidate)
                 counter += 1
 
-                if len(candidates) == 48:
-                    break
-            if len(candidates) == 48:
-                break
-        if len(candidates) == 48:
-            break
-
-    # Then add exactly 2 examples from the word_length_test template
-    word_template = transformation_input_templates[3]
-    for rule_name in RULE_SET[:2]:
-        text = word_template["pattern"]
-        gold_text = apply_rule(text, rule_name)
-
-        candidate = CandidateExample(
-            example_id=f"rbt_{counter:03d}",
-            task_name="rule_based_transformation",
-            template_name=f"{word_template['template_name']}__{rule_name}",
-            instruction=rule_instructions[rule_name],
-            input_data={"text": text},
-            gold_output={"text": gold_text},
-            metadata={"rule_name": rule_name}
-        )
-
-        candidates.append(candidate)
-        counter += 1
-
-        if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-            return candidates
+                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
+                    return candidates
 
     return candidates
 
@@ -242,59 +275,65 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
 def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
+    seen_inputs = set()
 
     for template_idx, template in enumerate(qa_templates):
-        for idx in range(13):
-            person = people[idx % len(people)]
-            location = locations[(idx + template_idx) % len(locations)]
-            date = dates[(idx + 2 * template_idx) % len(dates)]
-            company = companies[(idx + template_idx) % len(companies)]
-            product = products[(idx + 2 * template_idx) % len(products)]
+        for person_idx, person in enumerate(people):
+            for date_idx, date in enumerate(dates):
+                location = locations[(person_idx + date_idx + template_idx) % len(locations)]
+                company = companies[(person_idx + template_idx) % len(companies)]
+                product = products[(date_idx + template_idx) % len(products)]
 
-            passage = template["passage"].format(
-                person=person,
-                location=location,
-                date=date,
-                company=company,
-                product=product
-            )
+                passage = template["passage"].format(
+                    person=person,
+                    location=location,
+                    date=date,
+                    company=company,
+                    product=product
+                )
 
-            question = template["question"].format(
-                person=person,
-                location=location,
-                date=date,
-                company=company,
-                product=product
-            )
+                question = template["question"].format(
+                    person=person,
+                    location=location,
+                    date=date,
+                    company=company,
+                    product=product
+                )
 
-            answer_lookup = {
-                "person": person,
-                "location": location,
-                "date": date,
-                "company": company,
-                "product": product,
-            }
+                rendered = f"PASSAGE: {passage}\nQUESTION: {question}"
+                if rendered in seen_inputs:
+                    continue
 
-            answer = answer_lookup[template["answer_field"]]
+                seen_inputs.add(rendered)
 
-            candidate = CandidateExample(
-                example_id=f"qa_{counter:03d}",
-                task_name="extractive_qa",
-                template_name=template["template_name"],
-                instruction=template["instruction"],
-                input_data={
-                    "passage": passage,
-                    "question": question
-                },
-                gold_output={"answer": answer},
-                metadata={"answer_field": template["answer_field"]}
-            )
+                answer_lookup = {
+                    "person": person,
+                    "location": location,
+                    "date": date,
+                    "company": company,
+                    "product": product,
+                }
 
-            candidates.append(candidate)
-            counter += 1
+                answer = answer_lookup[template["answer_field"]]
 
-            if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                return candidates
+                candidate = CandidateExample(
+                    example_id=f"qa_{counter:03d}",
+                    task_name="extractive_qa",
+                    template_name=template["template_name"],
+                    instruction=template["instruction"],
+                    input_data={
+                        "passage": passage,
+                        "question": question
+                    },
+                    gold_output={"answer": answer},
+                    metadata={"answer_field": template["answer_field"]}
+                )
+
+                candidates.append(candidate)
+                counter += 1
+
+                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
+                    return candidates
 
     return candidates
 
