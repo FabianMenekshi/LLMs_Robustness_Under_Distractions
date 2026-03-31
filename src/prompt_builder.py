@@ -1,13 +1,6 @@
-# It should contain:
-# - functions to load the base dataset
-# - functions to render clean prompts
-# - functions to render distracted prompts
-# - functions to generate all 7 distraction variants for one base example
-# - functions to build preview/spec records
-# - save helpers
-
 import json
 import os
+from collections import defaultdict
 from typing import Dict, Any, List
 
 from src.prompt_templates import (
@@ -15,14 +8,18 @@ from src.prompt_templates import (
     NOISE_LIBRARY,
     LONG_NOISE_LIBRARY,
     STYLE_DISTRACTIONS,
+    CONFLICTING_INSTRUCTION_TEXT,
     get_negation_text,
     render_bounded_clean_prompt,
     render_unbounded_clean_prompt,
     build_prompt_design_spec,
 )
 
-# Load JSONL records from disk.
+
 def load_jsonl(input_path: str) -> List[Dict[str, Any]]:
+    """
+    Load JSONL records from disk.
+    """
     records = []
     with open(input_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -31,16 +28,20 @@ def load_jsonl(input_path: str) -> List[Dict[str, Any]]:
                 records.append(json.loads(line))
     return records
 
-# Save a JSON-serializable object as pretty JSON.
+
 def save_json(data: Any, output_path: str) -> None:
+    """
+    Save a JSON-serializable object as pretty JSON.
+    """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False, sort_keys=True)
 
-# Deterministically select one short noise block and one long noise block.
-# This avoids randomness at the prompt-design stage and keeps previews reproducible.
-def choose_noise_block(index: int) -> Dict[str, str]:
 
+def choose_noise_block(index: int) -> Dict[str, str]:
+    """
+    Deterministically select one short noise block and one long noise block.
+    """
     short_categories = sorted(NOISE_LIBRARY.keys())
     short_category = short_categories[index % len(short_categories)]
     short_options = NOISE_LIBRARY[short_category]
@@ -57,8 +58,11 @@ def choose_noise_block(index: int) -> Dict[str, str]:
         "long_text": long_text,
     }
 
-# Render a canonical clean prompt under the specified regime.
+
 def render_clean_prompt(record: Dict[str, Any], regime: str) -> str:
+    """
+    Render a canonical clean prompt under the specified regime.
+    """
     if regime == "bounded":
         return render_bounded_clean_prompt(record)
     if regime == "unbounded":
@@ -74,8 +78,9 @@ def render_distracted_prompt(
     noise_index: int = 0,
     style_index: int = 0,
 ) -> str:
-    
-    # Render one distracted prompt for a given base record, regime, and distraction type.
+    """
+    Render one distracted prompt for a given base record, regime, and distraction type.
+    """
     clean_prompt = render_clean_prompt(record, regime)
     template = DISTRACTION_TEMPLATES[distraction_name]
     selected_noise = choose_noise_block(noise_index)
@@ -94,11 +99,14 @@ def render_distracted_prompt(
         long_noise_block=selected_noise["long_text"],
         negation_text=negation_text,
         style_text=style_text,
-    ).replace("Answer like Shakespeare.", style_text)
+        conflicting_text=CONFLICTING_INSTRUCTION_TEXT,
+    )
 
-# Build a structured clean prompt record
+
 def build_clean_prompt_record(record: Dict[str, Any], regime: str) -> Dict[str, Any]:
-
+    """
+    Build a structured clean prompt record.
+    """
     return {
         "example_id": record["example_id"],
         "task_name": record["task_name"],
@@ -108,6 +116,7 @@ def build_clean_prompt_record(record: Dict[str, Any], regime: str) -> Dict[str, 
         "gold_output": record["gold_output"],
     }
 
+
 def build_distracted_prompt_record(
     record: Dict[str, Any],
     regime: str,
@@ -115,8 +124,9 @@ def build_distracted_prompt_record(
     noise_index: int = 0,
     style_index: int = 0,
 ) -> Dict[str, Any]:
-    
-# Build a structured distracted prompt record
+    """
+    Build a structured distracted prompt record.
+    """
     selected_noise = choose_noise_block(noise_index)
 
     return {
@@ -137,13 +147,38 @@ def build_distracted_prompt_record(
         "gold_output": record["gold_output"],
     }
 
-# Build a small preview set of clean and distracted prompts for inspection.
-# This is for Phase 4 design inspection, not the full benchmark build.
-def build_prompt_previews(records: List[Dict[str, Any]], num_examples: int = 5) -> List[Dict[str, Any]]:
 
+def select_preview_records_by_task(
+    records: List[Dict[str, Any]],
+    examples_per_task: int = 2,
+) -> List[Dict[str, Any]]:
+    """
+    Select a small preview subset that covers all task families.
+
+    This avoids preview files that only show one task family.
+    """
+    grouped = defaultdict(list)
+    for record in records:
+        grouped[record["task_name"]].append(record)
+
+    selected = []
+    for task_name in sorted(grouped.keys()):
+        selected.extend(grouped[task_name][:examples_per_task])
+
+    return selected
+
+
+def build_prompt_previews(
+    records: List[Dict[str, Any]],
+    examples_per_task: int = 2,
+) -> List[Dict[str, Any]]:
+    """
+    Build a preview set of clean and distracted prompts for inspection.
+
+    By default, this covers every task family.
+    """
     previews = []
-
-    subset = records[:num_examples]
+    subset = select_preview_records_by_task(records, examples_per_task=examples_per_task)
 
     for i, record in enumerate(subset):
         for regime in ["bounded", "unbounded"]:
@@ -162,11 +197,17 @@ def build_prompt_previews(records: List[Dict[str, Any]], num_examples: int = 5) 
 
     return previews
 
-# Save prompt previews to JSON.
+
 def save_prompt_previews(previews: List[Dict[str, Any]], output_path: str) -> None:
+    """
+    Save prompt previews to JSON.
+    """
     save_json(previews, output_path)
 
-# Save the prompt-design specification to JSON for reference and transparency.
+
 def export_prompt_design_spec(output_path: str) -> None:
+    """
+    Save the prompt-design specification for Phase 4.
+    """
     spec = build_prompt_design_spec()
     save_json(spec, output_path)
