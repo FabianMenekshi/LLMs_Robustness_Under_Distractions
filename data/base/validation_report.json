@@ -1,0 +1,13 @@
+{
+  "is_valid": true,
+  "total_records": 250,
+  "num_records_with_issues": 0,
+  "record_issues": {},
+  "dataset_level_issues": [
+    "instruction_inconsistency:rule_based_transformation:num_unique_instructions=4"
+  ],
+  "fatal_dataset_level_issues": [],
+  "issue_counts": {
+    "instruction_inconsistency:rule_based_transformation:num_unique_instructions=4": 1
+  }
+}

@@ -1,0 +1,4731 @@
+[
+  {
+    "example_id": "slc_000",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was excellent and worked smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_001",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was excellent and worked smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_002",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was excellent and worked smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_003",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was excellent and worked smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_004",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was excellent and worked smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_005",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was great and worked pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_006",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was great and worked pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_007",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was great and worked pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_008",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was great and worked pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_009",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was great and worked pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_010",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was reliable and worked better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_011",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was reliable and worked better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_012",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was reliable and worked better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_013",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was reliable and worked better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_014",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was reliable and worked better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_015",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was terrible and worked frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_016",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was terrible and worked frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_017",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was terrible and worked frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_018",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was terrible and worked frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_019",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was terrible and worked frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_020",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was awful and worked worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_021",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was awful and worked worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_022",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was awful and worked worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_023",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was awful and worked worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_024",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was awful and worked worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_025",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was poor and worked annoying from start to finish."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_026",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was poor and worked annoying from start to finish."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_027",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was poor and worked annoying from start to finish."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_028",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was poor and worked annoying from start to finish."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_029",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was poor and worked annoying from start to finish."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_030",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was ordinary and worked acceptable but unremarkable."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_031",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was ordinary and worked acceptable but unremarkable."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_032",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was ordinary and worked acceptable but unremarkable."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_033",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was ordinary and worked acceptable but unremarkable."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_034",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was ordinary and worked acceptable but unremarkable."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_035",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was fine and worked neither good nor bad."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_036",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was fine and worked neither good nor bad."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_037",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was fine and worked neither good nor bad."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_038",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was fine and worked neither good nor bad."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_039",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was fine and worked neither good nor bad."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_040",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The medical software was average and worked mostly standard."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_041",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The robot vacuum was average and worked mostly standard."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_042",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The budget phone was average and worked mostly standard."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_043",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The fitness watch was average and worked mostly standard."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_044",
+    "task_name": "single_label_classification",
+    "template_name": "product_review",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The solar battery was average and worked mostly standard."
+    },
+    "gold_output": {
+      "label": "neutral"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_045",
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The staff at the store were excellent and the service was smooth and satisfying."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_046",
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The staff at the store were great and the service was pleasant from start to finish."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_047",
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The staff at the store were reliable and the service was better than expected."
+    },
+    "gold_output": {
+      "label": "positive"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_048",
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The staff at the store were terrible and the service was frustrating and disappointing."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "slc_049",
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "input_data": {
+      "text": "The staff at the store were awful and the service was worse than expected."
+    },
+    "gold_output": {
+      "label": "negative"
+    },
+    "metadata": {
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_050",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new election reform related to election reform."
+    },
+    "gold_output": {
+      "labels": [
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_051",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new cloud platform related to cloud platform."
+    },
+    "gold_output": {
+      "labels": [
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_052",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new mental health service related to mental health service."
+    },
+    "gold_output": {
+      "labels": [
+        "health"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_053",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new cycling related to cycling."
+    },
+    "gold_output": {
+      "labels": [
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_054",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new investment fund related to investment fund."
+    },
+    "gold_output": {
+      "labels": [
+        "finance"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_055",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new election reform related to AI system."
+    },
+    "gold_output": {
+      "labels": [
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_056",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new cloud platform related to vaccine program."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_057",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new government regulation related to stock market."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_058",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new cycling related to medical device."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_059",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new investment fund related to robotics tool."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_060",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The government announced a new tax policy related to ministerial decision."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_061",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "BlueRiver Health launched a ministerial decision while discussing its impact on ministerial decision."
+    },
+    "gold_output": {
+      "labels": [
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_062",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Atlas Finance launched a mobile app while discussing its impact on mobile app."
+    },
+    "gold_output": {
+      "labels": [
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_063",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Civic Data Group launched a medical device while discussing its impact on medical device."
+    },
+    "gold_output": {
+      "labels": [
+        "health"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_064",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Urban Sports Media launched a swimming while discussing its impact on swimming."
+    },
+    "gold_output": {
+      "labels": [
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_065",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Northwind Labs launched a bank loan while discussing its impact on bank loan."
+    },
+    "gold_output": {
+      "labels": [
+        "finance"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_066",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "BlueRiver Health launched a ministerial decision while discussing its impact on cloud platform."
+    },
+    "gold_output": {
+      "labels": [
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_067",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Atlas Finance launched a mobile app while discussing its impact on mental health service."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_068",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Civic Data Group launched a parliament debate while discussing its impact on budget plan."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_069",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Urban Sports Media launched a swimming while discussing its impact on nutrition study."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_070",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Northwind Labs launched a bank loan while discussing its impact on AI system."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_071",
+    "task_name": "multi_label_classification",
+    "template_name": "company_news",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "Atlas Finance launched a stock market while discussing its impact on government regulation."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_072",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how government regulation could affect government regulation."
+    },
+    "gold_output": {
+      "labels": [
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_073",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how data pipeline could affect data pipeline."
+    },
+    "gold_output": {
+      "labels": [
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_074",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how nutrition study could affect nutrition study."
+    },
+    "gold_output": {
+      "labels": [
+        "health"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_075",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how football could affect football."
+    },
+    "gold_output": {
+      "labels": [
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_076",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how tax policy could affect tax policy."
+    },
+    "gold_output": {
+      "labels": [
+        "finance"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_077",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how government regulation could affect mobile app."
+    },
+    "gold_output": {
+      "labels": [
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_078",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how data pipeline could affect medical device."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_079",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how public policy could affect investment fund."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_080",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how football could affect hospital policy."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_081",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how tax policy could affect cloud platform."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_082",
+    "task_name": "multi_label_classification",
+    "template_name": "policy_summary",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "A report described how budget plan could affect parliament debate."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_083",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on parliament debate and parliament debate."
+    },
+    "gold_output": {
+      "labels": [
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_084",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on robotics tool and robotics tool."
+    },
+    "gold_output": {
+      "labels": [
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_085",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on hospital policy and hospital policy."
+    },
+    "gold_output": {
+      "labels": [
+        "health"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_086",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on tennis and tennis."
+    },
+    "gold_output": {
+      "labels": [
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_087",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on stock market and stock market."
+    },
+    "gold_output": {
+      "labels": [
+        "finance"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_088",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on parliament debate and data pipeline."
+    },
+    "gold_output": {
+      "labels": [
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_089",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on robotics tool and nutrition study."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_090",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on election reform and bank loan."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_091",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on tennis and vaccine program."
+    },
+    "gold_output": {
+      "labels": [
+        "health",
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_092",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on stock market and mobile app."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_093",
+    "task_name": "multi_label_classification",
+    "template_name": "event_report",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "During the meeting, speakers focused on investment fund and public policy."
+    },
+    "gold_output": {
+      "labels": [
+        "finance",
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_094",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new election reform related to ministerial decision."
+    },
+    "gold_output": {
+      "labels": [
+        "politics"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_095",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new cloud platform related to mobile app."
+    },
+    "gold_output": {
+      "labels": [
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_096",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new mental health service related to medical device."
+    },
+    "gold_output": {
+      "labels": [
+        "health"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_097",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new cycling related to swimming."
+    },
+    "gold_output": {
+      "labels": [
+        "sports"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_098",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new investment fund related to bank loan."
+    },
+    "gold_output": {
+      "labels": [
+        "finance"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "mlc_099",
+    "task_name": "multi_label_classification",
+    "template_name": "institutional_announcement",
+    "instruction": "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+    "input_data": {
+      "text": "The committee announced a new election reform related to cloud platform."
+    },
+    "gold_output": {
+      "labels": [
+        "politics",
+        "tech"
+      ]
+    },
+    "metadata": {
+      "label_set": [
+        "finance",
+        "health",
+        "politics",
+        "sports",
+        "tech"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_100",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Rome on 2024-01-15."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2024-01-15",
+      "location": "Rome"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_101",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Milan on 2024-03-21."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2024-03-21",
+      "location": "Milan"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_102",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Paris on 2024-06-10."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2024-06-10",
+      "location": "Paris"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_103",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Berlin on 2024-09-05."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2024-09-05",
+      "location": "Berlin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_104",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Madrid on 2025-02-14."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2025-02-14",
+      "location": "Madrid"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_105",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Lisbon on 2025-04-30."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2025-04-30",
+      "location": "Lisbon"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_106",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Vienna on 2025-07-12."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2025-07-12",
+      "location": "Vienna"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_107",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Prague on 2025-10-03."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2025-10-03",
+      "location": "Prague"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_108",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Athens on 2026-01-08."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2026-01-08",
+      "location": "Athens"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_109",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Alice Smith will speak in Dublin on 2026-02-19."
+    },
+    "gold_output": {
+      "person": "Alice Smith",
+      "date": "2026-02-19",
+      "location": "Dublin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_110",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Milan on 2024-01-15."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2024-01-15",
+      "location": "Milan"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_111",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Paris on 2024-03-21."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2024-03-21",
+      "location": "Paris"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_112",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Berlin on 2024-06-10."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2024-06-10",
+      "location": "Berlin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_113",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Madrid on 2024-09-05."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2024-09-05",
+      "location": "Madrid"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_114",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Lisbon on 2025-02-14."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2025-02-14",
+      "location": "Lisbon"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_115",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Vienna on 2025-04-30."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2025-04-30",
+      "location": "Vienna"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_116",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Prague on 2025-07-12."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2025-07-12",
+      "location": "Prague"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_117",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Athens on 2025-10-03."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2025-10-03",
+      "location": "Athens"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_118",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Dublin on 2026-01-08."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2026-01-08",
+      "location": "Dublin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_119",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Bruno Rossi will speak in Rome on 2026-02-19."
+    },
+    "gold_output": {
+      "person": "Bruno Rossi",
+      "date": "2026-02-19",
+      "location": "Rome"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_120",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Paris on 2024-01-15."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2024-01-15",
+      "location": "Paris"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_121",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Berlin on 2024-03-21."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2024-03-21",
+      "location": "Berlin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_122",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Madrid on 2024-06-10."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2024-06-10",
+      "location": "Madrid"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_123",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Lisbon on 2024-09-05."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2024-09-05",
+      "location": "Lisbon"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_124",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Vienna on 2025-02-14."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2025-02-14",
+      "location": "Vienna"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_125",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Prague on 2025-04-30."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2025-04-30",
+      "location": "Prague"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_126",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Athens on 2025-07-12."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2025-07-12",
+      "location": "Athens"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_127",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Dublin on 2025-10-03."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2025-10-03",
+      "location": "Dublin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_128",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Rome on 2026-01-08."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2026-01-08",
+      "location": "Rome"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_129",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Carla Gomez will speak in Milan on 2026-02-19."
+    },
+    "gold_output": {
+      "person": "Carla Gomez",
+      "date": "2026-02-19",
+      "location": "Milan"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_130",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Berlin on 2024-01-15."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2024-01-15",
+      "location": "Berlin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_131",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Madrid on 2024-03-21."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2024-03-21",
+      "location": "Madrid"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_132",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Lisbon on 2024-06-10."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2024-06-10",
+      "location": "Lisbon"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_133",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Vienna on 2024-09-05."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2024-09-05",
+      "location": "Vienna"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_134",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Prague on 2025-02-14."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2025-02-14",
+      "location": "Prague"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_135",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Athens on 2025-04-30."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2025-04-30",
+      "location": "Athens"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_136",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Dublin on 2025-07-12."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2025-07-12",
+      "location": "Dublin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_137",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Rome on 2025-10-03."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2025-10-03",
+      "location": "Rome"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_138",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Milan on 2026-01-08."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2026-01-08",
+      "location": "Milan"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_139",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "David Lee will speak in Paris on 2026-02-19."
+    },
+    "gold_output": {
+      "person": "David Lee",
+      "date": "2026-02-19",
+      "location": "Paris"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_140",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Madrid on 2024-01-15."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2024-01-15",
+      "location": "Madrid"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_141",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Lisbon on 2024-03-21."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2024-03-21",
+      "location": "Lisbon"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_142",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Vienna on 2024-06-10."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2024-06-10",
+      "location": "Vienna"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_143",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Prague on 2024-09-05."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2024-09-05",
+      "location": "Prague"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_144",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Athens on 2025-02-14."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2025-02-14",
+      "location": "Athens"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_145",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Dublin on 2025-04-30."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2025-04-30",
+      "location": "Dublin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_146",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Rome on 2025-07-12."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2025-07-12",
+      "location": "Rome"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_147",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Milan on 2025-10-03."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2025-10-03",
+      "location": "Milan"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_148",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Paris on 2026-01-08."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2026-01-08",
+      "location": "Paris"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "ie_149",
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement",
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "input_data": {
+      "text": "Elena Marino will speak in Berlin on 2026-02-19."
+    },
+    "gold_output": {
+      "person": "Elena Marino",
+      "date": "2026-02-19",
+      "location": "Berlin"
+    },
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    }
+  },
+  {
+    "example_id": "rbt_150",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Alice Smith Visited Rome With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "today alice smith visited rome with 3 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_151",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Bruno Rossi Visited Milan With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Bruno Rossi Visited Milan With 3 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_152",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Carla Gomez Visited Paris With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Carla Gomez Visited Paris With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_153",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today David Lee Visited Berlin With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today David Lee Berlin With 3"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_154",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Elena Marino Visited Madrid With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "today elena marino visited madrid with 3 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_155",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Farah Khan Visited Lisbon With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Farah Khan Visited Lisbon With 3 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_156",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Giulia Conti Visited Vienna With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Giulia Conti Visited Vienna With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_157",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Hassan Ali Visited Prague With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Hassan Ali Prague With 3"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_158",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Irene Novak Visited Athens With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "today irene novak visited athens with 3 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_159",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Jonas Weber Visited Dublin With 3 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Jonas Weber Visited Dublin With 3 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_160",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Alice Smith Visited Milan With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Alice Smith Visited Milan With 7 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_161",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Bruno Rossi Visited Paris With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Bruno Rossi Visited Paris With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_162",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Carla Gomez Visited Berlin With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Carla Gomez Berlin With 7"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_163",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today David Lee Visited Madrid With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "today david lee visited madrid with 7 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_164",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Elena Marino Visited Lisbon With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Elena Marino Visited Lisbon With 7 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_165",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Farah Khan Visited Vienna With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Farah Khan Visited Vienna With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_166",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Giulia Conti Visited Prague With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Giulia Conti Prague With 7"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_167",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Hassan Ali Visited Athens With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "today hassan ali visited athens with 7 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_168",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Irene Novak Visited Dublin With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Irene Novak Visited Dublin With 7 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_169",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Jonas Weber Visited Rome With 7 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Jonas Weber Visited Rome With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_170",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Alice Smith Visited Paris With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Alice Smith Visited Paris With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_171",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Bruno Rossi Visited Berlin With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Bruno Rossi Berlin With 10"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_172",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Carla Gomez Visited Madrid With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "today carla gomez visited madrid with 10 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_173",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today David Lee Visited Lisbon With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today David Lee Visited Lisbon With 10 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_174",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Elena Marino Visited Vienna With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Elena Marino Visited Vienna With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_175",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Farah Khan Visited Prague With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Farah Khan Prague With 10"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_176",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Giulia Conti Visited Athens With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "today giulia conti visited athens with 10 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_177",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Hassan Ali Visited Dublin With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Hassan Ali Visited Dublin With 10 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_178",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Irene Novak Visited Rome With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Irene Novak Visited Rome With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_179",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Jonas Weber Visited Milan With 10 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Jonas Weber Milan With 10"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_180",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Alice Smith Visited Berlin With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Alice Smith Berlin With 15"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_181",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Bruno Rossi Visited Madrid With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "today bruno rossi visited madrid with 15 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_182",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Carla Gomez Visited Lisbon With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Carla Gomez Visited Lisbon With 15 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_183",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today David Lee Visited Vienna With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today David Lee Visited Vienna With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_184",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Elena Marino Visited Prague With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Elena Marino Prague With 15"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_185",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Farah Khan Visited Athens With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "today farah khan visited athens with 15 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_186",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Giulia Conti Visited Dublin With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Giulia Conti Visited Dublin With 15 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_187",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Hassan Ali Visited Rome With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Hassan Ali Visited Rome With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_188",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Irene Novak Visited Milan With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Irene Novak Milan With 15"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_189",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Jonas Weber Visited Paris With 15 Friends!"
+    },
+    "gold_output": {
+      "text": "today jonas weber visited paris with 15 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_190",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Alice Smith Visited Madrid With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "today alice smith visited madrid with 21 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_191",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Bruno Rossi Visited Lisbon With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Bruno Rossi Visited Lisbon With 21 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_192",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Carla Gomez Visited Vienna With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Carla Gomez Visited Vienna With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_193",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today David Lee Visited Prague With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today David Lee Prague With 21"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_194",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Elena Marino Visited Athens With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "today elena marino visited athens with 21 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_195",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Farah Khan Visited Dublin With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Farah Khan Visited Dublin With 21 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "rbt_196",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__replace_numbers_with_NUM",
+    "instruction": "Replace every number in the text with <NUM>.",
+    "input_data": {
+      "text": "Today Giulia Conti Visited Rome With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Giulia Conti Visited Rome With <NUM> Friends!"
+    },
+    "metadata": {
+      "rule_name": "replace_numbers_with_NUM"
+    }
+  },
+  {
+    "example_id": "rbt_197",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_words_longer_than_6",
+    "instruction": "Remove all words longer than 6 characters from the text.",
+    "input_data": {
+      "text": "Today Hassan Ali Visited Milan With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Hassan Ali Milan With 21"
+    },
+    "metadata": {
+      "rule_name": "remove_words_longer_than_6"
+    }
+  },
+  {
+    "example_id": "rbt_198",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__lowercase",
+    "instruction": "Convert the text to lowercase.",
+    "input_data": {
+      "text": "Today Irene Novak Visited Paris With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "today irene novak visited paris with 21 friends!"
+    },
+    "metadata": {
+      "rule_name": "lowercase"
+    }
+  },
+  {
+    "example_id": "rbt_199",
+    "task_name": "rule_based_transformation",
+    "template_name": "mixed_case_statement__remove_punctuation",
+    "instruction": "Remove all punctuation from the text.",
+    "input_data": {
+      "text": "Today Jonas Weber Visited Berlin With 21 Friends!"
+    },
+    "gold_output": {
+      "text": "Today Jonas Weber Visited Berlin With 21 Friends"
+    },
+    "metadata": {
+      "rule_name": "remove_punctuation"
+    }
+  },
+  {
+    "example_id": "qa_200",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Rome on 2024-01-15 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Rome"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_201",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Milan on 2024-03-21 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Milan"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_202",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Paris on 2024-06-10 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Paris"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_203",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Berlin on 2024-09-05 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Berlin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_204",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Madrid on 2025-02-14 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Madrid"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_205",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Lisbon on 2025-04-30 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Lisbon"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_206",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Vienna on 2025-07-12 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Vienna"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_207",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Prague on 2025-10-03 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Prague"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_208",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Athens on 2026-01-08 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Athens"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_209",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Alice Smith arrived in Dublin on 2026-02-19 for a training session.",
+      "question": "Where did Alice Smith arrive?"
+    },
+    "gold_output": {
+      "answer": "Dublin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_210",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Milan on 2024-01-15 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Milan"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_211",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Paris on 2024-03-21 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Paris"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_212",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Berlin on 2024-06-10 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Berlin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_213",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Madrid on 2024-09-05 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Madrid"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_214",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Lisbon on 2025-02-14 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Lisbon"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_215",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Vienna on 2025-04-30 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Vienna"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_216",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Prague on 2025-07-12 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Prague"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_217",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Athens on 2025-10-03 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Athens"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_218",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Dublin on 2026-01-08 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Dublin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_219",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Bruno Rossi arrived in Rome on 2026-02-19 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
+    },
+    "gold_output": {
+      "answer": "Rome"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_220",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Paris on 2024-01-15 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Paris"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_221",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Berlin on 2024-03-21 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Berlin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_222",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Madrid on 2024-06-10 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Madrid"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_223",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Lisbon on 2024-09-05 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Lisbon"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_224",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Vienna on 2025-02-14 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Vienna"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_225",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Prague on 2025-04-30 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Prague"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_226",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Athens on 2025-07-12 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Athens"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_227",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Dublin on 2025-10-03 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Dublin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_228",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Rome on 2026-01-08 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Rome"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_229",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Carla Gomez arrived in Milan on 2026-02-19 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
+    },
+    "gold_output": {
+      "answer": "Milan"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_230",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Berlin on 2024-01-15 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Berlin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_231",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Madrid on 2024-03-21 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Madrid"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_232",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Lisbon on 2024-06-10 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Lisbon"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_233",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Vienna on 2024-09-05 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Vienna"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_234",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Prague on 2025-02-14 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Prague"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_235",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Athens on 2025-04-30 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Athens"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_236",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Dublin on 2025-07-12 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Dublin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_237",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Rome on 2025-10-03 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Rome"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_238",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Milan on 2026-01-08 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Milan"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_239",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "David Lee arrived in Paris on 2026-02-19 for a training session.",
+      "question": "Where did David Lee arrive?"
+    },
+    "gold_output": {
+      "answer": "Paris"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_240",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Madrid on 2024-01-15 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Madrid"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_241",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Lisbon on 2024-03-21 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Lisbon"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_242",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Vienna on 2024-06-10 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Vienna"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_243",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Prague on 2024-09-05 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Prague"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_244",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Athens on 2025-02-14 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Athens"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_245",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Dublin on 2025-04-30 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Dublin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_246",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Rome on 2025-07-12 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Rome"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_247",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Milan on 2025-10-03 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Milan"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_248",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Paris on 2026-01-08 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Paris"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  },
+  {
+    "example_id": "qa_249",
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage",
+    "instruction": "Answer the question using an exact span from the passage.",
+    "input_data": {
+      "passage": "Elena Marino arrived in Berlin on 2026-02-19 for a training session.",
+      "question": "Where did Elena Marino arrive?"
+    },
+    "gold_output": {
+      "answer": "Berlin"
+    },
+    "metadata": {
+      "answer_field": "location"
+    }
+  }
+]
