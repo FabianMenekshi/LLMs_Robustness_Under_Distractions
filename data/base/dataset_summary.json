@@ -1,21 +1,20 @@
 {
-  "total_records": 250,
   "counts_by_task": {
-    "single_label_classification": 50,
-    "multi_label_classification": 50,
+    "extractive_qa": 50,
     "information_extraction": 50,
+    "multi_label_classification": 50,
     "rule_based_transformation": 50,
-    "extractive_qa": 50
+    "single_label_classification": 50
   },
   "instructions_by_task": {
-    "single_label_classification": [
-      "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}."
-    ],
-    "multi_label_classification": [
-      "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically."
+    "extractive_qa": [
+      "Answer the question using an exact span from the passage."
     ],
     "information_extraction": [
       "Extract the fields person, date, and location from the text."
+    ],
+    "multi_label_classification": [
+      "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically."
     ],
     "rule_based_transformation": [
       "Convert the text to lowercase.",
@@ -23,8 +22,9 @@
       "Remove all words longer than 6 characters from the text.",
       "Replace every number in the text with <NUM>."
     ],
-    "extractive_qa": [
-      "Answer the question using an exact span from the passage."
+    "single_label_classification": [
+      "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}."
     ]
-  }
+  },
+  "total_records": 250
 }
