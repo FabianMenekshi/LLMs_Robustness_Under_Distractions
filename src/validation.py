@@ -1,4 +1,3 @@
-import re
 from collections import Counter
 from typing import List, Dict, Any
 
@@ -40,8 +39,9 @@ def validate_required_top_level_fields(record: Dict[str, Any]) -> List[str]:
 
 def validate_task_name(record: Dict[str, Any]) -> List[str]:
     issues = []
-    if record["task_name"] not in EXPECTED_TASK_NAMES:
-        issues.append(f"invalid_task_name: {record['task_name']}")
+    task_name = record.get("task_name")
+    if task_name not in EXPECTED_TASK_NAMES:
+        issues.append(f"invalid_task_name: {task_name}")
     return issues
 
 
@@ -248,6 +248,7 @@ def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -
     dataset_level_issues.extend(validate_unique_ids(records))
     dataset_level_issues.extend(validate_task_counts(records, expected_per_task=50))
     dataset_level_issues.extend(validate_instruction_consistency(records))
+    dataset_level_issues.extend(validate_no_exact_duplicate_inputs(records))
 
     if len(records) != expected_total:
         dataset_level_issues.append(
@@ -273,3 +274,29 @@ def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -
     "fatal_dataset_level_issues": fatal_dataset_level_issues,
     "issue_counts": dict(all_issue_counts),
     }
+
+def validate_no_exact_duplicate_inputs(records: List[Dict[str, Any]]) -> List[str]:
+    seen = {}
+    duplicates = []
+
+    for record in records:
+        task_name = record["task_name"]
+
+        if task_name == "extractive_qa":
+            rendered = (
+                f"PASSAGE: {record['input_data'].get('passage', '')}\n"
+                f"QUESTION: {record['input_data'].get('question', '')}"
+            )
+        else:
+            rendered = record["input_data"].get("text", "")
+
+        key = (task_name, rendered)
+
+        if key in seen:
+            duplicates.append((seen[key], record["example_id"]))
+        else:
+            seen[key] = record["example_id"]
+
+    if duplicates:
+        return [f"duplicate_rendered_inputs: {duplicates}"]
+    return []

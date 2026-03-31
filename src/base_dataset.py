@@ -1,7 +1,6 @@
 import json
 import os
 from collections import Counter
-from dataclasses import asdict
 from typing import List, Dict, Any
 
 from src.templates import CandidateExample
@@ -9,7 +8,7 @@ from src.templates import CandidateExample
 # Convert a CandidateExample into the final clean base-dataset record format.
 
 def candidate_to_base_record(example: CandidateExample) -> Dict[str, Any]:
-    return {
+    record = {
         "example_id": example.example_id,
         "task_name": example.task_name,
         "template_name": example.template_name,
@@ -18,6 +17,15 @@ def candidate_to_base_record(example: CandidateExample) -> Dict[str, Any]:
         "gold_output": example.gold_output,
         "metadata": example.metadata,
     }
+
+    if not isinstance(record["input_data"], dict):
+        raise TypeError(f"input_data must be a dict for {record['example_id']}")
+    if not isinstance(record["gold_output"], dict):
+        raise TypeError(f"gold_output must be a dict for {record['example_id']}")
+    if not isinstance(record["metadata"], dict):
+        raise TypeError(f"metadata must be a dict for {record['example_id']}")
+
+    return record
 
 # Convert a list of CandidateExample objects into final dataset records.
 def build_base_dataset(candidates: List[CandidateExample]) -> List[Dict[str, Any]]:
@@ -53,14 +61,14 @@ def save_jsonl(records: List[Dict[str, Any]], output_path: str) -> None:
 
     with open(output_path, "w", encoding="utf-8") as f:
         for record in records:
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+            f.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
 
 # Save any JSON-serializable object as pretty JSON.
 def save_json(data: Any, output_path: str) -> None:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 # Load JSONL records from disk.
 def load_jsonl(input_path: str) -> List[Dict[str, Any]]:
