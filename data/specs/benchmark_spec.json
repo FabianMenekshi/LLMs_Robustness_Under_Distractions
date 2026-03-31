@@ -164,10 +164,11 @@
   "dataset_size_summary": {
     "base_examples_per_task": 50,
     "num_tasks": 5,
+    "num_regimes": 2,
     "num_distractions": 7,
     "total_base_examples": 250,
-    "total_clean_cases": 250,
-    "total_distracted_cases": 1750,
-    "total_prompt_instances_if_clean_plus_distracted_are_evaluated": 2000
+    "total_clean_prompts": 500,
+    "total_distracted_prompts": 3500,
+    "total_prompt_instances": 4000
   }
 }
