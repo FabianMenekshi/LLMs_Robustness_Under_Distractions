@@ -478,6 +478,62 @@ def select_final_base_examples(
 
     return selected
 
+def select_base_examples_exact(
+    candidates: List[CandidateExample],
+    n_per_task: int = 50
+) -> List[CandidateExample]:
+
+    selected = []
+    task_names = sorted({example.task_name for example in candidates})
+
+    for task_name in task_names:
+        approved = [
+            example
+            for example in candidates
+            if example.task_name == task_name and example.review_status == "approved"
+        ]
+
+        pending = [
+            example
+            for example in candidates
+            if example.task_name == task_name and example.review_status == "pending"
+        ]
+
+        rejected = [
+            example
+            for example in candidates
+            if example.task_name == task_name and example.review_status == "rejected"
+        ]
+
+        chosen = approved[:n_per_task]
+
+        if len(chosen) < n_per_task:
+            needed = n_per_task - len(chosen)
+            chosen.extend(pending[:needed])
+
+        if len(chosen) < n_per_task:
+            needed = n_per_task - len(chosen)
+            chosen.extend(rejected[:needed])
+            print(
+                f"WARNING: task '{task_name}' needed rejected examples as fallback "
+                f"(approved={len(approved)}, pending={len(pending)}, rejected={len(rejected)})."
+            )
+
+        if len(chosen) != n_per_task:
+            raise ValueError(
+                f"Task '{task_name}' has only {len(chosen)} total available examples "
+                f"(approved={len(approved)}, pending={len(pending)}, rejected={len(rejected)})."
+            )
+
+        selected.extend(chosen)
+
+    if len(selected) != n_per_task * len(task_names):
+        raise ValueError(
+            f"Expected {n_per_task * len(task_names)} total selected examples, got {len(selected)}."
+        )
+
+    return selected
+
 # Convert a CandidateExample into a JSON-serializable dictionary.
 def example_to_dict(example: CandidateExample) -> Dict[str, Any]:
     return asdict(example)
@@ -488,6 +544,33 @@ def save_candidates_to_jsonl(candidates: List[CandidateExample], output_path: st
     with open(output_path, "w", encoding="utf-8") as f:
         for example in candidates:
             f.write(json.dumps(example_to_dict(example), ensure_ascii=False) + "\n")
+
+# Load candidate examples from a JSONL file.
+def load_candidates_from_jsonl(input_path: str) -> List[CandidateExample]:
+    candidates = []
+
+    with open(input_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+
+            row = json.loads(line)
+            candidates.append(
+                CandidateExample(
+                    example_id=row["example_id"],
+                    task_name=row["task_name"],
+                    template_name=row["template_name"],
+                    instruction=row["instruction"],
+                    input_data=row["input_data"],
+                    gold_output=row["gold_output"],
+                    metadata=row["metadata"],
+                    review_status=row.get("review_status", "pending"),
+                    review_note=row.get("review_note", ""),
+                )
+            )
+
+    return candidates
 
 # Helper to inspect per-task counts
 def count_examples_by_task(candidates: List[CandidateExample]) -> Dict[str, int]:
