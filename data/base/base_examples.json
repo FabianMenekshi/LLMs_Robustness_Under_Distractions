@@ -1,953 +1,1853 @@
 [
   {
-    "example_id": "slc_000",
+    "example_id": "qa_200",
     "gold_output": {
-      "label": "positive"
+      "answer": "Rome"
     },
     "input_data": {
-      "text": "The medical software was excellent and worked smooth and satisfying."
+      "passage": "Alice Smith arrived in Rome on 2024-01-15 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_001",
+    "example_id": "qa_201",
     "gold_output": {
-      "label": "positive"
+      "answer": "Milan"
     },
     "input_data": {
-      "text": "The robot vacuum was excellent and worked smooth and satisfying."
+      "passage": "Alice Smith arrived in Milan on 2024-03-21 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_002",
+    "example_id": "qa_202",
     "gold_output": {
-      "label": "positive"
+      "answer": "Paris"
     },
     "input_data": {
-      "text": "The budget phone was excellent and worked smooth and satisfying."
+      "passage": "Alice Smith arrived in Paris on 2024-06-10 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_003",
+    "example_id": "qa_203",
     "gold_output": {
-      "label": "positive"
+      "answer": "Berlin"
     },
     "input_data": {
-      "text": "The fitness watch was excellent and worked smooth and satisfying."
+      "passage": "Alice Smith arrived in Berlin on 2024-09-05 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_004",
+    "example_id": "qa_204",
     "gold_output": {
-      "label": "positive"
+      "answer": "Madrid"
     },
     "input_data": {
-      "text": "The solar battery was excellent and worked smooth and satisfying."
+      "passage": "Alice Smith arrived in Madrid on 2025-02-14 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_005",
+    "example_id": "qa_205",
     "gold_output": {
-      "label": "positive"
+      "answer": "Lisbon"
     },
     "input_data": {
-      "text": "The medical software was great and worked pleasant from start to finish."
+      "passage": "Alice Smith arrived in Lisbon on 2025-04-30 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_006",
+    "example_id": "qa_206",
     "gold_output": {
-      "label": "positive"
+      "answer": "Vienna"
     },
     "input_data": {
-      "text": "The robot vacuum was great and worked pleasant from start to finish."
+      "passage": "Alice Smith arrived in Vienna on 2025-07-12 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_007",
+    "example_id": "qa_207",
     "gold_output": {
-      "label": "positive"
+      "answer": "Prague"
     },
     "input_data": {
-      "text": "The budget phone was great and worked pleasant from start to finish."
+      "passage": "Alice Smith arrived in Prague on 2025-10-03 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_008",
+    "example_id": "qa_208",
     "gold_output": {
-      "label": "positive"
+      "answer": "Athens"
     },
     "input_data": {
-      "text": "The fitness watch was great and worked pleasant from start to finish."
+      "passage": "Alice Smith arrived in Athens on 2026-01-08 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_009",
+    "example_id": "qa_209",
     "gold_output": {
-      "label": "positive"
+      "answer": "Dublin"
     },
     "input_data": {
-      "text": "The solar battery was great and worked pleasant from start to finish."
+      "passage": "Alice Smith arrived in Dublin on 2026-02-19 for a training session.",
+      "question": "Where did Alice Smith arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_010",
+    "example_id": "qa_210",
     "gold_output": {
-      "label": "positive"
+      "answer": "Milan"
     },
     "input_data": {
-      "text": "The medical software was reliable and worked better than expected."
+      "passage": "Bruno Rossi arrived in Milan on 2024-01-15 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_011",
+    "example_id": "qa_211",
     "gold_output": {
-      "label": "positive"
+      "answer": "Paris"
     },
     "input_data": {
-      "text": "The robot vacuum was reliable and worked better than expected."
+      "passage": "Bruno Rossi arrived in Paris on 2024-03-21 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_012",
+    "example_id": "qa_212",
     "gold_output": {
-      "label": "positive"
+      "answer": "Berlin"
     },
     "input_data": {
-      "text": "The budget phone was reliable and worked better than expected."
+      "passage": "Bruno Rossi arrived in Berlin on 2024-06-10 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_013",
+    "example_id": "qa_213",
     "gold_output": {
-      "label": "positive"
+      "answer": "Madrid"
     },
     "input_data": {
-      "text": "The fitness watch was reliable and worked better than expected."
+      "passage": "Bruno Rossi arrived in Madrid on 2024-09-05 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_014",
+    "example_id": "qa_214",
     "gold_output": {
-      "label": "positive"
+      "answer": "Lisbon"
     },
     "input_data": {
-      "text": "The solar battery was reliable and worked better than expected."
+      "passage": "Bruno Rossi arrived in Lisbon on 2025-02-14 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_015",
+    "example_id": "qa_215",
     "gold_output": {
-      "label": "negative"
+      "answer": "Vienna"
     },
     "input_data": {
-      "text": "The medical software was terrible and worked frustrating and disappointing."
+      "passage": "Bruno Rossi arrived in Vienna on 2025-04-30 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_016",
+    "example_id": "qa_216",
     "gold_output": {
-      "label": "negative"
+      "answer": "Prague"
     },
     "input_data": {
-      "text": "The robot vacuum was terrible and worked frustrating and disappointing."
+      "passage": "Bruno Rossi arrived in Prague on 2025-07-12 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_017",
+    "example_id": "qa_217",
     "gold_output": {
-      "label": "negative"
+      "answer": "Athens"
     },
     "input_data": {
-      "text": "The budget phone was terrible and worked frustrating and disappointing."
+      "passage": "Bruno Rossi arrived in Athens on 2025-10-03 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_018",
+    "example_id": "qa_218",
     "gold_output": {
-      "label": "negative"
+      "answer": "Dublin"
     },
     "input_data": {
-      "text": "The fitness watch was terrible and worked frustrating and disappointing."
+      "passage": "Bruno Rossi arrived in Dublin on 2026-01-08 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_019",
+    "example_id": "qa_219",
     "gold_output": {
-      "label": "negative"
+      "answer": "Rome"
     },
     "input_data": {
-      "text": "The solar battery was terrible and worked frustrating and disappointing."
+      "passage": "Bruno Rossi arrived in Rome on 2026-02-19 for a training session.",
+      "question": "Where did Bruno Rossi arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_020",
+    "example_id": "qa_220",
     "gold_output": {
-      "label": "negative"
+      "answer": "Paris"
     },
     "input_data": {
-      "text": "The medical software was awful and worked worse than expected."
+      "passage": "Carla Gomez arrived in Paris on 2024-01-15 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_021",
+    "example_id": "qa_221",
     "gold_output": {
-      "label": "negative"
+      "answer": "Berlin"
     },
     "input_data": {
-      "text": "The robot vacuum was awful and worked worse than expected."
+      "passage": "Carla Gomez arrived in Berlin on 2024-03-21 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_022",
+    "example_id": "qa_222",
     "gold_output": {
-      "label": "negative"
+      "answer": "Madrid"
     },
     "input_data": {
-      "text": "The budget phone was awful and worked worse than expected."
+      "passage": "Carla Gomez arrived in Madrid on 2024-06-10 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_023",
+    "example_id": "qa_223",
     "gold_output": {
-      "label": "negative"
+      "answer": "Lisbon"
     },
     "input_data": {
-      "text": "The fitness watch was awful and worked worse than expected."
+      "passage": "Carla Gomez arrived in Lisbon on 2024-09-05 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_024",
+    "example_id": "qa_224",
     "gold_output": {
-      "label": "negative"
+      "answer": "Vienna"
     },
     "input_data": {
-      "text": "The solar battery was awful and worked worse than expected."
+      "passage": "Carla Gomez arrived in Vienna on 2025-02-14 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_025",
+    "example_id": "qa_225",
     "gold_output": {
-      "label": "negative"
+      "answer": "Prague"
     },
     "input_data": {
-      "text": "The medical software was poor and worked annoying from start to finish."
+      "passage": "Carla Gomez arrived in Prague on 2025-04-30 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_026",
+    "example_id": "qa_226",
     "gold_output": {
-      "label": "negative"
+      "answer": "Athens"
     },
     "input_data": {
-      "text": "The robot vacuum was poor and worked annoying from start to finish."
+      "passage": "Carla Gomez arrived in Athens on 2025-07-12 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_027",
+    "example_id": "qa_227",
     "gold_output": {
-      "label": "negative"
+      "answer": "Dublin"
     },
     "input_data": {
-      "text": "The budget phone was poor and worked annoying from start to finish."
+      "passage": "Carla Gomez arrived in Dublin on 2025-10-03 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_028",
+    "example_id": "qa_228",
     "gold_output": {
-      "label": "negative"
+      "answer": "Rome"
     },
     "input_data": {
-      "text": "The fitness watch was poor and worked annoying from start to finish."
+      "passage": "Carla Gomez arrived in Rome on 2026-01-08 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_029",
+    "example_id": "qa_229",
     "gold_output": {
-      "label": "negative"
+      "answer": "Milan"
     },
     "input_data": {
-      "text": "The solar battery was poor and worked annoying from start to finish."
+      "passage": "Carla Gomez arrived in Milan on 2026-02-19 for a training session.",
+      "question": "Where did Carla Gomez arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_030",
+    "example_id": "qa_230",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Berlin"
     },
     "input_data": {
-      "text": "The medical software was ordinary and worked acceptable but unremarkable."
+      "passage": "David Lee arrived in Berlin on 2024-01-15 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_031",
+    "example_id": "qa_231",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Madrid"
     },
     "input_data": {
-      "text": "The robot vacuum was ordinary and worked acceptable but unremarkable."
+      "passage": "David Lee arrived in Madrid on 2024-03-21 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_032",
+    "example_id": "qa_232",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Lisbon"
     },
     "input_data": {
-      "text": "The budget phone was ordinary and worked acceptable but unremarkable."
+      "passage": "David Lee arrived in Lisbon on 2024-06-10 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_033",
+    "example_id": "qa_233",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Vienna"
     },
     "input_data": {
-      "text": "The fitness watch was ordinary and worked acceptable but unremarkable."
+      "passage": "David Lee arrived in Vienna on 2024-09-05 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_034",
+    "example_id": "qa_234",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Prague"
     },
     "input_data": {
-      "text": "The solar battery was ordinary and worked acceptable but unremarkable."
+      "passage": "David Lee arrived in Prague on 2025-02-14 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_035",
+    "example_id": "qa_235",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Athens"
     },
     "input_data": {
-      "text": "The medical software was fine and worked neither good nor bad."
+      "passage": "David Lee arrived in Athens on 2025-04-30 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_036",
+    "example_id": "qa_236",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Dublin"
     },
     "input_data": {
-      "text": "The robot vacuum was fine and worked neither good nor bad."
+      "passage": "David Lee arrived in Dublin on 2025-07-12 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_037",
+    "example_id": "qa_237",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Rome"
     },
     "input_data": {
-      "text": "The budget phone was fine and worked neither good nor bad."
+      "passage": "David Lee arrived in Rome on 2025-10-03 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_038",
+    "example_id": "qa_238",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Milan"
     },
     "input_data": {
-      "text": "The fitness watch was fine and worked neither good nor bad."
+      "passage": "David Lee arrived in Milan on 2026-01-08 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_039",
+    "example_id": "qa_239",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Paris"
     },
     "input_data": {
-      "text": "The solar battery was fine and worked neither good nor bad."
+      "passage": "David Lee arrived in Paris on 2026-02-19 for a training session.",
+      "question": "Where did David Lee arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_040",
+    "example_id": "qa_240",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Madrid"
     },
     "input_data": {
-      "text": "The medical software was average and worked mostly standard."
+      "passage": "Elena Marino arrived in Madrid on 2024-01-15 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_041",
+    "example_id": "qa_241",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Lisbon"
     },
     "input_data": {
-      "text": "The robot vacuum was average and worked mostly standard."
+      "passage": "Elena Marino arrived in Lisbon on 2024-03-21 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_042",
+    "example_id": "qa_242",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Vienna"
     },
     "input_data": {
-      "text": "The budget phone was average and worked mostly standard."
+      "passage": "Elena Marino arrived in Vienna on 2024-06-10 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_043",
+    "example_id": "qa_243",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Prague"
     },
     "input_data": {
-      "text": "The fitness watch was average and worked mostly standard."
+      "passage": "Elena Marino arrived in Prague on 2024-09-05 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_044",
+    "example_id": "qa_244",
     "gold_output": {
-      "label": "neutral"
+      "answer": "Athens"
     },
     "input_data": {
-      "text": "The solar battery was average and worked mostly standard."
+      "passage": "Elena Marino arrived in Athens on 2025-02-14 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "product_review"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_045",
+    "example_id": "qa_245",
     "gold_output": {
-      "label": "positive"
+      "answer": "Dublin"
     },
     "input_data": {
-      "text": "The staff at the store were excellent and the service was smooth and satisfying."
+      "passage": "Elena Marino arrived in Dublin on 2025-04-30 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "service_feedback"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_046",
+    "example_id": "qa_246",
     "gold_output": {
-      "label": "positive"
+      "answer": "Rome"
     },
     "input_data": {
-      "text": "The staff at the store were great and the service was pleasant from start to finish."
+      "passage": "Elena Marino arrived in Rome on 2025-07-12 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "service_feedback"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_047",
+    "example_id": "qa_247",
     "gold_output": {
-      "label": "positive"
+      "answer": "Milan"
     },
     "input_data": {
-      "text": "The staff at the store were reliable and the service was better than expected."
+      "passage": "Elena Marino arrived in Milan on 2025-10-03 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "service_feedback"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_048",
+    "example_id": "qa_248",
     "gold_output": {
-      "label": "negative"
+      "answer": "Paris"
     },
     "input_data": {
-      "text": "The staff at the store were terrible and the service was frustrating and disappointing."
+      "passage": "Elena Marino arrived in Paris on 2026-01-08 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
-      ]
+      "answer_field": "location"
     },
-    "task_name": "single_label_classification",
-    "template_name": "service_feedback"
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
   },
   {
-    "example_id": "slc_049",
+    "example_id": "qa_249",
     "gold_output": {
-      "label": "negative"
+      "answer": "Berlin"
     },
     "input_data": {
-      "text": "The staff at the store were awful and the service was worse than expected."
+      "passage": "Elena Marino arrived in Berlin on 2026-02-19 for a training session.",
+      "question": "Where did Elena Marino arrive?"
     },
-    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+    "instruction": "Answer the question using an exact span from the passage.",
     "metadata": {
-      "label_set": [
-        "positive",
-        "negative",
-        "neutral"
+      "answer_field": "location"
+    },
+    "task_name": "extractive_qa",
+    "template_name": "schedule_passage"
+  },
+  {
+    "example_id": "ie_100",
+    "gold_output": {
+      "date": "2024-01-15",
+      "location": "Rome",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Rome on 2024-01-15."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
       ]
     },
-    "task_name": "single_label_classification",
-    "template_name": "service_feedback"
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_101",
+    "gold_output": {
+      "date": "2024-03-21",
+      "location": "Milan",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Milan on 2024-03-21."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_102",
+    "gold_output": {
+      "date": "2024-06-10",
+      "location": "Paris",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Paris on 2024-06-10."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_103",
+    "gold_output": {
+      "date": "2024-09-05",
+      "location": "Berlin",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Berlin on 2024-09-05."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_104",
+    "gold_output": {
+      "date": "2025-02-14",
+      "location": "Madrid",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Madrid on 2025-02-14."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_105",
+    "gold_output": {
+      "date": "2025-04-30",
+      "location": "Lisbon",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Lisbon on 2025-04-30."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_106",
+    "gold_output": {
+      "date": "2025-07-12",
+      "location": "Vienna",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Vienna on 2025-07-12."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_107",
+    "gold_output": {
+      "date": "2025-10-03",
+      "location": "Prague",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Prague on 2025-10-03."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_108",
+    "gold_output": {
+      "date": "2026-01-08",
+      "location": "Athens",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Athens on 2026-01-08."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_109",
+    "gold_output": {
+      "date": "2026-02-19",
+      "location": "Dublin",
+      "person": "Alice Smith"
+    },
+    "input_data": {
+      "text": "Alice Smith will speak in Dublin on 2026-02-19."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_110",
+    "gold_output": {
+      "date": "2024-01-15",
+      "location": "Milan",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Milan on 2024-01-15."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_111",
+    "gold_output": {
+      "date": "2024-03-21",
+      "location": "Paris",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Paris on 2024-03-21."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_112",
+    "gold_output": {
+      "date": "2024-06-10",
+      "location": "Berlin",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Berlin on 2024-06-10."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_113",
+    "gold_output": {
+      "date": "2024-09-05",
+      "location": "Madrid",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Madrid on 2024-09-05."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_114",
+    "gold_output": {
+      "date": "2025-02-14",
+      "location": "Lisbon",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Lisbon on 2025-02-14."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_115",
+    "gold_output": {
+      "date": "2025-04-30",
+      "location": "Vienna",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Vienna on 2025-04-30."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_116",
+    "gold_output": {
+      "date": "2025-07-12",
+      "location": "Prague",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Prague on 2025-07-12."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_117",
+    "gold_output": {
+      "date": "2025-10-03",
+      "location": "Athens",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Athens on 2025-10-03."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_118",
+    "gold_output": {
+      "date": "2026-01-08",
+      "location": "Dublin",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Dublin on 2026-01-08."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_119",
+    "gold_output": {
+      "date": "2026-02-19",
+      "location": "Rome",
+      "person": "Bruno Rossi"
+    },
+    "input_data": {
+      "text": "Bruno Rossi will speak in Rome on 2026-02-19."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_120",
+    "gold_output": {
+      "date": "2024-01-15",
+      "location": "Paris",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Paris on 2024-01-15."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_121",
+    "gold_output": {
+      "date": "2024-03-21",
+      "location": "Berlin",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Berlin on 2024-03-21."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_122",
+    "gold_output": {
+      "date": "2024-06-10",
+      "location": "Madrid",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Madrid on 2024-06-10."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_123",
+    "gold_output": {
+      "date": "2024-09-05",
+      "location": "Lisbon",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Lisbon on 2024-09-05."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_124",
+    "gold_output": {
+      "date": "2025-02-14",
+      "location": "Vienna",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Vienna on 2025-02-14."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_125",
+    "gold_output": {
+      "date": "2025-04-30",
+      "location": "Prague",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Prague on 2025-04-30."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_126",
+    "gold_output": {
+      "date": "2025-07-12",
+      "location": "Athens",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Athens on 2025-07-12."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_127",
+    "gold_output": {
+      "date": "2025-10-03",
+      "location": "Dublin",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Dublin on 2025-10-03."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_128",
+    "gold_output": {
+      "date": "2026-01-08",
+      "location": "Rome",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Rome on 2026-01-08."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_129",
+    "gold_output": {
+      "date": "2026-02-19",
+      "location": "Milan",
+      "person": "Carla Gomez"
+    },
+    "input_data": {
+      "text": "Carla Gomez will speak in Milan on 2026-02-19."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_130",
+    "gold_output": {
+      "date": "2024-01-15",
+      "location": "Berlin",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Berlin on 2024-01-15."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_131",
+    "gold_output": {
+      "date": "2024-03-21",
+      "location": "Madrid",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Madrid on 2024-03-21."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_132",
+    "gold_output": {
+      "date": "2024-06-10",
+      "location": "Lisbon",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Lisbon on 2024-06-10."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_133",
+    "gold_output": {
+      "date": "2024-09-05",
+      "location": "Vienna",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Vienna on 2024-09-05."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_134",
+    "gold_output": {
+      "date": "2025-02-14",
+      "location": "Prague",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Prague on 2025-02-14."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_135",
+    "gold_output": {
+      "date": "2025-04-30",
+      "location": "Athens",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Athens on 2025-04-30."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_136",
+    "gold_output": {
+      "date": "2025-07-12",
+      "location": "Dublin",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Dublin on 2025-07-12."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_137",
+    "gold_output": {
+      "date": "2025-10-03",
+      "location": "Rome",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Rome on 2025-10-03."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_138",
+    "gold_output": {
+      "date": "2026-01-08",
+      "location": "Milan",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Milan on 2026-01-08."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_139",
+    "gold_output": {
+      "date": "2026-02-19",
+      "location": "Paris",
+      "person": "David Lee"
+    },
+    "input_data": {
+      "text": "David Lee will speak in Paris on 2026-02-19."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_140",
+    "gold_output": {
+      "date": "2024-01-15",
+      "location": "Madrid",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Madrid on 2024-01-15."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_141",
+    "gold_output": {
+      "date": "2024-03-21",
+      "location": "Lisbon",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Lisbon on 2024-03-21."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_142",
+    "gold_output": {
+      "date": "2024-06-10",
+      "location": "Vienna",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Vienna on 2024-06-10."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_143",
+    "gold_output": {
+      "date": "2024-09-05",
+      "location": "Prague",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Prague on 2024-09-05."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_144",
+    "gold_output": {
+      "date": "2025-02-14",
+      "location": "Athens",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Athens on 2025-02-14."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_145",
+    "gold_output": {
+      "date": "2025-04-30",
+      "location": "Dublin",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Dublin on 2025-04-30."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_146",
+    "gold_output": {
+      "date": "2025-07-12",
+      "location": "Rome",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Rome on 2025-07-12."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_147",
+    "gold_output": {
+      "date": "2025-10-03",
+      "location": "Milan",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Milan on 2025-10-03."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_148",
+    "gold_output": {
+      "date": "2026-01-08",
+      "location": "Paris",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Paris on 2026-01-08."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
+  },
+  {
+    "example_id": "ie_149",
+    "gold_output": {
+      "date": "2026-02-19",
+      "location": "Berlin",
+      "person": "Elena Marino"
+    },
+    "input_data": {
+      "text": "Elena Marino will speak in Berlin on 2026-02-19."
+    },
+    "instruction": "Extract the fields person, date, and location from the text.",
+    "metadata": {
+      "schema_keys": [
+        "person",
+        "date",
+        "location"
+      ]
+    },
+    "task_name": "information_extraction",
+    "template_name": "meeting_announcement"
   },
   {
     "example_id": "mlc_050",
@@ -2129,1056 +3029,6 @@
     "template_name": "institutional_announcement"
   },
   {
-    "example_id": "ie_100",
-    "gold_output": {
-      "date": "2024-01-15",
-      "location": "Rome",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Rome on 2024-01-15."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_101",
-    "gold_output": {
-      "date": "2024-03-21",
-      "location": "Milan",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Milan on 2024-03-21."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_102",
-    "gold_output": {
-      "date": "2024-06-10",
-      "location": "Paris",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Paris on 2024-06-10."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_103",
-    "gold_output": {
-      "date": "2024-09-05",
-      "location": "Berlin",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Berlin on 2024-09-05."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_104",
-    "gold_output": {
-      "date": "2025-02-14",
-      "location": "Madrid",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Madrid on 2025-02-14."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_105",
-    "gold_output": {
-      "date": "2025-04-30",
-      "location": "Lisbon",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Lisbon on 2025-04-30."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_106",
-    "gold_output": {
-      "date": "2025-07-12",
-      "location": "Vienna",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Vienna on 2025-07-12."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_107",
-    "gold_output": {
-      "date": "2025-10-03",
-      "location": "Prague",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Prague on 2025-10-03."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_108",
-    "gold_output": {
-      "date": "2026-01-08",
-      "location": "Athens",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Athens on 2026-01-08."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_109",
-    "gold_output": {
-      "date": "2026-02-19",
-      "location": "Dublin",
-      "person": "Alice Smith"
-    },
-    "input_data": {
-      "text": "Alice Smith will speak in Dublin on 2026-02-19."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_110",
-    "gold_output": {
-      "date": "2024-01-15",
-      "location": "Milan",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Milan on 2024-01-15."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_111",
-    "gold_output": {
-      "date": "2024-03-21",
-      "location": "Paris",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Paris on 2024-03-21."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_112",
-    "gold_output": {
-      "date": "2024-06-10",
-      "location": "Berlin",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Berlin on 2024-06-10."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_113",
-    "gold_output": {
-      "date": "2024-09-05",
-      "location": "Madrid",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Madrid on 2024-09-05."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_114",
-    "gold_output": {
-      "date": "2025-02-14",
-      "location": "Lisbon",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Lisbon on 2025-02-14."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_115",
-    "gold_output": {
-      "date": "2025-04-30",
-      "location": "Vienna",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Vienna on 2025-04-30."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_116",
-    "gold_output": {
-      "date": "2025-07-12",
-      "location": "Prague",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Prague on 2025-07-12."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_117",
-    "gold_output": {
-      "date": "2025-10-03",
-      "location": "Athens",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Athens on 2025-10-03."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_118",
-    "gold_output": {
-      "date": "2026-01-08",
-      "location": "Dublin",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Dublin on 2026-01-08."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_119",
-    "gold_output": {
-      "date": "2026-02-19",
-      "location": "Rome",
-      "person": "Bruno Rossi"
-    },
-    "input_data": {
-      "text": "Bruno Rossi will speak in Rome on 2026-02-19."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_120",
-    "gold_output": {
-      "date": "2024-01-15",
-      "location": "Paris",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Paris on 2024-01-15."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_121",
-    "gold_output": {
-      "date": "2024-03-21",
-      "location": "Berlin",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Berlin on 2024-03-21."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_122",
-    "gold_output": {
-      "date": "2024-06-10",
-      "location": "Madrid",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Madrid on 2024-06-10."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_123",
-    "gold_output": {
-      "date": "2024-09-05",
-      "location": "Lisbon",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Lisbon on 2024-09-05."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_124",
-    "gold_output": {
-      "date": "2025-02-14",
-      "location": "Vienna",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Vienna on 2025-02-14."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_125",
-    "gold_output": {
-      "date": "2025-04-30",
-      "location": "Prague",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Prague on 2025-04-30."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_126",
-    "gold_output": {
-      "date": "2025-07-12",
-      "location": "Athens",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Athens on 2025-07-12."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_127",
-    "gold_output": {
-      "date": "2025-10-03",
-      "location": "Dublin",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Dublin on 2025-10-03."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_128",
-    "gold_output": {
-      "date": "2026-01-08",
-      "location": "Rome",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Rome on 2026-01-08."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_129",
-    "gold_output": {
-      "date": "2026-02-19",
-      "location": "Milan",
-      "person": "Carla Gomez"
-    },
-    "input_data": {
-      "text": "Carla Gomez will speak in Milan on 2026-02-19."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_130",
-    "gold_output": {
-      "date": "2024-01-15",
-      "location": "Berlin",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Berlin on 2024-01-15."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_131",
-    "gold_output": {
-      "date": "2024-03-21",
-      "location": "Madrid",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Madrid on 2024-03-21."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_132",
-    "gold_output": {
-      "date": "2024-06-10",
-      "location": "Lisbon",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Lisbon on 2024-06-10."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_133",
-    "gold_output": {
-      "date": "2024-09-05",
-      "location": "Vienna",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Vienna on 2024-09-05."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_134",
-    "gold_output": {
-      "date": "2025-02-14",
-      "location": "Prague",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Prague on 2025-02-14."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_135",
-    "gold_output": {
-      "date": "2025-04-30",
-      "location": "Athens",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Athens on 2025-04-30."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_136",
-    "gold_output": {
-      "date": "2025-07-12",
-      "location": "Dublin",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Dublin on 2025-07-12."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_137",
-    "gold_output": {
-      "date": "2025-10-03",
-      "location": "Rome",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Rome on 2025-10-03."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_138",
-    "gold_output": {
-      "date": "2026-01-08",
-      "location": "Milan",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Milan on 2026-01-08."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_139",
-    "gold_output": {
-      "date": "2026-02-19",
-      "location": "Paris",
-      "person": "David Lee"
-    },
-    "input_data": {
-      "text": "David Lee will speak in Paris on 2026-02-19."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_140",
-    "gold_output": {
-      "date": "2024-01-15",
-      "location": "Madrid",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Madrid on 2024-01-15."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_141",
-    "gold_output": {
-      "date": "2024-03-21",
-      "location": "Lisbon",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Lisbon on 2024-03-21."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_142",
-    "gold_output": {
-      "date": "2024-06-10",
-      "location": "Vienna",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Vienna on 2024-06-10."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_143",
-    "gold_output": {
-      "date": "2024-09-05",
-      "location": "Prague",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Prague on 2024-09-05."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_144",
-    "gold_output": {
-      "date": "2025-02-14",
-      "location": "Athens",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Athens on 2025-02-14."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_145",
-    "gold_output": {
-      "date": "2025-04-30",
-      "location": "Dublin",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Dublin on 2025-04-30."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_146",
-    "gold_output": {
-      "date": "2025-07-12",
-      "location": "Rome",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Rome on 2025-07-12."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_147",
-    "gold_output": {
-      "date": "2025-10-03",
-      "location": "Milan",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Milan on 2025-10-03."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_148",
-    "gold_output": {
-      "date": "2026-01-08",
-      "location": "Paris",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Paris on 2026-01-08."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
-    "example_id": "ie_149",
-    "gold_output": {
-      "date": "2026-02-19",
-      "location": "Berlin",
-      "person": "Elena Marino"
-    },
-    "input_data": {
-      "text": "Elena Marino will speak in Berlin on 2026-02-19."
-    },
-    "instruction": "Extract the fields person, date, and location from the text.",
-    "metadata": {
-      "schema_keys": [
-        "person",
-        "date",
-        "location"
-      ]
-    },
-    "task_name": "information_extraction",
-    "template_name": "meeting_announcement"
-  },
-  {
     "example_id": "rbt_150",
     "gold_output": {
       "text": "today alice smith visited rome with 3 friends!"
@@ -3929,803 +3779,953 @@
     "template_name": "mixed_case_statement__remove_punctuation"
   },
   {
-    "example_id": "qa_200",
+    "example_id": "slc_000",
     "gold_output": {
-      "answer": "Rome"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Rome on 2024-01-15 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The medical software was excellent and worked smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_201",
+    "example_id": "slc_001",
     "gold_output": {
-      "answer": "Milan"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Milan on 2024-03-21 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The robot vacuum was excellent and worked smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_202",
+    "example_id": "slc_003",
     "gold_output": {
-      "answer": "Paris"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Paris on 2024-06-10 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The fitness watch was excellent and worked smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_203",
+    "example_id": "slc_004",
     "gold_output": {
-      "answer": "Berlin"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Berlin on 2024-09-05 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The solar battery was excellent and worked smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_204",
+    "example_id": "slc_005",
     "gold_output": {
-      "answer": "Madrid"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Madrid on 2025-02-14 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The medical software was great and worked pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_205",
+    "example_id": "slc_006",
     "gold_output": {
-      "answer": "Lisbon"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Lisbon on 2025-04-30 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The robot vacuum was great and worked pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_206",
+    "example_id": "slc_007",
     "gold_output": {
-      "answer": "Vienna"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Vienna on 2025-07-12 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The budget phone was great and worked pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_207",
+    "example_id": "slc_008",
     "gold_output": {
-      "answer": "Prague"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Prague on 2025-10-03 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The fitness watch was great and worked pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_208",
+    "example_id": "slc_009",
     "gold_output": {
-      "answer": "Athens"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Athens on 2026-01-08 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The solar battery was great and worked pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_209",
+    "example_id": "slc_010",
     "gold_output": {
-      "answer": "Dublin"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Alice Smith arrived in Dublin on 2026-02-19 for a training session.",
-      "question": "Where did Alice Smith arrive?"
+      "text": "The medical software was reliable and worked better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_210",
+    "example_id": "slc_011",
     "gold_output": {
-      "answer": "Milan"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Milan on 2024-01-15 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The robot vacuum was reliable and worked better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_211",
+    "example_id": "slc_012",
     "gold_output": {
-      "answer": "Paris"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Paris on 2024-03-21 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The budget phone was reliable and worked better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_212",
+    "example_id": "slc_013",
     "gold_output": {
-      "answer": "Berlin"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Berlin on 2024-06-10 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The fitness watch was reliable and worked better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_213",
+    "example_id": "slc_014",
     "gold_output": {
-      "answer": "Madrid"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Madrid on 2024-09-05 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The solar battery was reliable and worked better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_214",
+    "example_id": "slc_015",
     "gold_output": {
-      "answer": "Lisbon"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Lisbon on 2025-02-14 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The medical software was terrible and worked frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_215",
+    "example_id": "slc_016",
     "gold_output": {
-      "answer": "Vienna"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Vienna on 2025-04-30 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The robot vacuum was terrible and worked frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_216",
+    "example_id": "slc_017",
     "gold_output": {
-      "answer": "Prague"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Prague on 2025-07-12 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The budget phone was terrible and worked frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_217",
+    "example_id": "slc_018",
     "gold_output": {
-      "answer": "Athens"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Athens on 2025-10-03 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The fitness watch was terrible and worked frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_218",
+    "example_id": "slc_019",
     "gold_output": {
-      "answer": "Dublin"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Dublin on 2026-01-08 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The solar battery was terrible and worked frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_219",
+    "example_id": "slc_020",
     "gold_output": {
-      "answer": "Rome"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Bruno Rossi arrived in Rome on 2026-02-19 for a training session.",
-      "question": "Where did Bruno Rossi arrive?"
+      "text": "The medical software was awful and worked worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_220",
+    "example_id": "slc_021",
     "gold_output": {
-      "answer": "Paris"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Paris on 2024-01-15 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The robot vacuum was awful and worked worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_221",
+    "example_id": "slc_022",
     "gold_output": {
-      "answer": "Berlin"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Berlin on 2024-03-21 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The budget phone was awful and worked worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_222",
+    "example_id": "slc_023",
     "gold_output": {
-      "answer": "Madrid"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Madrid on 2024-06-10 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The fitness watch was awful and worked worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_223",
+    "example_id": "slc_024",
     "gold_output": {
-      "answer": "Lisbon"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Lisbon on 2024-09-05 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The solar battery was awful and worked worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_224",
+    "example_id": "slc_025",
     "gold_output": {
-      "answer": "Vienna"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Vienna on 2025-02-14 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The medical software was poor and worked annoying from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_225",
+    "example_id": "slc_026",
     "gold_output": {
-      "answer": "Prague"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Prague on 2025-04-30 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The robot vacuum was poor and worked annoying from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_226",
+    "example_id": "slc_027",
     "gold_output": {
-      "answer": "Athens"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Athens on 2025-07-12 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The budget phone was poor and worked annoying from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_227",
+    "example_id": "slc_028",
     "gold_output": {
-      "answer": "Dublin"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Dublin on 2025-10-03 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The fitness watch was poor and worked annoying from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_228",
+    "example_id": "slc_029",
     "gold_output": {
-      "answer": "Rome"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Rome on 2026-01-08 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The solar battery was poor and worked annoying from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_229",
+    "example_id": "slc_030",
     "gold_output": {
-      "answer": "Milan"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "Carla Gomez arrived in Milan on 2026-02-19 for a training session.",
-      "question": "Where did Carla Gomez arrive?"
+      "text": "The medical software was ordinary and worked acceptable but unremarkable."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_230",
+    "example_id": "slc_031",
     "gold_output": {
-      "answer": "Berlin"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Berlin on 2024-01-15 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The robot vacuum was ordinary and worked acceptable but unremarkable."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_231",
+    "example_id": "slc_032",
     "gold_output": {
-      "answer": "Madrid"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Madrid on 2024-03-21 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The budget phone was ordinary and worked acceptable but unremarkable."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_232",
+    "example_id": "slc_033",
     "gold_output": {
-      "answer": "Lisbon"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Lisbon on 2024-06-10 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The fitness watch was ordinary and worked acceptable but unremarkable."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_233",
+    "example_id": "slc_034",
     "gold_output": {
-      "answer": "Vienna"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Vienna on 2024-09-05 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The solar battery was ordinary and worked acceptable but unremarkable."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_234",
+    "example_id": "slc_035",
     "gold_output": {
-      "answer": "Prague"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Prague on 2025-02-14 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The medical software was fine and worked neither good nor bad."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_235",
+    "example_id": "slc_036",
     "gold_output": {
-      "answer": "Athens"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Athens on 2025-04-30 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The robot vacuum was fine and worked neither good nor bad."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_236",
+    "example_id": "slc_037",
     "gold_output": {
-      "answer": "Dublin"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Dublin on 2025-07-12 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The budget phone was fine and worked neither good nor bad."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_237",
+    "example_id": "slc_038",
     "gold_output": {
-      "answer": "Rome"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Rome on 2025-10-03 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The fitness watch was fine and worked neither good nor bad."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_238",
+    "example_id": "slc_039",
     "gold_output": {
-      "answer": "Milan"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Milan on 2026-01-08 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The solar battery was fine and worked neither good nor bad."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_239",
+    "example_id": "slc_040",
     "gold_output": {
-      "answer": "Paris"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "David Lee arrived in Paris on 2026-02-19 for a training session.",
-      "question": "Where did David Lee arrive?"
+      "text": "The medical software was average and worked mostly standard."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_240",
+    "example_id": "slc_041",
     "gold_output": {
-      "answer": "Madrid"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Madrid on 2024-01-15 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The robot vacuum was average and worked mostly standard."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_241",
+    "example_id": "slc_042",
     "gold_output": {
-      "answer": "Lisbon"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Lisbon on 2024-03-21 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The budget phone was average and worked mostly standard."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_242",
+    "example_id": "slc_043",
     "gold_output": {
-      "answer": "Vienna"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Vienna on 2024-06-10 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The fitness watch was average and worked mostly standard."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_243",
+    "example_id": "slc_044",
     "gold_output": {
-      "answer": "Prague"
+      "label": "neutral"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Prague on 2024-09-05 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The solar battery was average and worked mostly standard."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   },
   {
-    "example_id": "qa_244",
+    "example_id": "slc_045",
     "gold_output": {
-      "answer": "Athens"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Athens on 2025-02-14 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The staff at the store were excellent and the service was smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback"
   },
   {
-    "example_id": "qa_245",
+    "example_id": "slc_046",
     "gold_output": {
-      "answer": "Dublin"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Dublin on 2025-04-30 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The staff at the store were great and the service was pleasant from start to finish."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback"
   },
   {
-    "example_id": "qa_246",
+    "example_id": "slc_047",
     "gold_output": {
-      "answer": "Rome"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Rome on 2025-07-12 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The staff at the store were reliable and the service was better than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback"
   },
   {
-    "example_id": "qa_247",
+    "example_id": "slc_048",
     "gold_output": {
-      "answer": "Milan"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Milan on 2025-10-03 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The staff at the store were terrible and the service was frustrating and disappointing."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback"
   },
   {
-    "example_id": "qa_248",
+    "example_id": "slc_049",
     "gold_output": {
-      "answer": "Paris"
+      "label": "negative"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Paris on 2026-01-08 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The staff at the store were awful and the service was worse than expected."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "service_feedback"
   },
   {
-    "example_id": "qa_249",
+    "example_id": "slc_002",
     "gold_output": {
-      "answer": "Berlin"
+      "label": "positive"
     },
     "input_data": {
-      "passage": "Elena Marino arrived in Berlin on 2026-02-19 for a training session.",
-      "question": "Where did Elena Marino arrive?"
+      "text": "The budget phone was excellent and worked smooth and satisfying."
     },
-    "instruction": "Answer the question using an exact span from the passage.",
+    "instruction": "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
     "metadata": {
-      "answer_field": "location"
+      "label_set": [
+        "positive",
+        "negative",
+        "neutral"
+      ]
     },
-    "task_name": "extractive_qa",
-    "template_name": "schedule_passage"
+    "task_name": "single_label_classification",
+    "template_name": "product_review"
   }
 ]
