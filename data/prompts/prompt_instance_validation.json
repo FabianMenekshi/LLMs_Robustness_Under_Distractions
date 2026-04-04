@@ -1,0 +1,32 @@
+{
+  "clean_count": 500,
+  "counts_by_distraction_type": {
+    "clean": 500,
+    "conflicting_instruction": 500,
+    "instruction_in_the_middle": 500,
+    "irrelevant_prefix": 500,
+    "irrelevant_suffix": 500,
+    "length_stress": 500,
+    "negation_distraction": 500,
+    "style_distraction": 500
+  },
+  "counts_by_regime": {
+    "bounded": 2000,
+    "unbounded": 2000
+  },
+  "counts_by_task": {
+    "extractive_qa": 800,
+    "information_extraction": 800,
+    "multi_label_classification": 800,
+    "rule_based_transformation": 800,
+    "single_label_classification": 800
+  },
+  "dataset_level_issues": [],
+  "distracted_count": 3500,
+  "is_valid": true,
+  "issue_counts": {},
+  "num_records_with_issues": 0,
+  "record_issues": {},
+  "total_prompt_instances": 4000,
+  "unique_base_example_ids": 250
+}
