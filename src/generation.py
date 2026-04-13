@@ -16,6 +16,10 @@ from src.templates import (
     dates,
     products,
     companies,
+    other_locations,
+    other_people,
+    other_companies,
+    other_dates,
     single_label_templates,
     single_label_value_map,
     multi_label_templates,
@@ -32,36 +36,72 @@ random.seed(42)
 
 TARGET_CANDIDATES_PER_TASK = 50
 
-# Sample one phrase associated with a topic label.
-def sample_topic_phrase(label: str) -> str: 
+
+def _choose_instruction(instruction_pool: List[str], index: int) -> str:
+    """
+    Deterministically choose one instruction paraphrase from a pool.
+    """
+    if not instruction_pool:
+        raise ValueError("instruction_pool must not be empty")
+    return instruction_pool[index % len(instruction_pool)]
+
+
+def sample_topic_phrase(label: str) -> str:
     return random.choice(topic_pool[label])
 
-# Generate candidate examples for single-label classification.
+
+def _get_single_label_instruction(template: Dict[str, Any], index: int) -> str:
+    return _choose_instruction(template["instruction_pool"], index)
+
+
+def _get_multi_label_instruction(template: Dict[str, Any], index: int) -> str:
+    return _choose_instruction(template["instruction_pool"], index)
+
+
+def _get_ie_instruction(template: Dict[str, Any], index: int) -> str:
+    return _choose_instruction(template["instruction_pool"], index)
+
+
+def _get_rule_instruction(rule_name: str, index: int) -> str:
+    pool = rule_instructions[rule_name]
+    return _choose_instruction(pool, index)
+
+
+def _get_qa_instruction(template: Dict[str, Any], index: int) -> str:
+    return _choose_instruction(template["instruction_pool"], index)
+
+
 def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
 
-    for template in single_label_templates:
+    for template_idx, template in enumerate(single_label_templates):
         uses_product = "{product}" in template["pattern"]
 
-        for label, value_options in single_label_value_map.items():
-            for values in value_options:
+        for label_idx, (label, value_options) in enumerate(single_label_value_map.items()):
+            for value_idx, values in enumerate(value_options):
                 if uses_product:
-                    for product in products:
+                    for product_idx, product in enumerate(products):
                         text = template["pattern"].format(
                             product=product,
-                            adjective=values["adjective"],
-                            ending=values["ending"]
+                            descriptor_1=values["descriptor_1"],
+                            descriptor_2=values["descriptor_2"],
+                            descriptor_3=values["descriptor_3"],
+                        )
+
+                        instruction = _get_single_label_instruction(
+                            template,
+                            template_idx + label_idx + value_idx + product_idx,
                         )
 
                         candidate = CandidateExample(
                             example_id=f"slc_{counter:03d}",
                             task_name="single_label_classification",
                             template_name=template["template_name"],
-                            instruction=template["instruction"],
+                            instruction=instruction,
                             input_data={"text": text},
                             gold_output={"label": label},
-                            metadata={"label_set": SINGLE_LABEL_SET}
+                            metadata={"label_set": SINGLE_LABEL_SET},
                         )
 
                         candidates.append(candidate)
@@ -71,18 +111,24 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
                             return candidates
                 else:
                     text = template["pattern"].format(
-                        adjective=values["adjective"],
-                        ending=values["ending"]
+                        descriptor_1=values["descriptor_1"],
+                        descriptor_2=values["descriptor_2"],
+                        descriptor_3=values["descriptor_3"],
+                    )
+
+                    instruction = _get_single_label_instruction(
+                        template,
+                        template_idx + label_idx + value_idx,
                     )
 
                     candidate = CandidateExample(
                         example_id=f"slc_{counter:03d}",
                         task_name="single_label_classification",
                         template_name=template["template_name"],
-                        instruction=template["instruction"],
+                        instruction=instruction,
                         input_data={"text": text},
                         gold_output={"label": label},
-                        metadata={"label_set": SINGLE_LABEL_SET}
+                        metadata={"label_set": SINGLE_LABEL_SET},
                     )
 
                     candidates.append(candidate)
@@ -93,13 +139,20 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
 
     return candidates
 
-# Generate candidate examples for multi-label classification.
+
 def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
     seen_texts = set()
 
-    actors = ["government", "committee", "startup", "university", "city council"]
+    actors = [
+        "government",
+        "committee",
+        "startup",
+        "university",
+        "city council",
+        "public agency",
+    ]
 
     for actor_idx, actor in enumerate(actors):
         for template_idx, template in enumerate(multi_label_templates):
@@ -111,14 +164,16 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
                 else:
                     secondary_label = combo[0]
 
-                secondary_item = topic_pool[secondary_label][(combo_idx + actor_idx + template_idx) % len(topic_pool[secondary_label])]
+                secondary_item = topic_pool[secondary_label][
+                    (combo_idx + actor_idx + template_idx) % len(topic_pool[secondary_label])
+                ]
                 company = companies[(combo_idx + template_idx + actor_idx) % len(companies)]
 
                 text = template["pattern"].format(
                     actor=actor,
                     company=company,
                     topic_item=topic_item,
-                    secondary_item=secondary_item
+                    secondary_item=secondary_item,
                 )
 
                 if text in seen_texts:
@@ -126,14 +181,19 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
 
                 seen_texts.add(text)
 
+                instruction = _get_multi_label_instruction(
+                    template,
+                    actor_idx + template_idx + combo_idx,
+                )
+
                 candidate = CandidateExample(
                     example_id=f"mlc_{counter:03d}",
                     task_name="multi_label_classification",
                     template_name=template["template_name"],
-                    instruction=template["instruction"],
+                    instruction=instruction,
                     input_data={"text": text},
                     gold_output={"labels": sorted(combo)},
-                    metadata={"label_set": MULTI_LABEL_SET}
+                    metadata={"label_set": MULTI_LABEL_SET},
                 )
 
                 candidates.append(candidate)
@@ -144,7 +204,7 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
 
     return candidates
 
-# Generate candidate examples for information extraction.
+
 def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
@@ -154,11 +214,15 @@ def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
         for person_idx, person in enumerate(people):
             for date_idx, date in enumerate(dates):
                 location = locations[(person_idx + date_idx + template_idx) % len(locations)]
+                other_date = other_dates[(person_idx + template_idx + date_idx) % len(other_dates)]
+                other_location = other_locations[(template_idx + date_idx + person_idx) % len(other_locations)]
 
                 text = template["pattern"].format(
                     person=person,
                     date=date,
-                    location=location
+                    location=location,
+                    other_date=other_date,
+                    other_location=other_location,
                 )
 
                 if text in seen_texts:
@@ -166,18 +230,23 @@ def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
 
                 seen_texts.add(text)
 
+                instruction = _get_ie_instruction(
+                    template,
+                    template_idx + person_idx + date_idx,
+                )
+
                 candidate = CandidateExample(
                     example_id=f"ie_{counter:03d}",
                     task_name="information_extraction",
                     template_name=template["template_name"],
-                    instruction=template["instruction"],
+                    instruction=instruction,
                     input_data={"text": text},
                     gold_output={
                         "person": person,
                         "date": date,
-                        "location": location
+                        "location": location,
                     },
-                    metadata={"schema_keys": IE_SCHEMA_KEYS}
+                    metadata={"schema_keys": IE_SCHEMA_KEYS},
                 )
 
                 candidates.append(candidate)
@@ -188,7 +257,7 @@ def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
 
     return candidates
 
-# Apply a deterministic transformation rule to text.
+
 def apply_rule(text: str, rule_name: str) -> str:
     if rule_name == "lowercase":
         return text.lower()
@@ -209,32 +278,25 @@ def apply_rule(text: str, rule_name: str) -> str:
 
     raise ValueError(f"Unknown rule: {rule_name}")
 
-# Generate candidate examples for rule-based transformation.
+
 def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
     seen_inputs = set()
 
-    # We need enough unique visible input texts to reach 50 examples.
-    # So we create a larger pool of numeric pairs and rotate people/locations.
     number_pairs = [
         (3, 12), (7, 25), (10, 42), (15, 99), (21, 5),
-        (8, 14), (11, 37), (19, 44), (23, 61), (30, 2)
+        (8, 14), (11, 37), (19, 44), (23, 61), (30, 2),
     ]
 
-    # Use only the first three templates because they contain slots and can
-    # generate many distinct visible inputs.
-    usable_templates = transformation_input_templates[:3]
-
-    # Cycle through rules while generating new visible inputs.
     rule_cycle = [
         "lowercase",
         "remove_punctuation",
         "replace_numbers_with_NUM",
-        "remove_words_longer_than_6"
+        "remove_words_longer_than_6",
     ]
 
-    for template_idx, template in enumerate(usable_templates):
+    for template_idx, template in enumerate(transformation_input_templates):
         for pair_idx, (n, n2) in enumerate(number_pairs):
             for person_idx, person in enumerate(people):
                 location = locations[(template_idx + pair_idx + person_idx) % len(locations)]
@@ -244,7 +306,7 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
                     person=person,
                     location=location,
                     n=n,
-                    n2=n2
+                    n2=n2,
                 )
 
                 if text in seen_inputs:
@@ -253,14 +315,19 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
                 seen_inputs.add(text)
                 gold_text = apply_rule(text, rule_name)
 
+                instruction = _get_rule_instruction(
+                    rule_name,
+                    template_idx + pair_idx + person_idx,
+                )
+
                 candidate = CandidateExample(
                     example_id=f"rbt_{counter:03d}",
                     task_name="rule_based_transformation",
                     template_name=f"{template['template_name']}__{rule_name}",
-                    instruction=rule_instructions[rule_name],
+                    instruction=instruction,
                     input_data={"text": text},
                     gold_output={"text": gold_text},
-                    metadata={"rule_name": rule_name}
+                    metadata={"rule_name": rule_name},
                 )
 
                 candidates.append(candidate)
@@ -271,34 +338,72 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
 
     return candidates
 
-# Generate candidate examples for extractive QA.
+
+def _build_qa_context(
+    template: Dict[str, Any],
+    template_idx: int,
+    person_idx: int,
+    date_idx: int,
+) -> Dict[str, str]:
+    """
+    Build a full formatting context for richer QA templates.
+    """
+    person = people[person_idx % len(people)]
+    location = locations[(person_idx + date_idx + template_idx) % len(locations)]
+    date = dates[date_idx % len(dates)]
+    company = companies[(person_idx + template_idx) % len(companies)]
+    product = products[(date_idx + template_idx) % len(products)]
+
+    other_location = other_locations[(template_idx + person_idx + date_idx) % len(other_locations)]
+    other_person = other_people[(template_idx + person_idx + date_idx) % len(other_people)]
+    other_company = other_companies[(template_idx + person_idx + date_idx) % len(other_companies)]
+    other_date = other_dates[(template_idx + person_idx + date_idx) % len(other_dates)]
+
+    context = {
+        "person": person,
+        "location": location,
+        "date": date,
+        "company": company,
+        "product": product,
+        "other_location": other_location,
+        "other_person": other_person,
+        "other_company": other_company,
+        "other_date": other_date,
+    }
+
+    # Guard against accidental equality between primary and distractor fields
+    if context["other_location"] == context["location"]:
+        context["other_location"] = other_locations[(template_idx + person_idx + date_idx + 1) % len(other_locations)]
+
+    if context["other_person"] == context["person"]:
+        context["other_person"] = other_people[(template_idx + person_idx + date_idx + 1) % len(other_people)]
+
+    if context["other_company"] == context["company"]:
+        context["other_company"] = other_companies[(template_idx + person_idx + date_idx + 1) % len(other_companies)]
+
+    if context["other_date"] == context["date"]:
+        context["other_date"] = other_dates[(template_idx + person_idx + date_idx + 1) % len(other_dates)]
+
+    return context
+
+
 def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
     candidates = []
     counter = start_id
     seen_inputs = set()
 
     for template_idx, template in enumerate(qa_templates):
-        for person_idx, person in enumerate(people):
-            for date_idx, date in enumerate(dates):
-                location = locations[(person_idx + date_idx + template_idx) % len(locations)]
-                company = companies[(person_idx + template_idx) % len(companies)]
-                product = products[(date_idx + template_idx) % len(products)]
-
-                passage = template["passage"].format(
-                    person=person,
-                    location=location,
-                    date=date,
-                    company=company,
-                    product=product
+        for person_idx, _person in enumerate(people):
+            for date_idx, _date in enumerate(dates):
+                context = _build_qa_context(
+                    template=template,
+                    template_idx=template_idx,
+                    person_idx=person_idx,
+                    date_idx=date_idx,
                 )
 
-                question = template["question"].format(
-                    person=person,
-                    location=location,
-                    date=date,
-                    company=company,
-                    product=product
-                )
+                passage = template["passage"].format(**context)
+                question = template["question"].format(**context)
 
                 rendered = f"PASSAGE: {passage}\nQUESTION: {question}"
                 if rendered in seen_inputs:
@@ -307,26 +412,35 @@ def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
                 seen_inputs.add(rendered)
 
                 answer_lookup = {
-                    "person": person,
-                    "location": location,
-                    "date": date,
-                    "company": company,
-                    "product": product,
+                    "person": context["person"],
+                    "location": context["location"],
+                    "date": context["date"],
+                    "company": context["company"],
+                    "product": context["product"],
                 }
 
                 answer = answer_lookup[template["answer_field"]]
+
+                # Keep only cases where the answer is a unique span in the passage.
+                if passage.count(answer) != 1:
+                    continue
+
+                instruction = _get_qa_instruction(
+                    template,
+                    template_idx + person_idx + date_idx,
+                )
 
                 candidate = CandidateExample(
                     example_id=f"qa_{counter:03d}",
                     task_name="extractive_qa",
                     template_name=template["template_name"],
-                    instruction=template["instruction"],
+                    instruction=instruction,
                     input_data={
                         "passage": passage,
-                        "question": question
+                        "question": question,
                     },
                     gold_output={"answer": answer},
-                    metadata={"answer_field": template["answer_field"]}
+                    metadata={"answer_field": template["answer_field"]},
                 )
 
                 candidates.append(candidate)
@@ -337,7 +451,7 @@ def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
 
     return candidates
 
-# Generate all candidate examples across all five tasks.
+
 def generate_all_candidates() -> List[CandidateExample]:
     all_candidates = []
 
@@ -358,7 +472,7 @@ def generate_all_candidates() -> List[CandidateExample]:
 
     return all_candidates
 
-# Convert structured input into a compact review string.
+
 def render_input_for_review(example: CandidateExample) -> str:
     if example.task_name == "extractive_qa":
         return (
@@ -368,7 +482,7 @@ def render_input_for_review(example: CandidateExample) -> str:
 
     return example.input_data["text"]
 
-# Flatten a candidate example into a review-friendly dictionary.
+
 def candidate_to_review_row(example: CandidateExample) -> Dict[str, Any]:
     return {
         "example_id": example.example_id,
@@ -381,20 +495,19 @@ def candidate_to_review_row(example: CandidateExample) -> Dict[str, Any]:
         "review_note": example.review_note,
     }
 
-# Count non-overlapping occurrences of a substring in text.
+
 def count_substring_occurrences(text: str, substring: str) -> int:
     return text.count(substring)
 
-# Automatically flag potentially problematic examples. Note that these are warning flags only. They do not automatically reject examples.
-def auto_flag_candidate(example: CandidateExample) -> List[str]:
 
+def auto_flag_candidate(example: CandidateExample) -> List[str]:
     issues = []
     rendered = render_input_for_review(example)
 
     if len(rendered) < 20:
         issues.append("input_too_short")
 
-    if len(rendered) > 300:
+    if len(rendered) > 600:
         issues.append("input_too_long")
 
     if example.task_name == "extractive_qa":
@@ -410,9 +523,8 @@ def auto_flag_candidate(example: CandidateExample) -> List[str]:
 
     return issues
 
-# Find exact duplicate rendered inputs across candidate examples.
+
 def find_exact_duplicate_inputs(candidates: List[CandidateExample]) -> Dict[str, List[str]]:
- 
     seen: Dict[str, List[str]] = {}
 
     for example in candidates:
@@ -427,14 +539,13 @@ def find_exact_duplicate_inputs(candidates: List[CandidateExample]) -> Dict[str,
 
     return duplicates
 
-# Update the manual review status of one example.
+
 def set_review_status(
     candidates: List[CandidateExample],
     example_id: str,
     status: str,
     note: str = ""
 ) -> None:
-
     valid_statuses = {"pending", "approved", "rejected"}
     if status not in valid_statuses:
         raise ValueError(f"Invalid status: {status}")
@@ -447,20 +558,18 @@ def set_review_status(
 
     raise ValueError(f"Example id not found: {example_id}")
 
-# Return all examples with a given review status
+
 def get_examples_by_status(
     candidates: List[CandidateExample],
     status: str
 ) -> List[CandidateExample]:
-
     return [example for example in candidates if example.review_status == status]
 
-# Select final approved base examples.
+
 def select_final_base_examples(
     candidates: List[CandidateExample],
     n_per_task: int = 50
 ) -> List[CandidateExample]:
-
     selected = []
     task_names = sorted({example.task_name for example in candidates})
 
@@ -478,11 +587,11 @@ def select_final_base_examples(
 
     return selected
 
+
 def select_base_examples_exact(
     candidates: List[CandidateExample],
     n_per_task: int = 50
 ) -> List[CandidateExample]:
-
     selected = []
     task_names = sorted({example.task_name for example in candidates})
 
@@ -534,18 +643,18 @@ def select_base_examples_exact(
 
     return selected
 
-# Convert a CandidateExample into a JSON-serializable dictionary.
+
 def example_to_dict(example: CandidateExample) -> Dict[str, Any]:
     return asdict(example)
 
-# Save candidate examples to a JSONL file.
+
 def save_candidates_to_jsonl(candidates: List[CandidateExample], output_path: str) -> None:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         for example in candidates:
             f.write(json.dumps(example_to_dict(example), ensure_ascii=False) + "\n")
 
-# Load candidate examples from a JSONL file.
+
 def load_candidates_from_jsonl(input_path: str) -> List[CandidateExample]:
     candidates = []
 
@@ -572,7 +681,7 @@ def load_candidates_from_jsonl(input_path: str) -> List[CandidateExample]:
 
     return candidates
 
-# Helper to inspect per-task counts
+
 def count_examples_by_task(candidates: List[CandidateExample]) -> Dict[str, int]:
     counts = {}
     for example in candidates:
@@ -587,7 +696,6 @@ def count_examples_by_status(candidates: List[CandidateExample]) -> Dict[str, in
     return counts
 
 
-# Task-and-status summary helper
 def count_by_task_and_status(candidates: List[CandidateExample]) -> Dict[str, Dict[str, int]]:
     summary = {}
     for example in candidates:
