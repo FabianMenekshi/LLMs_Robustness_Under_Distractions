@@ -8,22 +8,44 @@
   },
   "instructions_by_task": {
     "extractive_qa": [
-      "Answer the question using an exact span from the passage."
+      "Answer the question using an exact span from the passage.",
+      "Answer with the precise text appearing in the passage.",
+      "Copy the answer directly from the passage.",
+      "Extract the answer directly from the passage without paraphrasing.",
+      "Return only the exact answer span from the passage.",
+      "Return the exact words from the passage that answer the question.",
+      "Use a verbatim span from the passage.",
+      "Use the passage wording exactly for the answer."
     ],
     "information_extraction": [
-      "Extract the fields person, date, and location from the text."
+      "Extract person, date, and location and return them as structured fields.",
+      "Extract the fields person, date, and location from the text.",
+      "Find the person, date, and location mentioned in the text.",
+      "Identify and output person, date, and location from the text.",
+      "Return the person, date, and location fields from the text.",
+      "Return the values for person, date, and location from the text."
     ],
     "multi_label_classification": [
-      "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically."
+      "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.",
+      "Assign the applicable topic labels using only {finance, health, politics, sports, tech}. Sort the labels alphabetically.",
+      "Choose all labels that apply from {finance, health, politics, sports, tech}. Return them in alphabetical order.",
+      "Label the text with every applicable topic from {finance, health, politics, sports, tech}. Output the labels alphabetically.",
+      "Return all matching topic labels from the allowed set {finance, health, politics, sports, tech}, in alphabetical order.",
+      "Return every relevant topic label from {finance, health, politics, sports, tech}, sorted alphabetically."
     ],
     "rule_based_transformation": [
       "Convert the text to lowercase.",
-      "Remove all punctuation from the text.",
-      "Remove all words longer than 6 characters from the text.",
-      "Replace every number in the text with <NUM>."
+      "Drop all words with more than 6 characters.",
+      "Return the text with all numbers replaced by <NUM>.",
+      "Return the text with punctuation removed."
     ],
     "single_label_classification": [
-      "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}."
+      "Assign a single sentiment label from the allowed set {positive, negative, neutral}.",
+      "Choose one sentiment label only from {positive, negative, neutral}.",
+      "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.",
+      "Label the text with exactly one of {positive, negative, neutral}.",
+      "Return exactly one sentiment label from {positive, negative, neutral}.",
+      "Return one sentiment label only: {positive, negative, neutral}."
     ]
   },
   "total_records": 250
