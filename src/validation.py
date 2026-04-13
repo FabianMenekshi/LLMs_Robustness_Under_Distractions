@@ -13,7 +13,7 @@ EXPECTED_TASK_NAMES = {
     "extractive_qa",
 }
 
-# Check that the final base record contains all required top-level fields.
+
 def validate_required_top_level_fields(record: Dict[str, Any]) -> List[str]:
     required_fields = {
         "example_id",
@@ -30,9 +30,9 @@ def validate_required_top_level_fields(record: Dict[str, Any]) -> List[str]:
     extra = set(record.keys()) - required_fields
 
     if missing:
-        issues.append(f"missing_top_level_fields: {sorted(missing)}")
+        issues.append(f"missing_top_level_fields:{sorted(missing)}")
     if extra:
-        issues.append(f"unexpected_top_level_fields: {sorted(extra)}")
+        issues.append(f"unexpected_top_level_fields:{sorted(extra)}")
 
     return issues
 
@@ -41,7 +41,7 @@ def validate_task_name(record: Dict[str, Any]) -> List[str]:
     issues = []
     task_name = record.get("task_name")
     if task_name not in EXPECTED_TASK_NAMES:
-        issues.append(f"invalid_task_name: {task_name}")
+        issues.append(f"invalid_task_name:{task_name}")
     return issues
 
 
@@ -58,7 +58,7 @@ def validate_single_label_record(record: Dict[str, Any]) -> List[str]:
         issues.append("single_label_missing_text_input")
 
     if "label" in gold and gold["label"] not in SINGLE_LABEL_SET:
-        issues.append(f"single_label_invalid_label: {gold['label']}")
+        issues.append(f"single_label_invalid_label:{gold['label']}")
 
     return issues
 
@@ -85,7 +85,7 @@ def validate_multi_label_record(record: Dict[str, Any]) -> List[str]:
 
     if any(label not in MULTI_LABEL_SET for label in labels):
         invalid = [label for label in labels if label not in MULTI_LABEL_SET]
-        issues.append(f"multi_label_invalid_labels: {invalid}")
+        issues.append(f"multi_label_invalid_labels:{invalid}")
 
     if len(labels) != len(set(labels)):
         issues.append("multi_label_duplicate_labels")
@@ -130,7 +130,7 @@ def validate_rule_based_transformation_record(record: Dict[str, Any]) -> List[st
 
     rule_name = metadata.get("rule_name")
     if rule_name not in RULE_SET:
-        issues.append(f"transformation_invalid_rule_name: {rule_name}")
+        issues.append(f"transformation_invalid_rule_name:{rule_name}")
         return issues
 
     source_text = input_data.get("text", "")
@@ -172,7 +172,7 @@ def validate_extractive_qa_record(record: Dict[str, Any]) -> List[str]:
 
     return issues
 
-#  Run all relevant validations for one record.
+
 def validate_record(record: Dict[str, Any]) -> List[str]:
     issues = []
     issues.extend(validate_required_top_level_fields(record))
@@ -193,16 +193,16 @@ def validate_record(record: Dict[str, Any]) -> List[str]:
 
     return issues
 
-# Check that all example IDs are unique.
+
 def validate_unique_ids(records: List[Dict[str, Any]]) -> List[str]:
     ids = [record["example_id"] for record in records]
     duplicates = [item for item, count in Counter(ids).items() if count > 1]
 
     if duplicates:
-        return [f"duplicate_example_ids: {duplicates}"]
+        return [f"duplicate_example_ids:{duplicates}"]
     return []
 
-# Check that each task has exactly expected_per_task records.
+
 def validate_task_counts(records: List[Dict[str, Any]], expected_per_task: int = 50) -> List[str]:
     counts = Counter(record["task_name"] for record in records)
     issues = []
@@ -216,64 +216,6 @@ def validate_task_counts(records: List[Dict[str, Any]], expected_per_task: int =
 
     return issues
 
-# Check whether instructions are standardized within each task family.
-def validate_instruction_consistency(records: List[Dict[str, Any]]) -> List[str]:
-    issues = []
-    instructions_by_task: Dict[str, set] = {}
-
-    for record in records:
-        instructions_by_task.setdefault(record["task_name"], set()).add(record["instruction"])
-
-    for task_name, instructions in instructions_by_task.items():
-        if len(instructions) > 1:
-            issues.append(
-                f"instruction_inconsistency:{task_name}:num_unique_instructions={len(instructions)}"
-            )
-
-    return issues
-
-# Full validation for the clean base dataset.
-def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -> Dict[str, Any]:
-    record_issues: Dict[str, List[str]] = {}
-    all_issue_counts = Counter()
-
-    for record in records:
-        issues = validate_record(record)
-        if issues:
-            record_issues[record["example_id"]] = issues
-            for issue in issues:
-                all_issue_counts[issue] += 1
-
-    dataset_level_issues = []
-    dataset_level_issues.extend(validate_unique_ids(records))
-    dataset_level_issues.extend(validate_task_counts(records, expected_per_task=50))
-    dataset_level_issues.extend(validate_instruction_consistency(records))
-    dataset_level_issues.extend(validate_no_exact_duplicate_inputs(records))
-
-    if len(records) != expected_total:
-        dataset_level_issues.append(
-            f"total_record_count_mismatch:expected={expected_total}:observed={len(records)}"
-        )
-
-    for issue in dataset_level_issues:
-        all_issue_counts[issue] += 1
-
-    fatal_dataset_level_issues = [
-    issue for issue in dataset_level_issues
-    if not issue.startswith("instruction_inconsistency:")
-    ]
-
-    is_valid = (len(record_issues) == 0) and (len(fatal_dataset_level_issues) == 0)
-    
-    return {
-    "is_valid": is_valid,
-    "total_records": len(records),
-    "num_records_with_issues": len(record_issues),
-    "record_issues": record_issues,
-    "dataset_level_issues": dataset_level_issues,
-    "fatal_dataset_level_issues": fatal_dataset_level_issues,
-    "issue_counts": dict(all_issue_counts),
-    }
 
 def validate_no_exact_duplicate_inputs(records: List[Dict[str, Any]]) -> List[str]:
     seen = {}
@@ -298,5 +240,92 @@ def validate_no_exact_duplicate_inputs(records: List[Dict[str, Any]]) -> List[st
             seen[key] = record["example_id"]
 
     if duplicates:
-        return [f"duplicate_rendered_inputs: {duplicates}"]
+        return [f"duplicate_rendered_inputs:{duplicates}"]
     return []
+
+
+def summarize_instruction_diversity(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+    instructions_by_task: Dict[str, set] = {}
+
+    for record in records:
+        instructions_by_task.setdefault(record["task_name"], set()).add(record["instruction"])
+
+    return {
+        task_name: {
+            "num_unique_instructions": len(instructions),
+            "instructions": sorted(instructions),
+        }
+        for task_name, instructions in instructions_by_task.items()
+    }
+
+
+def validate_minimum_instruction_diversity(
+    records: List[Dict[str, Any]],
+    min_unique_per_task: int = 4,
+) -> List[str]:
+    issues = []
+    instructions_by_task: Dict[str, set] = {}
+
+    for record in records:
+        instructions_by_task.setdefault(record["task_name"], set()).add(record["instruction"])
+
+    for task_name in EXPECTED_TASK_NAMES:
+        observed = len(instructions_by_task.get(task_name, set()))
+        if observed < min_unique_per_task:
+            issues.append(
+                f"instruction_diversity_too_low:{task_name}:minimum={min_unique_per_task}:observed={observed}"
+            )
+
+    return issues
+
+
+def validate_instruction_non_empty(records: List[Dict[str, Any]]) -> List[str]:
+    issues = []
+
+    for record in records:
+        instruction = record.get("instruction")
+        if not isinstance(instruction, str) or not instruction.strip():
+            issues.append(f"empty_instruction:{record.get('example_id', '<missing_id>')}")
+
+    return issues
+
+
+def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -> Dict[str, Any]:
+    record_issues: Dict[str, List[str]] = {}
+    all_issue_counts = Counter()
+
+    for record in records:
+        issues = validate_record(record)
+        if issues:
+            record_issues[record["example_id"]] = issues
+            for issue in issues:
+                all_issue_counts[issue] += 1
+
+    dataset_level_issues = []
+    dataset_level_issues.extend(validate_unique_ids(records))
+    dataset_level_issues.extend(validate_task_counts(records, expected_per_task=50))
+    dataset_level_issues.extend(validate_no_exact_duplicate_inputs(records))
+    dataset_level_issues.extend(validate_instruction_non_empty(records))
+    dataset_level_issues.extend(
+        validate_minimum_instruction_diversity(records, min_unique_per_task=4)
+    )
+
+    if len(records) != expected_total:
+        dataset_level_issues.append(
+            f"total_record_count_mismatch:expected={expected_total}:observed={len(records)}"
+        )
+
+    for issue in dataset_level_issues:
+        all_issue_counts[issue] += 1
+
+    is_valid = (len(record_issues) == 0) and (len(dataset_level_issues) == 0)
+
+    return {
+        "is_valid": is_valid,
+        "total_records": len(records),
+        "num_records_with_issues": len(record_issues),
+        "record_issues": record_issues,
+        "dataset_level_issues": dataset_level_issues,
+        "issue_counts": dict(all_issue_counts),
+        "instruction_diversity_summary": summarize_instruction_diversity(records),
+    }
