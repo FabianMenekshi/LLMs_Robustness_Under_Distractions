@@ -49,6 +49,35 @@ def _stable_index(*parts: Any) -> int:
     return sum(ord(ch) for ch in joined)
 
 
+def build_balanced_variant_lookup(
+    records: List[Dict[str, Any]],
+    regimes: Optional[List[str]] = None,
+    distraction_names: Optional[List[str]] = None,
+) -> Dict[tuple, int]:
+    """
+    Precompute balanced variant indices for prompt previews/building so that the
+    preview logic follows the same allocation philosophy as prompt_instance_generation.py.
+
+    Returns a mapping:
+        (example_id, regime, distraction_name) -> variant_index
+    """
+    active_regimes = regimes or ["bounded", "unbounded"]
+    active_distractions = distraction_names or ["clean", *list(DISTRACTION_TEMPLATES.keys())]
+
+    ordered_records = sorted(records, key=lambda r: (r["task_name"], r["example_id"]))
+    counters = defaultdict(int)
+    lookup: Dict[tuple, int] = {}
+
+    for regime in active_regimes:
+        for distraction_name in active_distractions:
+            for record in ordered_records:
+                key = (record["example_id"], regime, distraction_name)
+                lookup[key] = counters[(regime, distraction_name)]
+                counters[(regime, distraction_name)] += 1
+
+    return lookup
+
+
 def choose_clean_prompt_components(
     record: Dict[str, Any],
     regime: str,
@@ -65,7 +94,7 @@ def choose_clean_prompt_components(
 
     if regime == "bounded":
         opener = choose_bounded_opener(record, base_index)
-        layout = choose_bounded_layout(record, base_index + 1)
+        layout = choose_bounded_layout(record, base_index)
         return {
             "regime": regime,
             "prompt_surface_type": "bounded_tagged",
@@ -446,6 +475,7 @@ def render_distracted_prompt(
         "negation_subtype": negation_block.get("subtype") if negation_block else None,
         "style_id": style_block.get("style_id") if style_block else None,
         "style_family": style_block.get("style_family") if style_block else None,
+        "variant_index": variant_index,
     }
 
 
@@ -479,6 +509,7 @@ def build_clean_prompt_record(
         "opener_text": clean_info.get("opener_text"),
         "layout_id": clean_info.get("layout_id"),
         "layout_name": clean_info.get("layout_name"),
+        "variant_index": variant_index,
     }
 
 
@@ -532,6 +563,7 @@ def build_distracted_prompt_record(
         "negation_subtype": distracted_info.get("negation_subtype"),
         "style_id": distracted_info.get("style_id"),
         "style_family": distracted_info.get("style_family"),
+        "variant_index": distracted_info.get("variant_index"),
     }
 
 
@@ -560,28 +592,39 @@ def build_prompt_previews(
     """
     Build a preview set of clean and distracted prompts for inspection.
 
-    By default, this covers every task family.
+    By default, this covers every task family and uses a balanced variant allocation
+    so preview surfaces/subtypes reflect the actual generation policy more closely.
     """
     previews = []
     subset = select_preview_records_by_task(records, examples_per_task=examples_per_task)
 
-    for i, record in enumerate(subset):
+    preview_variant_lookup = build_balanced_variant_lookup(
+        records=subset,
+        regimes=["bounded", "unbounded"],
+        distraction_names=["clean", *list(DISTRACTION_TEMPLATES.keys())],
+    )
+
+    ordered_subset = sorted(subset, key=lambda r: (r["task_name"], r["example_id"]))
+
+    for record in ordered_subset:
         for regime in ["bounded", "unbounded"]:
+            clean_variant_index = preview_variant_lookup[(record["example_id"], regime, "clean")]
             previews.append(
                 build_clean_prompt_record(
                     record=record,
                     regime=regime,
-                    variant_index=i,
+                    variant_index=clean_variant_index,
                 )
             )
 
             for distraction_name in DISTRACTION_TEMPLATES.keys():
+                variant_index = preview_variant_lookup[(record["example_id"], regime, distraction_name)]
                 previews.append(
                     build_distracted_prompt_record(
                         record=record,
                         regime=regime,
                         distraction_name=distraction_name,
-                        variant_index=i,
+                        variant_index=variant_index,
                     )
                 )
 
