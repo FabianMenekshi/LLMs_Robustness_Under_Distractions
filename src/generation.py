@@ -2,7 +2,7 @@ import json
 import random
 import re
 from dataclasses import asdict
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Callable, Tuple
 import os
 
 from src.templates import (
@@ -71,9 +71,124 @@ def _get_qa_instruction(template: Dict[str, Any], index: int) -> str:
     return _choose_instruction(template["instruction_pool"], index)
 
 
+def _reindex_examples(
+    examples: List[CandidateExample],
+    prefix: str,
+    start_id: int,
+) -> List[CandidateExample]:
+    """
+    Reassign sequential example ids after balancing/subselection so ids remain compact.
+    """
+    for idx, example in enumerate(examples):
+        example.example_id = f"{prefix}_{start_id + idx:03d}"
+    return examples
+
+
+def _stable_group_sort_key(key: Any) -> str:
+    return str(key)
+
+
+def _round_robin_select(
+    items: List[CandidateExample],
+    n: int,
+    key_fn: Callable[[CandidateExample], Any],
+) -> List[CandidateExample]:
+    """
+    Select up to n items in a balanced round-robin way across groups defined by key_fn.
+    Preserves within-group order and reduces front-loading from early template families.
+    """
+    grouped: Dict[Any, List[CandidateExample]] = {}
+    for item in items:
+        key = key_fn(item)
+        grouped.setdefault(key, []).append(item)
+
+    ordered_keys = sorted(grouped.keys(), key=_stable_group_sort_key)
+    positions = {key: 0 for key in ordered_keys}
+
+    selected: List[CandidateExample] = []
+
+    while len(selected) < n:
+        made_progress = False
+
+        for key in ordered_keys:
+            pos = positions[key]
+            bucket = grouped[key]
+
+            if pos < len(bucket):
+                selected.append(bucket[pos])
+                positions[key] += 1
+                made_progress = True
+
+                if len(selected) == n:
+                    break
+
+        if not made_progress:
+            break
+
+    return selected
+
+
+def _round_robin_fill(
+    selected: List[CandidateExample],
+    candidates: List[CandidateExample],
+    target_n: int,
+    key_fn: Callable[[CandidateExample], Any],
+) -> List[CandidateExample]:
+    """
+    Fill an existing list up to target_n with balanced sampling from candidates.
+    Skips already selected example ids.
+    """
+    selected_ids = {example.example_id for example in selected}
+    remaining = [example for example in candidates if example.example_id not in selected_ids]
+
+    needed = max(0, target_n - len(selected))
+    if needed == 0:
+        return selected
+
+    selected.extend(_round_robin_select(remaining, needed, key_fn=key_fn))
+    return selected
+
+
+def _task_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
+    """
+    Grouping key used for balancing final selection within each task.
+    For QA we balance by both template and answer field.
+    For other tasks we balance by template only.
+    """
+    if example.task_name == "extractive_qa":
+        return (
+            example.template_name,
+            example.metadata.get("answer_field"),
+        )
+
+    return (example.template_name,)
+
+
+def _qa_generation_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
+    """
+    Stronger balancing key for QA generation:
+    balance by template, answer field, and instruction string.
+    """
+    return (
+        example.template_name,
+        example.metadata.get("answer_field"),
+        example.instruction,
+    )
+
+
+def _default_generation_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
+    """
+    Default generation balancing key for non-QA tasks.
+    """
+    return (
+        example.template_name,
+        example.instruction,
+    )
+
+
 def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample]:
-    candidates = []
-    counter = start_id
+    pool: List[CandidateExample] = []
+    counter = 0
 
     for template_idx, template in enumerate(single_label_templates):
         uses_product = "{product}" in template["pattern"]
@@ -94,21 +209,18 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
                             template_idx + label_idx + value_idx + product_idx,
                         )
 
-                        candidate = CandidateExample(
-                            example_id=f"slc_{counter:03d}",
-                            task_name="single_label_classification",
-                            template_name=template["template_name"],
-                            instruction=instruction,
-                            input_data={"text": text},
-                            gold_output={"label": label},
-                            metadata={"label_set": SINGLE_LABEL_SET},
+                        pool.append(
+                            CandidateExample(
+                                example_id=f"slc_tmp_{counter:04d}",
+                                task_name="single_label_classification",
+                                template_name=template["template_name"],
+                                instruction=instruction,
+                                input_data={"text": text},
+                                gold_output={"label": label},
+                                metadata={"label_set": SINGLE_LABEL_SET},
+                            )
                         )
-
-                        candidates.append(candidate)
                         counter += 1
-
-                        if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                            return candidates
                 else:
                     text = template["pattern"].format(
                         descriptor_1=values["descriptor_1"],
@@ -121,28 +233,35 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
                         template_idx + label_idx + value_idx,
                     )
 
-                    candidate = CandidateExample(
-                        example_id=f"slc_{counter:03d}",
-                        task_name="single_label_classification",
-                        template_name=template["template_name"],
-                        instruction=instruction,
-                        input_data={"text": text},
-                        gold_output={"label": label},
-                        metadata={"label_set": SINGLE_LABEL_SET},
+                    pool.append(
+                        CandidateExample(
+                            example_id=f"slc_tmp_{counter:04d}",
+                            task_name="single_label_classification",
+                            template_name=template["template_name"],
+                            instruction=instruction,
+                            input_data={"text": text},
+                            gold_output={"label": label},
+                            metadata={"label_set": SINGLE_LABEL_SET},
+                        )
                     )
-
-                    candidates.append(candidate)
                     counter += 1
 
-                    if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                        return candidates
+    selected = _round_robin_select(
+        pool,
+        TARGET_CANDIDATES_PER_TASK,
+        key_fn=lambda ex: (
+            ex.template_name,
+            ex.gold_output["label"],
+            ex.instruction,
+        ),
+    )
 
-    return candidates
+    return _reindex_examples(selected, "slc", start_id)
 
 
 def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]:
-    candidates = []
-    counter = start_id
+    pool: List[CandidateExample] = []
+    counter = 0
     seen_texts = set()
 
     actors = [
@@ -186,28 +305,35 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
                     actor_idx + template_idx + combo_idx,
                 )
 
-                candidate = CandidateExample(
-                    example_id=f"mlc_{counter:03d}",
-                    task_name="multi_label_classification",
-                    template_name=template["template_name"],
-                    instruction=instruction,
-                    input_data={"text": text},
-                    gold_output={"labels": sorted(combo)},
-                    metadata={"label_set": MULTI_LABEL_SET},
+                pool.append(
+                    CandidateExample(
+                        example_id=f"mlc_tmp_{counter:04d}",
+                        task_name="multi_label_classification",
+                        template_name=template["template_name"],
+                        instruction=instruction,
+                        input_data={"text": text},
+                        gold_output={"labels": sorted(combo)},
+                        metadata={"label_set": MULTI_LABEL_SET},
+                    )
                 )
-
-                candidates.append(candidate)
                 counter += 1
 
-                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                    return candidates
+    selected = _round_robin_select(
+        pool,
+        TARGET_CANDIDATES_PER_TASK,
+        key_fn=lambda ex: (
+            ex.template_name,
+            tuple(ex.gold_output["labels"]),
+            ex.instruction,
+        ),
+    )
 
-    return candidates
+    return _reindex_examples(selected, "mlc", start_id)
 
 
 def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
-    candidates = []
-    counter = start_id
+    pool: List[CandidateExample] = []
+    counter = 0
     seen_texts = set()
 
     for template_idx, template in enumerate(ie_templates):
@@ -235,27 +361,30 @@ def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
                     template_idx + person_idx + date_idx,
                 )
 
-                candidate = CandidateExample(
-                    example_id=f"ie_{counter:03d}",
-                    task_name="information_extraction",
-                    template_name=template["template_name"],
-                    instruction=instruction,
-                    input_data={"text": text},
-                    gold_output={
-                        "person": person,
-                        "date": date,
-                        "location": location,
-                    },
-                    metadata={"schema_keys": IE_SCHEMA_KEYS},
+                pool.append(
+                    CandidateExample(
+                        example_id=f"ie_tmp_{counter:04d}",
+                        task_name="information_extraction",
+                        template_name=template["template_name"],
+                        instruction=instruction,
+                        input_data={"text": text},
+                        gold_output={
+                            "person": person,
+                            "date": date,
+                            "location": location,
+                        },
+                        metadata={"schema_keys": IE_SCHEMA_KEYS},
+                    )
                 )
-
-                candidates.append(candidate)
                 counter += 1
 
-                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                    return candidates
+    selected = _round_robin_select(
+        pool,
+        TARGET_CANDIDATES_PER_TASK,
+        key_fn=_default_generation_balance_key,
+    )
 
-    return candidates
+    return _reindex_examples(selected, "ie", start_id)
 
 
 def apply_rule(text: str, rule_name: str) -> str:
@@ -280,8 +409,8 @@ def apply_rule(text: str, rule_name: str) -> str:
 
 
 def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExample]:
-    candidates = []
-    counter = start_id
+    pool: List[CandidateExample] = []
+    counter = 0
     seen_inputs = set()
 
     number_pairs = [
@@ -320,23 +449,30 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
                     template_idx + pair_idx + person_idx,
                 )
 
-                candidate = CandidateExample(
-                    example_id=f"rbt_{counter:03d}",
-                    task_name="rule_based_transformation",
-                    template_name=f"{template['template_name']}__{rule_name}",
-                    instruction=instruction,
-                    input_data={"text": text},
-                    gold_output={"text": gold_text},
-                    metadata={"rule_name": rule_name},
+                pool.append(
+                    CandidateExample(
+                        example_id=f"rbt_tmp_{counter:04d}",
+                        task_name="rule_based_transformation",
+                        template_name=f"{template['template_name']}__{rule_name}",
+                        instruction=instruction,
+                        input_data={"text": text},
+                        gold_output={"text": gold_text},
+                        metadata={"rule_name": rule_name},
+                    )
                 )
-
-                candidates.append(candidate)
                 counter += 1
 
-                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                    return candidates
+    selected = _round_robin_select(
+        pool,
+        TARGET_CANDIDATES_PER_TASK,
+        key_fn=lambda ex: (
+            ex.template_name,
+            ex.metadata["rule_name"],
+            ex.instruction,
+        ),
+    )
 
-    return candidates
+    return _reindex_examples(selected, "rbt", start_id)
 
 
 def _build_qa_context(
@@ -388,8 +524,16 @@ def _build_qa_context(
 
 
 def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
-    candidates = []
-    counter = start_id
+    """
+    Generate a richer QA pool and then balance final selection across:
+    - template family
+    - answer field
+    - instruction paraphrase
+
+    This prevents early template families from dominating the first 50 examples.
+    """
+    pool: List[CandidateExample] = []
+    counter = 0
     seen_inputs = set()
 
     for template_idx, template in enumerate(qa_templates):
@@ -430,26 +574,29 @@ def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
                     template_idx + person_idx + date_idx,
                 )
 
-                candidate = CandidateExample(
-                    example_id=f"qa_{counter:03d}",
-                    task_name="extractive_qa",
-                    template_name=template["template_name"],
-                    instruction=instruction,
-                    input_data={
-                        "passage": passage,
-                        "question": question,
-                    },
-                    gold_output={"answer": answer},
-                    metadata={"answer_field": template["answer_field"]},
+                pool.append(
+                    CandidateExample(
+                        example_id=f"qa_tmp_{counter:04d}",
+                        task_name="extractive_qa",
+                        template_name=template["template_name"],
+                        instruction=instruction,
+                        input_data={
+                            "passage": passage,
+                            "question": question,
+                        },
+                        gold_output={"answer": answer},
+                        metadata={"answer_field": template["answer_field"]},
+                    )
                 )
-
-                candidates.append(candidate)
                 counter += 1
 
-                if len(candidates) == TARGET_CANDIDATES_PER_TASK:
-                    return candidates
+    selected = _round_robin_select(
+        pool,
+        TARGET_CANDIDATES_PER_TASK,
+        key_fn=_qa_generation_balance_key,
+    )
 
-    return candidates
+    return _reindex_examples(selected, "qa", start_id)
 
 
 def generate_all_candidates() -> List[CandidateExample]:
@@ -570,6 +717,10 @@ def select_final_base_examples(
     candidates: List[CandidateExample],
     n_per_task: int = 50
 ) -> List[CandidateExample]:
+    """
+    Select approved examples only, balancing within each task by template family.
+    For QA, also balance by answer field.
+    """
     selected = []
     task_names = sorted({example.task_name for example in candidates})
 
@@ -583,7 +734,12 @@ def select_final_base_examples(
         if len(approved) < n_per_task:
             print(f"Warning: task '{task_name}' has only {len(approved)} approved examples.")
 
-        selected.extend(approved[:n_per_task])
+        chosen = _round_robin_select(
+            approved,
+            min(n_per_task, len(approved)),
+            key_fn=_task_balance_key,
+        )
+        selected.extend(chosen)
 
     return selected
 
@@ -592,6 +748,18 @@ def select_base_examples_exact(
     candidates: List[CandidateExample],
     n_per_task: int = 50
 ) -> List[CandidateExample]:
+    """
+    Select exactly n_per_task examples for each task.
+
+    Selection priority:
+    1. approved
+    2. pending
+    3. rejected
+
+    Within each status bucket, use balanced round-robin selection so final task sets
+    are not dominated by the earliest template families. For QA, balancing also uses
+    the answer field.
+    """
     selected = []
     task_names = sorted({example.task_name for example in candidates})
 
@@ -614,15 +782,34 @@ def select_base_examples_exact(
             if example.task_name == task_name and example.review_status == "rejected"
         ]
 
-        chosen = approved[:n_per_task]
+        chosen: List[CandidateExample] = []
 
-        if len(chosen) < n_per_task:
-            needed = n_per_task - len(chosen)
-            chosen.extend(pending[:needed])
+        chosen = _round_robin_fill(
+            selected=chosen,
+            candidates=approved,
+            target_n=n_per_task,
+            key_fn=_task_balance_key,
+        )
 
-        if len(chosen) < n_per_task:
-            needed = n_per_task - len(chosen)
-            chosen.extend(rejected[:needed])
+        chosen = _round_robin_fill(
+            selected=chosen,
+            candidates=pending,
+            target_n=n_per_task,
+            key_fn=_task_balance_key,
+        )
+
+        used_rejected = False
+        before_rejected = len(chosen)
+        chosen = _round_robin_fill(
+            selected=chosen,
+            candidates=rejected,
+            target_n=n_per_task,
+            key_fn=_task_balance_key,
+        )
+        if len(chosen) > before_rejected:
+            used_rejected = True
+
+        if used_rejected:
             print(
                 f"WARNING: task '{task_name}' needed rejected examples as fallback "
                 f"(approved={len(approved)}, pending={len(pending)}, rejected={len(rejected)})."
