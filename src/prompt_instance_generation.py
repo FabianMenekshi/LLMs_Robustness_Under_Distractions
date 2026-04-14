@@ -1,11 +1,10 @@
 import json
 import os
 from collections import Counter, defaultdict
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 
 from src.prompt_templates import (
     PROMPT_REGIMES,
-    DISTRACTION_TEMPLATES,
     render_bounded_clean_prompt,
     render_unbounded_clean_prompt,
     choose_bounded_opener,
@@ -19,7 +18,6 @@ from src.prompt_templates import (
 )
 
 
-# Keep the top-level parent distraction families stable for reporting.
 REGIMES = list(PROMPT_REGIMES.keys())
 
 DISTRACTION_TYPES = [
@@ -58,28 +56,53 @@ def save_json(data: Any, path: str) -> None:
 
 
 def _stable_index(*parts: Any) -> int:
-    """
-    Build a deterministic integer from arbitrary parts.
-    This keeps prompt generation reproducible without randomness.
-    """
     joined = "||".join(str(part) for part in parts if part is not None)
     return sum(ord(ch) for ch in joined)
+
+
+def _build_balanced_variant_counters(
+    base_records: List[Dict[str, Any]],
+    regimes: List[str],
+    distraction_types: List[str],
+) -> Dict[Tuple[str, str], Dict[str, int]]:
+    """
+    Precompute balanced variant indices for every (base_example_id, regime, distraction_type).
+    This makes surface and subtype assignment explicitly balanced across the dataset rather
+    than indirectly determined only by example ids.
+    """
+    counters: Dict[Tuple[str, str], int] = defaultdict(int)
+    variant_lookup: Dict[Tuple[str, str], Dict[str, int]] = {}
+
+    # Sort for stable reproducible allocation independent of upstream file ordering noise.
+    ordered_records = sorted(
+        base_records,
+        key=lambda r: (r["task_name"], r["example_id"]),
+    )
+
+    for regime in regimes:
+        for distraction_type in distraction_types:
+            for record in ordered_records:
+                key = (record["example_id"], regime)
+                variant_lookup.setdefault(key, {})
+                variant_lookup[key][distraction_type] = counters[(regime, distraction_type)]
+                counters[(regime, distraction_type)] += 1
+
+    return variant_lookup
 
 
 def _choose_clean_prompt_and_metadata(
     base_record: Dict[str, Any],
     regime: str,
+    variant_index: int,
 ) -> Dict[str, Any]:
     """
-    Render the clean prompt for one base record and expose the surface metadata
-    used to build it.
+    Render the clean prompt for one base record and expose the surface metadata used to build it.
+    The variant_index is explicitly allocated upstream to balance surface usage.
     """
     if regime == "bounded":
-        opener_idx = _stable_index(base_record["example_id"], regime, "opener")
-        layout_idx = _stable_index(base_record["example_id"], regime, "layout")
+        opener = choose_bounded_opener(base_record, variant_index)
+        layout = choose_bounded_layout(base_record, variant_index)
 
-        opener = choose_bounded_opener(base_record, opener_idx)
-        layout = choose_bounded_layout(base_record, layout_idx)
         prompt_text = render_bounded_clean_prompt(
             base_record,
             opener=opener,
@@ -98,8 +121,7 @@ def _choose_clean_prompt_and_metadata(
         }
 
     if regime == "unbounded":
-        surface_idx = _stable_index(base_record["example_id"], regime, "surface")
-        surface = choose_unbounded_surface(base_record, surface_idx)
+        surface = choose_unbounded_surface(base_record, variant_index)
         prompt_text = render_unbounded_clean_prompt(
             base_record,
             surface=surface,
@@ -119,17 +141,11 @@ def _choose_clean_prompt_and_metadata(
     raise ValueError(f"Unknown regime: {regime}")
 
 
-def _insert_irrelevant_prefix(
-    clean_prompt: str,
-    noise_text: str,
-) -> str:
+def _insert_irrelevant_prefix(clean_prompt: str, noise_text: str) -> str:
     return f"{noise_text}\n\n{clean_prompt}"
 
 
-def _insert_irrelevant_suffix(
-    clean_prompt: str,
-    noise_text: str,
-) -> str:
+def _insert_irrelevant_suffix(clean_prompt: str, noise_text: str) -> str:
     return f"{clean_prompt}\n\n{noise_text}"
 
 
@@ -144,7 +160,6 @@ def _insert_instruction_in_the_middle(
 def _insert_conflicting_instruction(
     clean_prompt: str,
     conflict_text: str,
-    regime: str,
     placement: str,
 ) -> str:
     if placement == "prefix":
@@ -152,17 +167,11 @@ def _insert_conflicting_instruction(
     if placement == "suffix":
         return f"{clean_prompt}\n\n{conflict_text}"
     if placement == "sandwich":
-        if regime == "bounded":
-            return f"{conflict_text}\n\n{clean_prompt}"
-        return f"{clean_prompt}\n\n{conflict_text}"
+        return f"{conflict_text}\n\n{clean_prompt}"
     raise ValueError(f"Unknown conflicting placement: {placement}")
 
 
-def _insert_negation(
-    clean_prompt: str,
-    negation_text: str,
-    placement: str,
-) -> str:
+def _insert_negation(clean_prompt: str, negation_text: str, placement: str) -> str:
     if placement == "prefix":
         return f"{negation_text}\n\n{clean_prompt}"
     if placement == "suffix":
@@ -170,11 +179,7 @@ def _insert_negation(
     raise ValueError(f"Unknown negation placement: {placement}")
 
 
-def _insert_style(
-    clean_prompt: str,
-    style_text: str,
-    placement: str,
-) -> str:
+def _insert_style(clean_prompt: str, style_text: str, placement: str) -> str:
     if placement == "prefix":
         return f"{style_text}\n\n{clean_prompt}"
     if placement == "suffix":
@@ -182,11 +187,7 @@ def _insert_style(
     raise ValueError(f"Unknown style placement: {placement}")
 
 
-def _insert_length_stress(
-    clean_prompt: str,
-    long_noise_text: str,
-    placement: str,
-) -> str:
+def _insert_length_stress(clean_prompt: str, long_noise_text: str, placement: str) -> str:
     if placement == "prefix":
         return f"{long_noise_text}\n\n{clean_prompt}"
     if placement == "suffix":
@@ -198,14 +199,12 @@ def _choose_distraction_material(
     base_record: Dict[str, Any],
     regime: str,
     distraction_type: str,
+    variant_index: int,
 ) -> Dict[str, Any]:
     """
-    Deterministically choose the materials used for a distraction and expose
-    enough metadata for later analysis.
+    Choose distraction material using an explicitly allocated variant index so subtype usage
+    is balanced across the dataset.
     """
-    example_id = base_record["example_id"]
-    base_idx = _stable_index(example_id, regime, distraction_type)
-
     if distraction_type == "clean":
         return {
             "distraction_subtype": None,
@@ -220,7 +219,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "irrelevant_prefix":
-        noise = choose_short_noise(base_record, base_idx)
+        noise = choose_short_noise(base_record, variant_index)
         return {
             "distraction_subtype": "short_prefix_noise",
             "distraction_variant_id": noise.get("block_id"),
@@ -234,7 +233,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "irrelevant_suffix":
-        noise = choose_short_noise(base_record, base_idx)
+        noise = choose_short_noise(base_record, variant_index)
         return {
             "distraction_subtype": "short_suffix_noise",
             "distraction_variant_id": noise.get("block_id"),
@@ -248,8 +247,8 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "instruction_in_the_middle":
-        noise_before = choose_short_noise(base_record, base_idx)
-        noise_after = choose_short_noise(base_record, base_idx + 1)
+        noise_before = choose_short_noise(base_record, variant_index)
+        noise_after = choose_short_noise(base_record, variant_index + 1)
         return {
             "distraction_subtype": "middle_burial",
             "distraction_variant_id": f"{noise_before.get('block_id')}__{noise_after.get('block_id')}",
@@ -263,7 +262,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "conflicting_instruction":
-        conflict = choose_conflicting_instruction(base_record, base_idx)
+        conflict = choose_conflicting_instruction(base_record, variant_index)
         return {
             "distraction_subtype": conflict.get("subtype"),
             "distraction_variant_id": conflict.get("variant_id"),
@@ -277,7 +276,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "negation_distraction":
-        negation = choose_negation_text(base_record, base_idx)
+        negation = choose_negation_text(base_record, variant_index)
         return {
             "distraction_subtype": negation.get("subtype"),
             "distraction_variant_id": negation.get("variant_id"),
@@ -291,7 +290,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "style_distraction":
-        style = choose_style_distraction(base_record, base_idx)
+        style = choose_style_distraction(base_record, variant_index)
         return {
             "distraction_subtype": style.get("style_family"),
             "distraction_variant_id": style.get("style_id"),
@@ -305,7 +304,7 @@ def _choose_distraction_material(
         }
 
     if distraction_type == "length_stress":
-        long_noise = choose_long_noise(base_record, base_idx)
+        long_noise = choose_long_noise(base_record, variant_index)
         return {
             "distraction_subtype": long_noise.get("category"),
             "distraction_variant_id": long_noise.get("block_id"),
@@ -323,8 +322,6 @@ def _choose_distraction_material(
 
 def _apply_distraction(
     clean_prompt: str,
-    base_record: Dict[str, Any],
-    regime: str,
     distraction_type: str,
     materials: Dict[str, Any],
 ) -> str:
@@ -354,7 +351,6 @@ def _apply_distraction(
         return _insert_conflicting_instruction(
             clean_prompt=clean_prompt,
             conflict_text=materials["conflict_block"]["text"],
-            regime=regime,
             placement=materials["placement"],
         )
 
@@ -394,22 +390,23 @@ def build_prompt_record(
     base_record: Dict[str, Any],
     regime: str,
     distraction_type: str,
+    variant_index: int,
 ) -> Dict[str, Any]:
     clean_info = _choose_clean_prompt_and_metadata(
         base_record=base_record,
         regime=regime,
+        variant_index=variant_index,
     )
 
     materials = _choose_distraction_material(
         base_record=base_record,
         regime=regime,
         distraction_type=distraction_type,
+        variant_index=variant_index,
     )
 
     prompt_text = _apply_distraction(
         clean_prompt=clean_info["prompt_text"],
-        base_record=base_record,
-        regime=regime,
         distraction_type=distraction_type,
         materials=materials,
     )
@@ -460,6 +457,7 @@ def build_prompt_record(
         "negation_subtype": negation_block.get("subtype") if negation_block else None,
         "style_id": style_block.get("style_id") if style_block else None,
         "style_family": style_block.get("style_family") if style_block else None,
+        "variant_index": variant_index,
     }
 
 
@@ -473,14 +471,27 @@ def build_all_prompt_instances(
     active_regimes = regimes or REGIMES
     active_distraction_types = distraction_types or DISTRACTION_TYPES
 
-    for base_record in base_records:
+    variant_lookup = _build_balanced_variant_counters(
+        base_records=base_records,
+        regimes=active_regimes,
+        distraction_types=active_distraction_types,
+    )
+
+    ordered_records = sorted(
+        base_records,
+        key=lambda r: (r["task_name"], r["example_id"]),
+    )
+
+    for base_record in ordered_records:
         for regime in active_regimes:
             for distraction_type in active_distraction_types:
+                variant_index = variant_lookup[(base_record["example_id"], regime)][distraction_type]
                 prompt_records.append(
                     build_prompt_record(
                         base_record=base_record,
                         regime=regime,
                         distraction_type=distraction_type,
+                        variant_index=variant_index,
                     )
                 )
 
