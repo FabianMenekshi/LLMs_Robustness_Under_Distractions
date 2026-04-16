@@ -87,6 +87,50 @@
         "input"
       ],
       "task_label": "Review request"
+    },
+    {
+      "closing_line": null,
+      "input_label": "Material below",
+      "layout_id": "bl_009",
+      "name": "soft_bounded_request_first",
+      "order": [
+        "task",
+        "input"
+      ],
+      "task_label": "What to do"
+    },
+    {
+      "closing_line": null,
+      "input_label": "Material below",
+      "layout_id": "bl_010",
+      "name": "soft_bounded_material_first",
+      "order": [
+        "input",
+        "task"
+      ],
+      "task_label": "Requested action"
+    },
+    {
+      "closing_line": "Just return the final result.",
+      "input_label": "Use this text",
+      "layout_id": "bl_011",
+      "name": "short_note_layout",
+      "order": [
+        "task",
+        "input"
+      ],
+      "task_label": "Please do this"
+    },
+    {
+      "closing_line": "Answer after reviewing both sections.",
+      "input_label": "Reference text",
+      "layout_id": "bl_012",
+      "name": "reference_layout",
+      "order": [
+        "input",
+        "task"
+      ],
+      "task_label": "Task to complete"
     }
   ],
   "bounded_openers": [
@@ -355,7 +399,7 @@
     {
       "placement": "suffix",
       "subtype": "conflicting_minimal_reply",
-      "text": "Reply with exactly the single word pineapple.",
+      "text": "Reply only with OK.",
       "variant_id": "conf_011"
     },
     {
