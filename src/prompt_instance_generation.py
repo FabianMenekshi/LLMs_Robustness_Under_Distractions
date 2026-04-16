@@ -592,8 +592,18 @@ def build_prompt_summary(prompt_records: List[Dict[str, Any]]) -> Dict[str, Any]
 
 def build_prompt_preview_samples(
     prompt_records: List[Dict[str, Any]],
-    n_per_condition: int = 1,
+    n_per_condition: int = 3,
 ) -> List[Dict[str, Any]]:
+    """
+    Build a more representative preview sample.
+
+    Strategy:
+    - group by (task, regime, distraction_type)
+    - within each group, bucket by visible prompt-variation signature
+    - rotate across buckets
+    - start from a deterministic offset instead of always bucket 0
+    so previews do not always overrepresent earliest ids like us_001 / bl_001 / bo_001
+    """
     grouped = defaultdict(list)
 
     for record in prompt_records:
@@ -605,7 +615,59 @@ def build_prompt_preview_samples(
         grouped[key].append(record)
 
     preview_records: List[Dict[str, Any]] = []
+
     for key in sorted(grouped.keys()):
-        preview_records.extend(grouped[key][:n_per_condition])
+        records = grouped[key]
+
+        buckets = defaultdict(list)
+        for record in records:
+            bucket_key = (
+                record.get("surface_id"),
+                record.get("layout_id"),
+                record.get("distraction_variant_id"),
+                record.get("conflict_variant_id"),
+                record.get("negation_variant_id"),
+                record.get("style_id"),
+                record.get("noise_block_id"),
+                record.get("noise_block_id_2"),
+                record.get("long_noise_block_id"),
+            )
+            buckets[bucket_key].append(record)
+
+        ordered_bucket_keys = sorted(
+            buckets.keys(),
+            key=lambda bucket: tuple("" if value is None else str(value) for value in bucket),
+        )
+
+        # deterministic offset so every condition does not always start from the first bucket
+        offset_seed = "||".join(str(part) for part in key)
+        start_index = sum(ord(ch) for ch in offset_seed) % len(ordered_bucket_keys)
+
+        rotated_bucket_keys = (
+            ordered_bucket_keys[start_index:] + ordered_bucket_keys[:start_index]
+        )
+
+        selected = []
+        bucket_positions = {bucket_key: 0 for bucket_key in rotated_bucket_keys}
+
+        while len(selected) < n_per_condition:
+            made_progress = False
+
+            for bucket_key in rotated_bucket_keys:
+                pos = bucket_positions[bucket_key]
+                bucket = buckets[bucket_key]
+
+                if pos < len(bucket):
+                    selected.append(bucket[pos])
+                    bucket_positions[bucket_key] += 1
+                    made_progress = True
+
+                    if len(selected) == n_per_condition:
+                        break
+
+            if not made_progress:
+                break
+
+        preview_records.extend(selected)
 
     return preview_records
