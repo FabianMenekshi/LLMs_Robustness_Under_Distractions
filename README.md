@@ -4,7 +4,7 @@ A thesis-oriented benchmark pipeline for studying how NLP task performance chang
 
 This project builds a **balanced base dataset** across several task families, then expands each base example into a **prompt-robustness benchmark** with bounded and unbounded prompt regimes plus multiple distraction conditions.
 
----
+
 
 ## Overview
   
@@ -28,7 +28,7 @@ The pipeline has two major stages:
    - Validate prompt-level balance and metadata coverage.
 
 
----
+
 
 ## Research Goal
 
@@ -48,7 +48,7 @@ The benchmark is especially useful for studying whether a model:
 - switches to the wrong format or style,
 - or paraphrases when exact extraction is required.
 
----
+
 
 ## Task Families
 
@@ -72,7 +72,7 @@ Models transform text according to an explicit deterministic rule.
 ### 5. Extractive QA
 Models answer a question with an exact span from the passage.
 
----
+
 
 ## Prompt Regimes
 
@@ -95,7 +95,7 @@ Instead, they are rendered as distinct naturalistic surfaces such as:
 - chat-like prompts
 - workflow-like notes
 
----
+
 
 ## Distraction Conditions
 
@@ -131,7 +131,7 @@ A strong style request creates tension with the correct task output.
 ### Length stress
 A long irrelevant block increases context pressure and tests whether the model still follows the real task.
 
----
+
 
 ## Repository Structure
 
@@ -178,7 +178,7 @@ A long irrelevant block increases context pressure and tests whether the model s
 ```
 
 
-<!-- ---
+<!-- 
 
 ## Source Modules
 
@@ -256,7 +256,7 @@ Checks include:
 ### `src/prompt_builder.py`
 Used for rendering and previewing prompts in a structured way. It mirrors the current prompt-generation logic closely enough for inspection and notebook previews.
 
----
+
 
 ## Notebooks
 
@@ -288,7 +288,7 @@ Supports inspection and refinement of prompt-design components.
 ### `lock_design.ipynb`
 Used to lock or export design specifications.
 
----
+
 
 ## Data Outputs
 
@@ -339,7 +339,7 @@ A human-readable preview artifact used for qualitative inspection.
 
 The preview sampler is stratified so it is more representative than simply taking the first row from each condition. -->
 
----
+
 
 ## End-to-End Pipeline
 
@@ -377,7 +377,7 @@ Check:
 
 These tell you whether prompt-level balance and qualitative diversity are acceptable.
 
----
+
 
 ## Expected Dataset Sizes
 
@@ -394,7 +394,7 @@ For each base example:
 So:
 - 250 × 2 × 8 = **4000 prompt instances**
 
----
+
 
 ## Quick Start
 
