@@ -1,5 +1,5 @@
-from collections import Counter
-from typing import List, Dict, Any
+from collections import Counter, defaultdict
+from typing import List, Dict, Any, Tuple
 
 from src.templates import SINGLE_LABEL_SET, MULTI_LABEL_SET, IE_SCHEMA_KEYS, RULE_SET
 from src.generation import apply_rule
@@ -290,6 +290,166 @@ def validate_instruction_non_empty(records: List[Dict[str, Any]]) -> List[str]:
     return issues
 
 
+def summarize_template_distribution(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+    templates_by_task: Dict[str, Counter] = defaultdict(Counter)
+
+    for record in records:
+        templates_by_task[record["task_name"]][record["template_name"]] += 1
+
+    return {
+        task_name: dict(sorted(counter.items(), key=lambda item: item[0]))
+        for task_name, counter in sorted(templates_by_task.items(), key=lambda item: item[0])
+    }
+
+
+def validate_minimum_template_diversity(
+    records: List[Dict[str, Any]],
+    minimums_by_task: Dict[str, int] | None = None,
+) -> List[str]:
+    """
+    Soft structural diversity check.
+
+    Default thresholds reflect what the current generator is expected to support:
+    - single_label_classification: at least 4 templates
+    - multi_label_classification: at least 2 templates
+    - information_extraction: at least 5 templates
+    - rule_based_transformation: at least 8 template-rule combinations
+    - extractive_qa: at least 6 templates
+    """
+    if minimums_by_task is None:
+        minimums_by_task = {
+            "single_label_classification": 4,
+            "multi_label_classification": 2,
+            "information_extraction": 5,
+            "rule_based_transformation": 8,
+            "extractive_qa": 6,
+        }
+
+    issues = []
+    templates_by_task: Dict[str, set] = defaultdict(set)
+
+    for record in records:
+        templates_by_task[record["task_name"]].add(record["template_name"])
+
+    for task_name in EXPECTED_TASK_NAMES:
+        observed = len(templates_by_task.get(task_name, set()))
+        minimum = minimums_by_task.get(task_name, 1)
+        if observed < minimum:
+            issues.append(
+                f"template_diversity_too_low:{task_name}:minimum={minimum}:observed={observed}"
+            )
+
+    return issues
+
+
+def validate_template_concentration(
+    records: List[Dict[str, Any]],
+    max_share_by_task: Dict[str, float] | None = None,
+) -> List[str]:
+    """
+    Warn if a single template dominates too much of a task's final selected set.
+    """
+    if max_share_by_task is None:
+        max_share_by_task = {
+            "single_label_classification": 0.40,
+            "multi_label_classification": 0.60,
+            "information_extraction": 0.35,
+            "rule_based_transformation": 0.20,
+            "extractive_qa": 0.20,
+        }
+
+    issues = []
+    templates_by_task: Dict[str, Counter] = defaultdict(Counter)
+    task_counts = Counter(record["task_name"] for record in records)
+
+    for record in records:
+        templates_by_task[record["task_name"]][record["template_name"]] += 1
+
+    for task_name in sorted(templates_by_task.keys()):
+        total = task_counts[task_name]
+        allowed_share = max_share_by_task.get(task_name, 1.0)
+
+        for template_name, count in templates_by_task[task_name].items():
+            share = count / total if total else 0.0
+            if share > allowed_share:
+                issues.append(
+                    f"template_concentration_too_high:{task_name}:{template_name}:share={share:.3f}:max={allowed_share:.3f}"
+                )
+
+    return issues
+
+
+def summarize_qa_answer_field_distribution(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+    qa_records = [record for record in records if record["task_name"] == "extractive_qa"]
+
+    overall = Counter()
+    by_template: Dict[str, Counter] = defaultdict(Counter)
+
+    for record in qa_records:
+        answer_field = record.get("metadata", {}).get("answer_field", "<missing>")
+        template_name = record["template_name"]
+        overall[answer_field] += 1
+        by_template[template_name][answer_field] += 1
+
+    return {
+        "overall": dict(sorted(overall.items(), key=lambda item: item[0])),
+        "by_template": {
+            template_name: dict(sorted(counter.items(), key=lambda item: item[0]))
+            for template_name, counter in sorted(by_template.items(), key=lambda item: item[0])
+        },
+    }
+
+
+def validate_qa_answer_field_diversity(
+    records: List[Dict[str, Any]],
+    min_unique_answer_fields: int = 4,
+) -> List[str]:
+    issues = []
+
+    qa_records = [record for record in records if record["task_name"] == "extractive_qa"]
+    if not qa_records:
+        return issues
+
+    answer_fields = {
+        record.get("metadata", {}).get("answer_field", "<missing>")
+        for record in qa_records
+    }
+
+    observed = len(answer_fields)
+    if observed < min_unique_answer_fields:
+        issues.append(
+            f"qa_answer_field_diversity_too_low:minimum={min_unique_answer_fields}:observed={observed}"
+        )
+
+    return issues
+
+
+def validate_qa_answer_field_concentration(
+    records: List[Dict[str, Any]],
+    max_share: float = 0.45,
+) -> List[str]:
+    issues = []
+
+    qa_records = [record for record in records if record["task_name"] == "extractive_qa"]
+    if not qa_records:
+        return issues
+
+    counts = Counter(
+        record.get("metadata", {}).get("answer_field", "<missing>")
+        for record in qa_records
+    )
+    total = len(qa_records)
+
+    for answer_field, count in counts.items():
+        share = count / total if total else 0.0
+        if share > max_share:
+            issues.append(
+                f"qa_answer_field_concentration_too_high:{answer_field}:share={share:.3f}:max={max_share:.3f}"
+            )
+
+    return issues
+
+
 def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -> Dict[str, Any]:
     record_issues: Dict[str, List[str]] = {}
     all_issue_counts = Counter()
@@ -310,6 +470,12 @@ def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -
         validate_minimum_instruction_diversity(records, min_unique_per_task=4)
     )
 
+    # New balance-aware dataset checks
+    dataset_level_issues.extend(validate_minimum_template_diversity(records))
+    dataset_level_issues.extend(validate_template_concentration(records))
+    dataset_level_issues.extend(validate_qa_answer_field_diversity(records, min_unique_answer_fields=4))
+    dataset_level_issues.extend(validate_qa_answer_field_concentration(records, max_share=0.45))
+
     if len(records) != expected_total:
         dataset_level_issues.append(
             f"total_record_count_mismatch:expected={expected_total}:observed={len(records)}"
@@ -328,4 +494,6 @@ def validate_dataset(records: List[Dict[str, Any]], expected_total: int = 250) -
         "dataset_level_issues": dataset_level_issues,
         "issue_counts": dict(all_issue_counts),
         "instruction_diversity_summary": summarize_instruction_diversity(records),
+        "template_distribution_summary": summarize_template_distribution(records),
+        "qa_answer_field_summary": summarize_qa_answer_field_distribution(records),
     }
