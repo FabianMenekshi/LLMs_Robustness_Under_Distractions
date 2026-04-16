@@ -65,15 +65,9 @@ def _build_balanced_variant_counters(
     regimes: List[str],
     distraction_types: List[str],
 ) -> Dict[Tuple[str, str], Dict[str, int]]:
-    """
-    Precompute balanced variant indices for every (base_example_id, regime, distraction_type).
-    This makes surface and subtype assignment explicitly balanced across the dataset rather
-    than indirectly determined only by example ids.
-    """
     counters: Dict[Tuple[str, str], int] = defaultdict(int)
     variant_lookup: Dict[Tuple[str, str], Dict[str, int]] = {}
 
-    # Sort for stable reproducible allocation independent of upstream file ordering noise.
     ordered_records = sorted(
         base_records,
         key=lambda r: (r["task_name"], r["example_id"]),
@@ -95,10 +89,6 @@ def _choose_clean_prompt_and_metadata(
     regime: str,
     variant_index: int,
 ) -> Dict[str, Any]:
-    """
-    Render the clean prompt for one base record and expose the surface metadata used to build it.
-    The variant_index is explicitly allocated upstream to balance surface usage.
-    """
     if regime == "bounded":
         opener = choose_bounded_opener(base_record, variant_index)
         layout = choose_bounded_layout(base_record, variant_index)
@@ -201,10 +191,6 @@ def _choose_distraction_material(
     distraction_type: str,
     variant_index: int,
 ) -> Dict[str, Any]:
-    """
-    Choose distraction material using an explicitly allocated variant index so subtype usage
-    is balanced across the dataset.
-    """
     if distraction_type == "clean":
         return {
             "distraction_subtype": None,
@@ -498,6 +484,10 @@ def build_all_prompt_instances(
     return prompt_records
 
 
+def _sorted_counter(counter: Counter) -> Dict[str, int]:
+    return dict(sorted(counter.items(), key=lambda item: item[0]))
+
+
 def build_prompt_summary(prompt_records: List[Dict[str, Any]]) -> Dict[str, Any]:
     counts_by_task = Counter(record["task_name"] for record in prompt_records)
     counts_by_regime = Counter(record["regime"] for record in prompt_records)
@@ -507,7 +497,7 @@ def build_prompt_summary(prompt_records: List[Dict[str, Any]]) -> Dict[str, Any]
         for record in prompt_records
         if record.get("distraction_subtype")
     )
-    counts_by_surface = Counter(
+    counts_by_surface_type = Counter(
         record["prompt_surface_type"]
         for record in prompt_records
         if record.get("prompt_surface_type")
@@ -518,6 +508,53 @@ def build_prompt_summary(prompt_records: List[Dict[str, Any]]) -> Dict[str, Any]
         if record.get("layout_name")
     )
     counts_by_clean_flag = Counter(str(record["is_clean"]).lower() for record in prompt_records)
+
+    # New finer-grained counts
+    counts_by_surface_id = Counter(
+        record["surface_id"]
+        for record in prompt_records
+        if record.get("surface_id")
+    )
+    counts_by_surface_name = Counter(
+        record["surface_name"]
+        for record in prompt_records
+        if record.get("surface_name")
+    )
+    counts_by_opener_id = Counter(
+        record["opener_id"]
+        for record in prompt_records
+        if record.get("opener_id")
+    )
+    counts_by_conflict_variant_id = Counter(
+        record["conflict_variant_id"]
+        for record in prompt_records
+        if record.get("conflict_variant_id")
+    )
+    counts_by_negation_variant_id = Counter(
+        record["negation_variant_id"]
+        for record in prompt_records
+        if record.get("negation_variant_id")
+    )
+    counts_by_style_id = Counter(
+        record["style_id"]
+        for record in prompt_records
+        if record.get("style_id")
+    )
+    counts_by_noise_block_id = Counter(
+        record["noise_block_id"]
+        for record in prompt_records
+        if record.get("noise_block_id")
+    )
+    counts_by_noise_block_id_2 = Counter(
+        record["noise_block_id_2"]
+        for record in prompt_records
+        if record.get("noise_block_id_2")
+    )
+    counts_by_long_noise_block_id = Counter(
+        record["long_noise_block_id"]
+        for record in prompt_records
+        if record.get("long_noise_block_id")
+    )
 
     task_regime = defaultdict(int)
     task_distraction = defaultdict(int)
@@ -531,16 +568,25 @@ def build_prompt_summary(prompt_records: List[Dict[str, Any]]) -> Dict[str, Any]
 
     return {
         "total_prompt_instances": len(prompt_records),
-        "counts_by_task": dict(counts_by_task),
-        "counts_by_regime": dict(counts_by_regime),
-        "counts_by_distraction_type": dict(counts_by_distraction),
-        "counts_by_distraction_subtype": dict(counts_by_subtype),
-        "counts_by_prompt_surface_type": dict(counts_by_surface),
-        "counts_by_layout_name": dict(counts_by_layout),
-        "counts_by_clean_flag": dict(counts_by_clean_flag),
-        "counts_by_task_and_regime": dict(task_regime),
-        "counts_by_task_and_distraction_type": dict(task_distraction),
-        "counts_by_task_and_distraction_subtype": dict(task_subtype),
+        "counts_by_task": _sorted_counter(counts_by_task),
+        "counts_by_regime": _sorted_counter(counts_by_regime),
+        "counts_by_distraction_type": _sorted_counter(counts_by_distraction),
+        "counts_by_distraction_subtype": _sorted_counter(counts_by_subtype),
+        "counts_by_prompt_surface_type": _sorted_counter(counts_by_surface_type),
+        "counts_by_layout_name": _sorted_counter(counts_by_layout),
+        "counts_by_clean_flag": _sorted_counter(counts_by_clean_flag),
+        "counts_by_surface_id": _sorted_counter(counts_by_surface_id),
+        "counts_by_surface_name": _sorted_counter(counts_by_surface_name),
+        "counts_by_opener_id": _sorted_counter(counts_by_opener_id),
+        "counts_by_conflict_variant_id": _sorted_counter(counts_by_conflict_variant_id),
+        "counts_by_negation_variant_id": _sorted_counter(counts_by_negation_variant_id),
+        "counts_by_style_id": _sorted_counter(counts_by_style_id),
+        "counts_by_noise_block_id": _sorted_counter(counts_by_noise_block_id),
+        "counts_by_noise_block_id_2": _sorted_counter(counts_by_noise_block_id_2),
+        "counts_by_long_noise_block_id": _sorted_counter(counts_by_long_noise_block_id),
+        "counts_by_task_and_regime": dict(sorted(task_regime.items(), key=lambda item: item[0])),
+        "counts_by_task_and_distraction_type": dict(sorted(task_distraction.items(), key=lambda item: item[0])),
+        "counts_by_task_and_distraction_subtype": dict(sorted(task_subtype.items(), key=lambda item: item[0])),
     }
 
 
