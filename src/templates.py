@@ -328,32 +328,59 @@ single_label_value_map = {
 multi_label_templates = [
     {
         "template_name": "institutional_announcement",
-        "pattern": "The {actor} announced a new {topic_item} connected to {secondary_item}.",
+        "pattern": (
+            "The {actor} announced a new initiative involving {topic_item}. "
+            "The statement also discussed implications for {secondary_item}."
+        ),
         "instruction_pool": multi_label_instructions,
     },
     {
         "template_name": "company_news",
-        "pattern": "{company} introduced a {topic_item} while discussing its effect on {secondary_item}.",
+        "pattern": (
+            "{company} introduced a new effort around {topic_item} while explaining its connection to {secondary_item}."
+        ),
         "instruction_pool": multi_label_instructions,
     },
     {
         "template_name": "policy_summary",
-        "pattern": "A report described how {topic_item} could influence {secondary_item}.",
+        "pattern": (
+            "A policy summary described how {topic_item} could affect {secondary_item} over the next year."
+        ),
         "instruction_pool": multi_label_instructions,
     },
     {
         "template_name": "event_report",
-        "pattern": "During the meeting, speakers focused on {topic_item} and {secondary_item}.",
+        "pattern": (
+            "During the event recap, speakers focused on {topic_item} together with concerns about {secondary_item}."
+        ),
         "instruction_pool": multi_label_instructions,
     },
     {
         "template_name": "press_briefing",
-        "pattern": "In a briefing, the {actor} discussed {topic_item}, along with new concerns about {secondary_item}.",
+        "pattern": (
+            "In a press briefing, the {actor} discussed {topic_item} and answered questions about {secondary_item}."
+        ),
         "instruction_pool": multi_label_instructions,
     },
     {
         "template_name": "project_update",
-        "pattern": "{company} published an update about {topic_item} and its relation to {secondary_item}.",
+        "pattern": (
+            "{company} published a project update covering {topic_item} and its relation to {secondary_item}."
+        ),
+        "instruction_pool": multi_label_instructions,
+    },
+    {
+        "template_name": "newsletter_excerpt",
+        "pattern": (
+            "The newsletter excerpt linked {topic_item} with recent developments involving {secondary_item}."
+        ),
+        "instruction_pool": multi_label_instructions,
+    },
+    {
+        "template_name": "panel_discussion_note",
+        "pattern": (
+            "Panel notes highlighted debate around {topic_item}, with repeated references to {secondary_item}."
+        ),
         "instruction_pool": multi_label_instructions,
     },
 ]
@@ -524,8 +551,8 @@ qa_templates = [
             "{person} said the meeting in {location} would start on {date}, even though an earlier draft listed {other_date}. "
             "The venue itself did not change."
         ),
-        "question": "On what date would the meeting in {location} start?",
-        "answer_field": "date",
+        "question": "Who said the meeting in {location} would start on {date}?",
+        "answer_field": "person",
         "instruction_pool": qa_instructions,
         "required_fields": ["person", "location", "date", "other_date"],
     },
@@ -546,8 +573,8 @@ qa_templates = [
             "The travel record notes that {person} was expected on {other_date}, but the confirmed arrival in {location} "
             "occurred on {date}. A final check-in was logged the following morning."
         ),
-        "question": "On what date did the confirmed arrival in {location} occur?",
-        "answer_field": "date",
+        "question": "Who had the confirmed arrival in {location}?",
+        "answer_field": "person",
         "instruction_pool": qa_instructions,
         "required_fields": ["person", "location", "date", "other_date"],
     },
@@ -590,10 +617,32 @@ qa_templates = [
             "The deployment note says {company} will roll out the {product} on {date} after testing in {location}. "
             "A separate memo about {other_company} concerned a different tool."
         ),
-        "question": "On what date will {company} roll out the {product}?",
-        "answer_field": "date",
+        "question": "Which company will roll out the {product} on {date}?",
+        "answer_field": "company",
         "instruction_pool": qa_instructions,
         "required_fields": ["company", "product", "date", "location", "other_company"],
+    },
+    {
+        "template_name": "venue_confirmation_note",
+        "passage": (
+            "The draft first mentioned {other_location}, but the final confirmation says that {company} will present "
+            "the {product} in {location} on {date}."
+        ),
+        "question": "Where will {company} present the {product} on {date}?",
+        "answer_field": "location",
+        "instruction_pool": qa_instructions,
+        "required_fields": ["company", "product", "location", "other_location", "date"],
+    },
+    {
+        "template_name": "product_owner_note",
+        "passage": (
+            "The comparison memo says the {product} belongs to {company}, while a separate note about {other_company} "
+            "concerns a different release planned for {other_date}."
+        ),
+        "question": "Which company does the {product} belong to?",
+        "answer_field": "company",
+        "instruction_pool": qa_instructions,
+        "required_fields": ["product", "company", "other_company", "other_date"],
     },
 ]
 
