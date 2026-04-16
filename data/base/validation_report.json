@@ -60,6 +60,105 @@
   "is_valid": true,
   "issue_counts": {},
   "num_records_with_issues": 0,
+  "qa_answer_field_summary": {
+    "by_template": {
+      "arrival_record_with_multiple_dates": {
+        "person": 8
+      },
+      "deployment_update_passage": {
+        "company": 8
+      },
+      "hosted_event_passage": {
+        "company": 5
+      },
+      "meeting_city_resolution": {
+        "location": 8
+      },
+      "product_brief_with_competitor": {
+        "product": 8
+      },
+      "project_summary_rich": {
+        "person": 4
+      },
+      "release_comparison_passage": {
+        "product": 4
+      },
+      "schedule_passage_rich": {
+        "location": 5
+      }
+    },
+    "overall": {
+      "company": 13,
+      "location": 13,
+      "person": 12,
+      "product": 12
+    }
+  },
   "record_issues": {},
+  "template_distribution_summary": {
+    "extractive_qa": {
+      "arrival_record_with_multiple_dates": 8,
+      "deployment_update_passage": 8,
+      "hosted_event_passage": 5,
+      "meeting_city_resolution": 8,
+      "product_brief_with_competitor": 8,
+      "project_summary_rich": 4,
+      "release_comparison_passage": 4,
+      "schedule_passage_rich": 5
+    },
+    "information_extraction": {
+      "appointment_notice_rich": 9,
+      "conference_attendance_rich": 9,
+      "event_registration_rich": 8,
+      "meeting_announcement_rich": 8,
+      "speaker_log_entry": 8,
+      "travel_schedule_notice": 8
+    },
+    "multi_label_classification": {
+      "company_news": 7,
+      "event_report": 7,
+      "institutional_announcement": 6,
+      "newsletter_excerpt": 6,
+      "panel_discussion_note": 6,
+      "policy_summary": 6,
+      "press_briefing": 6,
+      "project_update": 6
+    },
+    "rule_based_transformation": {
+      "mixed_caps_checklist__lowercase": 3,
+      "mixed_caps_checklist__remove_punctuation": 2,
+      "mixed_caps_checklist__remove_words_longer_than_6": 2,
+      "mixed_caps_checklist__replace_numbers_with_NUM": 2,
+      "mixed_case_statement__lowercase": 2,
+      "mixed_case_statement__remove_punctuation": 2,
+      "mixed_case_statement__remove_words_longer_than_6": 2,
+      "mixed_case_statement__replace_numbers_with_NUM": 2,
+      "punctuated_note__lowercase": 2,
+      "punctuated_note__remove_punctuation": 2,
+      "punctuated_note__remove_words_longer_than_6": 2,
+      "punctuated_note__replace_numbers_with_NUM": 2,
+      "quote_and_symbol_note__lowercase": 2,
+      "quote_and_symbol_note__remove_punctuation": 2,
+      "quote_and_symbol_note__remove_words_longer_than_6": 2,
+      "quote_and_symbol_note__replace_numbers_with_NUM": 2,
+      "short_report__lowercase": 2,
+      "short_report__remove_punctuation": 2,
+      "short_report__remove_words_longer_than_6": 2,
+      "short_report__replace_numbers_with_NUM": 2,
+      "slash_and_dash_update__lowercase": 2,
+      "slash_and_dash_update__remove_punctuation": 2,
+      "slash_and_dash_update__remove_words_longer_than_6": 2,
+      "slash_and_dash_update__replace_numbers_with_NUM": 2,
+      "word_length_test__replace_numbers_with_NUM": 1
+    },
+    "single_label_classification": {
+      "app_experience_note": 9,
+      "delivery_comment_mixed": 9,
+      "event_reaction_short_review": 8,
+      "product_review_balanced": 8,
+      "service_feedback_natural": 8,
+      "store_visit_note": 8
+    }
+  },
   "total_records": 250
 }

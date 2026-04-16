@@ -1,10 +1,211 @@
 {
+  "counts_by_instruction": {
+    "Answer the question using an exact span from the passage.": 8,
+    "Answer with the precise text appearing in the passage.": 8,
+    "Assign a single sentiment label from the allowed set {positive, negative, neutral}.": 9,
+    "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.": 10,
+    "Assign the applicable topic labels using only {finance, health, politics, sports, tech}. Sort the labels alphabetically.": 8,
+    "Choose all labels that apply from {finance, health, politics, sports, tech}. Return them in alphabetical order.": 8,
+    "Choose one sentiment label only from {positive, negative, neutral}.": 8,
+    "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.": 10,
+    "Convert the text to lowercase.": 13,
+    "Copy the answer directly from the passage.": 8,
+    "Drop all words with more than 6 characters.": 12,
+    "Extract person, date, and location and return them as structured fields.": 12,
+    "Extract the answer directly from the passage without paraphrasing.": 8,
+    "Extract the fields person, date, and location from the text.": 12,
+    "Find the person, date, and location mentioned in the text.": 8,
+    "Identify and output person, date, and location from the text.": 6,
+    "Label the text with every applicable topic from {finance, health, politics, sports, tech}. Output the labels alphabetically.": 8,
+    "Label the text with exactly one of {positive, negative, neutral}.": 7,
+    "Return all matching topic labels from the allowed set {finance, health, politics, sports, tech}, in alphabetical order.": 8,
+    "Return every relevant topic label from {finance, health, politics, sports, tech}, sorted alphabetically.": 8,
+    "Return exactly one sentiment label from {positive, negative, neutral}.": 8,
+    "Return one sentiment label only: {positive, negative, neutral}.": 8,
+    "Return only the exact answer span from the passage.": 6,
+    "Return the exact words from the passage that answer the question.": 4,
+    "Return the person, date, and location fields from the text.": 6,
+    "Return the text with all numbers replaced by <NUM>.": 13,
+    "Return the text with punctuation removed.": 12,
+    "Return the values for person, date, and location from the text.": 6,
+    "Use a verbatim span from the passage.": 4,
+    "Use the passage wording exactly for the answer.": 4
+  },
   "counts_by_task": {
     "extractive_qa": 50,
     "information_extraction": 50,
     "multi_label_classification": 50,
     "rule_based_transformation": 50,
     "single_label_classification": 50
+  },
+  "counts_by_task_and_instruction": {
+    "extractive_qa": {
+      "Answer the question using an exact span from the passage.": 8,
+      "Answer with the precise text appearing in the passage.": 8,
+      "Copy the answer directly from the passage.": 8,
+      "Extract the answer directly from the passage without paraphrasing.": 8,
+      "Return only the exact answer span from the passage.": 6,
+      "Return the exact words from the passage that answer the question.": 4,
+      "Use a verbatim span from the passage.": 4,
+      "Use the passage wording exactly for the answer.": 4
+    },
+    "information_extraction": {
+      "Extract person, date, and location and return them as structured fields.": 12,
+      "Extract the fields person, date, and location from the text.": 12,
+      "Find the person, date, and location mentioned in the text.": 8,
+      "Identify and output person, date, and location from the text.": 6,
+      "Return the person, date, and location fields from the text.": 6,
+      "Return the values for person, date, and location from the text.": 6
+    },
+    "multi_label_classification": {
+      "Assign all applicable topic labels from {finance, health, politics, sports, tech}. Return them alphabetically.": 10,
+      "Assign the applicable topic labels using only {finance, health, politics, sports, tech}. Sort the labels alphabetically.": 8,
+      "Choose all labels that apply from {finance, health, politics, sports, tech}. Return them in alphabetical order.": 8,
+      "Label the text with every applicable topic from {finance, health, politics, sports, tech}. Output the labels alphabetically.": 8,
+      "Return all matching topic labels from the allowed set {finance, health, politics, sports, tech}, in alphabetical order.": 8,
+      "Return every relevant topic label from {finance, health, politics, sports, tech}, sorted alphabetically.": 8
+    },
+    "rule_based_transformation": {
+      "Convert the text to lowercase.": 13,
+      "Drop all words with more than 6 characters.": 12,
+      "Return the text with all numbers replaced by <NUM>.": 13,
+      "Return the text with punctuation removed.": 12
+    },
+    "single_label_classification": {
+      "Assign a single sentiment label from the allowed set {positive, negative, neutral}.": 9,
+      "Choose one sentiment label only from {positive, negative, neutral}.": 8,
+      "Classify the sentiment of the text using exactly one label from {positive, negative, neutral}.": 10,
+      "Label the text with exactly one of {positive, negative, neutral}.": 7,
+      "Return exactly one sentiment label from {positive, negative, neutral}.": 8,
+      "Return one sentiment label only: {positive, negative, neutral}.": 8
+    }
+  },
+  "counts_by_task_and_template": {
+    "extractive_qa": {
+      "arrival_record_with_multiple_dates": 8,
+      "deployment_update_passage": 8,
+      "hosted_event_passage": 5,
+      "meeting_city_resolution": 8,
+      "product_brief_with_competitor": 8,
+      "project_summary_rich": 4,
+      "release_comparison_passage": 4,
+      "schedule_passage_rich": 5
+    },
+    "information_extraction": {
+      "appointment_notice_rich": 9,
+      "conference_attendance_rich": 9,
+      "event_registration_rich": 8,
+      "meeting_announcement_rich": 8,
+      "speaker_log_entry": 8,
+      "travel_schedule_notice": 8
+    },
+    "multi_label_classification": {
+      "company_news": 7,
+      "event_report": 7,
+      "institutional_announcement": 6,
+      "newsletter_excerpt": 6,
+      "panel_discussion_note": 6,
+      "policy_summary": 6,
+      "press_briefing": 6,
+      "project_update": 6
+    },
+    "rule_based_transformation": {
+      "mixed_caps_checklist__lowercase": 3,
+      "mixed_caps_checklist__remove_punctuation": 2,
+      "mixed_caps_checklist__remove_words_longer_than_6": 2,
+      "mixed_caps_checklist__replace_numbers_with_NUM": 2,
+      "mixed_case_statement__lowercase": 2,
+      "mixed_case_statement__remove_punctuation": 2,
+      "mixed_case_statement__remove_words_longer_than_6": 2,
+      "mixed_case_statement__replace_numbers_with_NUM": 2,
+      "punctuated_note__lowercase": 2,
+      "punctuated_note__remove_punctuation": 2,
+      "punctuated_note__remove_words_longer_than_6": 2,
+      "punctuated_note__replace_numbers_with_NUM": 2,
+      "quote_and_symbol_note__lowercase": 2,
+      "quote_and_symbol_note__remove_punctuation": 2,
+      "quote_and_symbol_note__remove_words_longer_than_6": 2,
+      "quote_and_symbol_note__replace_numbers_with_NUM": 2,
+      "short_report__lowercase": 2,
+      "short_report__remove_punctuation": 2,
+      "short_report__remove_words_longer_than_6": 2,
+      "short_report__replace_numbers_with_NUM": 2,
+      "slash_and_dash_update__lowercase": 2,
+      "slash_and_dash_update__remove_punctuation": 2,
+      "slash_and_dash_update__remove_words_longer_than_6": 2,
+      "slash_and_dash_update__replace_numbers_with_NUM": 2,
+      "word_length_test__replace_numbers_with_NUM": 1
+    },
+    "single_label_classification": {
+      "app_experience_note": 9,
+      "delivery_comment_mixed": 9,
+      "event_reaction_short_review": 8,
+      "product_review_balanced": 8,
+      "service_feedback_natural": 8,
+      "store_visit_note": 8
+    }
+  },
+  "counts_by_template": {
+    "app_experience_note": 9,
+    "appointment_notice_rich": 9,
+    "arrival_record_with_multiple_dates": 8,
+    "company_news": 7,
+    "conference_attendance_rich": 9,
+    "delivery_comment_mixed": 9,
+    "deployment_update_passage": 8,
+    "event_reaction_short_review": 8,
+    "event_registration_rich": 8,
+    "event_report": 7,
+    "hosted_event_passage": 5,
+    "institutional_announcement": 6,
+    "meeting_announcement_rich": 8,
+    "meeting_city_resolution": 8,
+    "mixed_caps_checklist__lowercase": 3,
+    "mixed_caps_checklist__remove_punctuation": 2,
+    "mixed_caps_checklist__remove_words_longer_than_6": 2,
+    "mixed_caps_checklist__replace_numbers_with_NUM": 2,
+    "mixed_case_statement__lowercase": 2,
+    "mixed_case_statement__remove_punctuation": 2,
+    "mixed_case_statement__remove_words_longer_than_6": 2,
+    "mixed_case_statement__replace_numbers_with_NUM": 2,
+    "newsletter_excerpt": 6,
+    "panel_discussion_note": 6,
+    "policy_summary": 6,
+    "press_briefing": 6,
+    "product_brief_with_competitor": 8,
+    "product_review_balanced": 8,
+    "project_summary_rich": 4,
+    "project_update": 6,
+    "punctuated_note__lowercase": 2,
+    "punctuated_note__remove_punctuation": 2,
+    "punctuated_note__remove_words_longer_than_6": 2,
+    "punctuated_note__replace_numbers_with_NUM": 2,
+    "quote_and_symbol_note__lowercase": 2,
+    "quote_and_symbol_note__remove_punctuation": 2,
+    "quote_and_symbol_note__remove_words_longer_than_6": 2,
+    "quote_and_symbol_note__replace_numbers_with_NUM": 2,
+    "release_comparison_passage": 4,
+    "schedule_passage_rich": 5,
+    "service_feedback_natural": 8,
+    "short_report__lowercase": 2,
+    "short_report__remove_punctuation": 2,
+    "short_report__remove_words_longer_than_6": 2,
+    "short_report__replace_numbers_with_NUM": 2,
+    "slash_and_dash_update__lowercase": 2,
+    "slash_and_dash_update__remove_punctuation": 2,
+    "slash_and_dash_update__remove_words_longer_than_6": 2,
+    "slash_and_dash_update__replace_numbers_with_NUM": 2,
+    "speaker_log_entry": 8,
+    "store_visit_note": 8,
+    "travel_schedule_notice": 8,
+    "word_length_test__replace_numbers_with_NUM": 1
+  },
+  "instruction_diversity_by_task": {
+    "extractive_qa": 8,
+    "information_extraction": 6,
+    "multi_label_classification": 6,
+    "rule_based_transformation": 4,
+    "single_label_classification": 6
   },
   "instructions_by_task": {
     "extractive_qa": [
@@ -46,6 +247,162 @@
       "Label the text with exactly one of {positive, negative, neutral}.",
       "Return exactly one sentiment label from {positive, negative, neutral}.",
       "Return one sentiment label only: {positive, negative, neutral}."
+    ]
+  },
+  "qa_summary": {
+    "answer_field_counts": {
+      "company": 13,
+      "location": 13,
+      "person": 12,
+      "product": 12
+    },
+    "answer_field_counts_by_instruction": {
+      "Answer the question using an exact span from the passage.": {
+        "company": 2,
+        "location": 2,
+        "person": 2,
+        "product": 2
+      },
+      "Answer with the precise text appearing in the passage.": {
+        "company": 2,
+        "location": 2,
+        "person": 2,
+        "product": 2
+      },
+      "Copy the answer directly from the passage.": {
+        "company": 2,
+        "location": 2,
+        "person": 2,
+        "product": 2
+      },
+      "Extract the answer directly from the passage without paraphrasing.": {
+        "company": 2,
+        "location": 2,
+        "person": 2,
+        "product": 2
+      },
+      "Return only the exact answer span from the passage.": {
+        "company": 2,
+        "location": 2,
+        "person": 1,
+        "product": 1
+      },
+      "Return the exact words from the passage that answer the question.": {
+        "company": 1,
+        "location": 1,
+        "person": 1,
+        "product": 1
+      },
+      "Use a verbatim span from the passage.": {
+        "company": 1,
+        "location": 1,
+        "person": 1,
+        "product": 1
+      },
+      "Use the passage wording exactly for the answer.": {
+        "company": 1,
+        "location": 1,
+        "person": 1,
+        "product": 1
+      }
+    },
+    "answer_field_counts_by_template": {
+      "arrival_record_with_multiple_dates": {
+        "person": 8
+      },
+      "deployment_update_passage": {
+        "company": 8
+      },
+      "hosted_event_passage": {
+        "company": 5
+      },
+      "meeting_city_resolution": {
+        "location": 8
+      },
+      "product_brief_with_competitor": {
+        "product": 8
+      },
+      "project_summary_rich": {
+        "person": 4
+      },
+      "release_comparison_passage": {
+        "product": 4
+      },
+      "schedule_passage_rich": {
+        "location": 5
+      }
+    }
+  },
+  "template_diversity_by_task": {
+    "extractive_qa": 8,
+    "information_extraction": 6,
+    "multi_label_classification": 8,
+    "rule_based_transformation": 25,
+    "single_label_classification": 6
+  },
+  "templates_by_task": {
+    "extractive_qa": [
+      "arrival_record_with_multiple_dates",
+      "deployment_update_passage",
+      "hosted_event_passage",
+      "meeting_city_resolution",
+      "product_brief_with_competitor",
+      "project_summary_rich",
+      "release_comparison_passage",
+      "schedule_passage_rich"
+    ],
+    "information_extraction": [
+      "appointment_notice_rich",
+      "conference_attendance_rich",
+      "event_registration_rich",
+      "meeting_announcement_rich",
+      "speaker_log_entry",
+      "travel_schedule_notice"
+    ],
+    "multi_label_classification": [
+      "company_news",
+      "event_report",
+      "institutional_announcement",
+      "newsletter_excerpt",
+      "panel_discussion_note",
+      "policy_summary",
+      "press_briefing",
+      "project_update"
+    ],
+    "rule_based_transformation": [
+      "mixed_caps_checklist__lowercase",
+      "mixed_caps_checklist__remove_punctuation",
+      "mixed_caps_checklist__remove_words_longer_than_6",
+      "mixed_caps_checklist__replace_numbers_with_NUM",
+      "mixed_case_statement__lowercase",
+      "mixed_case_statement__remove_punctuation",
+      "mixed_case_statement__remove_words_longer_than_6",
+      "mixed_case_statement__replace_numbers_with_NUM",
+      "punctuated_note__lowercase",
+      "punctuated_note__remove_punctuation",
+      "punctuated_note__remove_words_longer_than_6",
+      "punctuated_note__replace_numbers_with_NUM",
+      "quote_and_symbol_note__lowercase",
+      "quote_and_symbol_note__remove_punctuation",
+      "quote_and_symbol_note__remove_words_longer_than_6",
+      "quote_and_symbol_note__replace_numbers_with_NUM",
+      "short_report__lowercase",
+      "short_report__remove_punctuation",
+      "short_report__remove_words_longer_than_6",
+      "short_report__replace_numbers_with_NUM",
+      "slash_and_dash_update__lowercase",
+      "slash_and_dash_update__remove_punctuation",
+      "slash_and_dash_update__remove_words_longer_than_6",
+      "slash_and_dash_update__replace_numbers_with_NUM",
+      "word_length_test__replace_numbers_with_NUM"
+    ],
+    "single_label_classification": [
+      "app_experience_note",
+      "delivery_comment_mixed",
+      "event_reaction_short_review",
+      "product_review_balanced",
+      "service_feedback_natural",
+      "store_visit_note"
     ]
   },
   "total_records": 250
