@@ -31,23 +31,15 @@ from src.templates import (
     qa_templates,
 )
 
-# For reproducibility
 random.seed(42)
 
 TARGET_CANDIDATES_PER_TASK = 50
 
 
 def _choose_instruction(instruction_pool: List[str], index: int) -> str:
-    """
-    Deterministically choose one instruction paraphrase from a pool.
-    """
     if not instruction_pool:
         raise ValueError("instruction_pool must not be empty")
     return instruction_pool[index % len(instruction_pool)]
-
-
-def sample_topic_phrase(label: str) -> str:
-    return random.choice(topic_pool[label])
 
 
 def _get_single_label_instruction(template: Dict[str, Any], index: int) -> str:
@@ -76,9 +68,6 @@ def _reindex_examples(
     prefix: str,
     start_id: int,
 ) -> List[CandidateExample]:
-    """
-    Reassign sequential example ids after balancing/subselection so ids remain compact.
-    """
     for idx, example in enumerate(examples):
         example.example_id = f"{prefix}_{start_id + idx:03d}"
     return examples
@@ -93,10 +82,6 @@ def _round_robin_select(
     n: int,
     key_fn: Callable[[CandidateExample], Any],
 ) -> List[CandidateExample]:
-    """
-    Select up to n items in a balanced round-robin way across groups defined by key_fn.
-    Preserves within-group order and reduces front-loading from early template families.
-    """
     grouped: Dict[Any, List[CandidateExample]] = {}
     for item in items:
         key = key_fn(item)
@@ -134,10 +119,6 @@ def _round_robin_fill(
     target_n: int,
     key_fn: Callable[[CandidateExample], Any],
 ) -> List[CandidateExample]:
-    """
-    Fill an existing list up to target_n with balanced sampling from candidates.
-    Skips already selected example ids.
-    """
     selected_ids = {example.example_id for example in selected}
     remaining = [example for example in candidates if example.example_id not in selected_ids]
 
@@ -149,37 +130,89 @@ def _round_robin_fill(
     return selected
 
 
+def _quota_select(
+    items: List[CandidateExample],
+    n: int,
+    primary_key_fn: Callable[[CandidateExample], Any],
+    secondary_key_fn: Callable[[CandidateExample], Any] | None = None,
+) -> List[CandidateExample]:
+    """
+    Stronger balanced selector than plain round robin.
+
+    Stage 1:
+        Give each primary group roughly the same quota.
+    Stage 2:
+        Within each primary group, optionally diversify by secondary groups.
+    Stage 3:
+        Fill any leftovers by balanced round robin across remaining items.
+    """
+    if n <= 0 or not items:
+        return []
+
+    primary_groups: Dict[Any, List[CandidateExample]] = {}
+    for item in items:
+        primary_groups.setdefault(primary_key_fn(item), []).append(item)
+
+    ordered_primary = sorted(primary_groups.keys(), key=_stable_group_sort_key)
+    num_groups = len(ordered_primary)
+
+    base_quota = n // num_groups
+    remainder = n % num_groups
+
+    selected: List[CandidateExample] = []
+    selected_ids = set()
+
+    for idx, primary_key in enumerate(ordered_primary):
+        group_items = primary_groups[primary_key]
+        group_quota = base_quota + (1 if idx < remainder else 0)
+
+        if secondary_key_fn is None:
+            chosen = group_items[:group_quota]
+        else:
+            chosen = _round_robin_select(
+                group_items,
+                min(group_quota, len(group_items)),
+                key_fn=secondary_key_fn,
+            )
+
+        for item in chosen:
+            if item.example_id not in selected_ids:
+                selected.append(item)
+                selected_ids.add(item.example_id)
+
+    if len(selected) < n:
+        remaining = [item for item in items if item.example_id not in selected_ids]
+        fill = _round_robin_select(
+            remaining,
+            n - len(selected),
+            key_fn=primary_key_fn,
+        )
+        for item in fill:
+            if item.example_id not in selected_ids:
+                selected.append(item)
+                selected_ids.add(item.example_id)
+
+    return selected[:n]
+
+
 def _task_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
-    """
-    Grouping key used for balancing final selection within each task.
-    For QA we balance by both template and answer field.
-    For other tasks we balance by template only.
-    """
     if example.task_name == "extractive_qa":
         return (
-            example.template_name,
             example.metadata.get("answer_field"),
+            example.template_name,
         )
 
     return (example.template_name,)
 
 
-def _qa_generation_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
-    """
-    Stronger balancing key for QA generation:
-    balance by template, answer field, and instruction string.
-    """
+def _qa_generation_secondary_key(example: CandidateExample) -> Tuple[Any, ...]:
     return (
         example.template_name,
-        example.metadata.get("answer_field"),
         example.instruction,
     )
 
 
 def _default_generation_balance_key(example: CandidateExample) -> Tuple[Any, ...]:
-    """
-    Default generation balancing key for non-QA tasks.
-    """
     return (
         example.template_name,
         example.instruction,
@@ -246,20 +279,22 @@ def generate_single_label_candidates(start_id: int = 0) -> List[CandidateExample
                     )
                     counter += 1
 
-    selected = _round_robin_select(
+    selected = _quota_select(
         pool,
         TARGET_CANDIDATES_PER_TASK,
-        key_fn=lambda ex: (
-            ex.template_name,
-            ex.gold_output["label"],
-            ex.instruction,
-        ),
+        primary_key_fn=lambda ex: ex.template_name,
+        secondary_key_fn=lambda ex: (ex.gold_output["label"], ex.instruction),
     )
 
     return _reindex_examples(selected, "slc", start_id)
 
 
 def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]:
+    """
+    Build a large multi-label pool, then explicitly balance selection by template first.
+    This is the direct fix for the current collapse where the final selected set ends up
+    using only `company_news` despite multiple templates existing in the inventory.
+    """
     pool: List[CandidateExample] = []
     counter = 0
     seen_texts = set()
@@ -271,18 +306,15 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
         "university",
         "city council",
         "public agency",
+        "industry group",
+        "research institute",
     ]
 
     for actor_idx, actor in enumerate(actors):
         for template_idx, template in enumerate(multi_label_templates):
             for combo_idx, combo in enumerate(multi_label_combinations):
                 topic_item = topic_pool[combo[0]][(combo_idx + template_idx) % len(topic_pool[combo[0]])]
-
-                if len(combo) > 1:
-                    secondary_label = combo[1]
-                else:
-                    secondary_label = combo[0]
-
+                secondary_label = combo[1] if len(combo) > 1 else combo[0]
                 secondary_item = topic_pool[secondary_label][
                     (combo_idx + actor_idx + template_idx) % len(topic_pool[secondary_label])
                 ]
@@ -318,14 +350,11 @@ def generate_multi_label_candidates(start_id: int = 0) -> List[CandidateExample]
                 )
                 counter += 1
 
-    selected = _round_robin_select(
+    selected = _quota_select(
         pool,
         TARGET_CANDIDATES_PER_TASK,
-        key_fn=lambda ex: (
-            ex.template_name,
-            tuple(ex.gold_output["labels"]),
-            ex.instruction,
-        ),
+        primary_key_fn=lambda ex: ex.template_name,
+        secondary_key_fn=lambda ex: (tuple(ex.gold_output["labels"]), ex.instruction),
     )
 
     return _reindex_examples(selected, "mlc", start_id)
@@ -378,10 +407,11 @@ def generate_ie_candidates(start_id: int = 0) -> List[CandidateExample]:
                 )
                 counter += 1
 
-    selected = _round_robin_select(
+    selected = _quota_select(
         pool,
         TARGET_CANDIDATES_PER_TASK,
-        key_fn=_default_generation_balance_key,
+        primary_key_fn=lambda ex: ex.template_name,
+        secondary_key_fn=_default_generation_balance_key,
     )
 
     return _reindex_examples(selected, "ie", start_id)
@@ -462,14 +492,11 @@ def generate_transformation_candidates(start_id: int = 0) -> List[CandidateExamp
                 )
                 counter += 1
 
-    selected = _round_robin_select(
+    selected = _quota_select(
         pool,
         TARGET_CANDIDATES_PER_TASK,
-        key_fn=lambda ex: (
-            ex.template_name,
-            ex.metadata["rule_name"],
-            ex.instruction,
-        ),
+        primary_key_fn=lambda ex: ex.template_name,
+        secondary_key_fn=lambda ex: (ex.metadata["rule_name"], ex.instruction),
     )
 
     return _reindex_examples(selected, "rbt", start_id)
@@ -481,9 +508,6 @@ def _build_qa_context(
     person_idx: int,
     date_idx: int,
 ) -> Dict[str, str]:
-    """
-    Build a full formatting context for richer QA templates.
-    """
     person = people[person_idx % len(people)]
     location = locations[(person_idx + date_idx + template_idx) % len(locations)]
     date = dates[date_idx % len(dates)]
@@ -507,7 +531,6 @@ def _build_qa_context(
         "other_date": other_date,
     }
 
-    # Guard against accidental equality between primary and distractor fields
     if context["other_location"] == context["location"]:
         context["other_location"] = other_locations[(template_idx + person_idx + date_idx + 1) % len(other_locations)]
 
@@ -525,12 +548,11 @@ def _build_qa_context(
 
 def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
     """
-    Generate a richer QA pool and then balance final selection across:
-    - template family
-    - answer field
-    - instruction paraphrase
+    Build a richer QA pool and then explicitly balance by answer field first, and by
+    template/instruction within each answer field second.
 
-    This prevents early template families from dominating the first 50 examples.
+    This is the direct fix for the current drift where the final QA set becomes
+    over-concentrated in a single answer field even after template edits.
     """
     pool: List[CandidateExample] = []
     counter = 0
@@ -563,9 +585,9 @@ def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
                     "product": context["product"],
                 }
 
-                answer = answer_lookup[template["answer_field"]]
+                answer_field = template["answer_field"]
+                answer = answer_lookup[answer_field]
 
-                # Keep only cases where the answer is a unique span in the passage.
                 if passage.count(answer) != 1:
                     continue
 
@@ -585,15 +607,16 @@ def generate_qa_candidates(start_id: int = 0) -> List[CandidateExample]:
                             "question": question,
                         },
                         gold_output={"answer": answer},
-                        metadata={"answer_field": template["answer_field"]},
+                        metadata={"answer_field": answer_field},
                     )
                 )
                 counter += 1
 
-    selected = _round_robin_select(
+    selected = _quota_select(
         pool,
         TARGET_CANDIDATES_PER_TASK,
-        key_fn=_qa_generation_balance_key,
+        primary_key_fn=lambda ex: ex.metadata.get("answer_field"),
+        secondary_key_fn=_qa_generation_secondary_key,
     )
 
     return _reindex_examples(selected, "qa", start_id)
@@ -718,8 +741,12 @@ def select_final_base_examples(
     n_per_task: int = 50
 ) -> List[CandidateExample]:
     """
-    Select approved examples only, balancing within each task by template family.
-    For QA, also balance by answer field.
+    Select approved examples only.
+
+    For QA:
+        balance by answer field first, then template.
+    For other tasks:
+        balance by template.
     """
     selected = []
     task_names = sorted({example.task_name for example in candidates})
@@ -734,11 +761,21 @@ def select_final_base_examples(
         if len(approved) < n_per_task:
             print(f"Warning: task '{task_name}' has only {len(approved)} approved examples.")
 
-        chosen = _round_robin_select(
-            approved,
-            min(n_per_task, len(approved)),
-            key_fn=_task_balance_key,
-        )
+        if task_name == "extractive_qa":
+            chosen = _quota_select(
+                approved,
+                min(n_per_task, len(approved)),
+                primary_key_fn=lambda ex: ex.metadata.get("answer_field"),
+                secondary_key_fn=lambda ex: ex.template_name,
+            )
+        else:
+            chosen = _quota_select(
+                approved,
+                min(n_per_task, len(approved)),
+                primary_key_fn=lambda ex: ex.template_name,
+                secondary_key_fn=lambda ex: ex.instruction,
+            )
+
         selected.extend(chosen)
 
     return selected
@@ -756,9 +793,12 @@ def select_base_examples_exact(
     2. pending
     3. rejected
 
-    Within each status bucket, use balanced round-robin selection so final task sets
-    are not dominated by the earliest template families. For QA, balancing also uses
-    the answer field.
+    For QA:
+        balance by answer field first, then template.
+    For multi-label:
+        enforce template balancing directly.
+    For others:
+        balance by template.
     """
     selected = []
     task_names = sorted({example.task_name for example in candidates})
@@ -782,30 +822,42 @@ def select_base_examples_exact(
             if example.task_name == task_name and example.review_status == "rejected"
         ]
 
+        def _task_specific_fill(
+            chosen: List[CandidateExample],
+            pool: List[CandidateExample],
+            target_n: int,
+        ) -> List[CandidateExample]:
+            chosen_ids = {example.example_id for example in chosen}
+            remaining = [example for example in pool if example.example_id not in chosen_ids]
+            needed = target_n - len(chosen)
+            if needed <= 0 or not remaining:
+                return chosen
+
+            if task_name == "extractive_qa":
+                fill = _quota_select(
+                    remaining,
+                    needed,
+                    primary_key_fn=lambda ex: ex.metadata.get("answer_field"),
+                    secondary_key_fn=lambda ex: ex.template_name,
+                )
+            else:
+                fill = _quota_select(
+                    remaining,
+                    needed,
+                    primary_key_fn=lambda ex: ex.template_name,
+                    secondary_key_fn=lambda ex: ex.instruction,
+                )
+
+            chosen.extend(fill)
+            return chosen
+
         chosen: List[CandidateExample] = []
-
-        chosen = _round_robin_fill(
-            selected=chosen,
-            candidates=approved,
-            target_n=n_per_task,
-            key_fn=_task_balance_key,
-        )
-
-        chosen = _round_robin_fill(
-            selected=chosen,
-            candidates=pending,
-            target_n=n_per_task,
-            key_fn=_task_balance_key,
-        )
+        chosen = _task_specific_fill(chosen, approved, n_per_task)
+        chosen = _task_specific_fill(chosen, pending, n_per_task)
 
         used_rejected = False
         before_rejected = len(chosen)
-        chosen = _round_robin_fill(
-            selected=chosen,
-            candidates=rejected,
-            target_n=n_per_task,
-            key_fn=_task_balance_key,
-        )
+        chosen = _task_specific_fill(chosen, rejected, n_per_task)
         if len(chosen) > before_rejected:
             used_rejected = True
 
