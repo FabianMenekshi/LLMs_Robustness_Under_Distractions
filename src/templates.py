@@ -1,3 +1,14 @@
+'''
+This file is the foundational content library of the benchmark. It defines:
+    - the task types
+    - the allowed labels / schemas / rules
+    - reusable value pools like people, dates, locations, companies
+    - paraphrased instruction pools
+    - the actual text templates for each task
+
+So this file does not generate examples by itself. It is more like a structured inventory of ingredients.
+'''
+
 from dataclasses import dataclass
 from typing import Dict, Any, List
 

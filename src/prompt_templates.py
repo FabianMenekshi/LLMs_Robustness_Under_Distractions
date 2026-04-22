@@ -1,5 +1,12 @@
-from typing import Dict, Any, List
+'''
+This file defines:
+    - the bounded and unbounded prompt regimes, 
+    - the wrapper surfaces, 
+    - the reusable noise and distraction libraries, 
+    - the deterministic selection helpers that later files use to render clean and distracted prompts.
+'''
 
+from typing import Dict, Any, List
 
 PROMPT_REGIMES = {
     "bounded": {

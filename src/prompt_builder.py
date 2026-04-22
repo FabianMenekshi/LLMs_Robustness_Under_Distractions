@@ -1,3 +1,18 @@
+'''
+prompt_builder.py is the file that takes the design pieces from prompt_templates.py and starts actually rendering prompts.
+
+This file does six main things:
+    - load/save base records and prompt previews
+    - build deterministic variant assignments
+    - choose clean prompt surface components
+    - choose distraction materials
+    - apply distractions to clean prompts
+    - return structured prompt records for inspection and preview
+    
+This means, tahn rather than generating raw prompt text, this file is more focused on building 
+a structured representation of the prompt design that can be easily audited and analyzed. 
+'''
+
 import json
 import os
 from collections import defaultdict

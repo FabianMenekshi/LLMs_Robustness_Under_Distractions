@@ -1,3 +1,30 @@
+'''
+This is the file that takes the base dataset records and generates the final prompt instances benchmark with various distractions.
+
+This file takes the finalized base dataset and expands each base example across:
+
+    a)  both regimes: 
+        1.   bounded, 
+        2.    unbounded
+    b)  all distraction types:
+        1.   clean
+        2.   irrelevant_prefix
+        3.   irrelevant_suffix
+        4.   instruction_in_the_middle
+        5.   conflicting_instruction
+        6.   negation_distraction
+        7.   style_distraction
+        8.   length_stress
+
+So each base example becomes 16 prompt instances:
+
+2 regimes x 8 distraction types = 16
+
+And because your base dataset has 250 examples, the expected full prompt benchmark becomes:
+
+250 x 16 = 4000 prompt instances
+'''
+
 import json
 import os
 from collections import Counter, defaultdict

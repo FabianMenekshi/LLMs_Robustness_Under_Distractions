@@ -1,3 +1,29 @@
+'''
+If generation.py creates candidate examples, then validation.py checks whether those examples are 
+structurally correct, internally consistent, and balanced enough to be trusted as the base benchmark.
+
+It does that at two levels:
+
+    1.  Record-level validation
+        Check each example individually:
+        -   does it have the required fields?
+        -   is its schema correct for its task?
+        -   is the gold output valid?
+        -   is the QA answer unique?
+        -   is the transformation output correct?
+    2.  Dataset-level validation
+        Check the whole dataset:
+        -   are IDs unique?
+        -   do we have 50 examples per task?
+        -   are there duplicate rendered inputs?
+        -   do we have enough instruction diversity?
+        -   do we have enough template diversity?
+        -   is any template too dominant?
+        -   does QA have enough answer-field diversity?
+
+'''
+
+
 from collections import Counter, defaultdict
 from typing import List, Dict, Any, Tuple
 

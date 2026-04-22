@@ -1,3 +1,12 @@
+'''
+This file does five main jobs:
+    - generate candidate examples for each task
+    - balance the generated pool so one template, label type, field or subtype does not dominate
+    - provide review utilities
+    - select the final base examples
+    - save/load/export candidate examples
+'''
+
 import json
 import random
 import re

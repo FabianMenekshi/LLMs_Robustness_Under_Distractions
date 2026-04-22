@@ -1,3 +1,14 @@
+'''
+Previously, we created the 4000 prompt instances, now prompt_instance_validation.py checks whether those prompt instances are:
+    - structurally well-formed
+    - internally consistent
+    - complete across all expected conditions
+    - correctly annotated with surface and distraction metadata
+
+So this file is the prompt-level equivalent of what validation.py was for the base dataset.
+But it is even stricter in some ways, because prompt instances carry much richer metadata.
+'''
+
 from collections import Counter
 from typing import List, Dict, Any
 

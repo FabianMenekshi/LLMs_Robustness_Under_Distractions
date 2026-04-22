@@ -1,3 +1,14 @@
+'''
+This is the file that takes the selected CandidateExample objects 
+and converts them into the final exported base dataset format.
+
+It contains:
+    - conversion from CandidateExample to plain dictionary records
+    - construction of the base dataset list
+    - summary-building for auditing
+    - JSON / JSONL saving and loading utilities
+'''
+
 import json
 import os
 from collections import Counter, defaultdict
