@@ -20,7 +20,7 @@ So each base example becomes 16 prompt instances:
 
 2 regimes x 8 distraction types = 16
 
-And because your base dataset has 250 examples, the expected full prompt benchmark becomes:
+And because the base dataset has 250 examples, the expected full prompt benchmark becomes:
 
 250 x 16 = 4000 prompt instances
 '''
