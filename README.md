@@ -1,4 +1,4 @@
-# <h1 align="center">*<ins>NLP Prompt Robustness Benchmark</ins>*</h1>
+# <h1 align="center">*<ins>LLM Prompt Robustness Benchmark</ins>*</h1>
 
 A thesis-oriented benchmark pipeline for studying how LLMs handle **noisy, misleading, and realistic prompts**.
 
@@ -77,8 +77,6 @@ The benchmark measures **robustness to prompt interference**, including:
 .
 ├── .gitignore
 ├── README.md
-├── structure.txt
-├── test.ipynb
 ├── data/
 │   ├── base/
 │   │   ├── base_examples.json
@@ -141,3 +139,8 @@ Check:
 - `data/prompts/prompt_instance_summary.json`
 - `data/prompts/prompt_instance_validation.json`
 - `data/prompts/prompt_preview_samples.json`
+
+### The benchmark:
+```bash
+data/prompts/prompt_instances.jsonl
+```
