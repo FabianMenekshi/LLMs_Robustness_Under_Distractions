@@ -1,8 +1,6 @@
-# <h1 align="center">*<ins>LLM Prompt Robustness Benchmark</ins>*</h1>
+# <h1 align="center">*<ins>PRISM-Bench: Evaluating the Robustness of Instruction-Following Language Models to Prompt Distractions</ins>*</h1>
 
-A thesis-oriented benchmark pipeline for studying how LLMs handle **noisy, misleading, and realistic prompts**.
-
-This project builds a **balanced base dataset** across several task families, then expands each base example into a **prompt-robustness benchmark** with bounded and unbounded prompt regimes plus multiple distraction conditions.
+Recent advances in instruction-tuned Large Language Models (LLMs) have enabled strong performance across a wide range of NLP tasks with minimal supervision, yet these capabilities are typically evaluated under clean, well-structured input conditions that rarely reflect real-world usage. In practice, prompts often contain noise such as irrelevant context, inconsistent formatting, or conflicting instructions, and prior work suggests that model performance can be highly sensitive to such variations. Despite this, existing benchmarks do not systematically assess robustness to complex prompt interference, leaving open the question of whether strong performance on idealized inputs translates to reliable behavior in realistic settings. To address this gap, we introduce ***PRISM-Bench*** (Prompt Robustness under Instructional and Contextual Structured Modifications), a controlled evaluation framework designed to measure how different types of prompt distractions impact model performance, enabling deeper analysis of robustness, failure modes, and cross-model comparisons.
 
 ---
 
