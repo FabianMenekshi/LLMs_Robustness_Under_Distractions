@@ -1,8 +1,8 @@
 # <h1 align="center">*<ins>PRISM-Bench: Evaluating the Robustness of Instruction-Following Language Models to Prompt Distractions</ins>*</h1>
 
-Recent advances in instruction-tuned Large Language Models (LLMs) have enabled strong performance across a wide range of NLP tasks with minimal supervision, yet these capabilities are typically evaluated under clean, well-structured input conditions that rarely reflect real-world usage. In practice, prompts often contain noise such as irrelevant context, inconsistent formatting, or conflicting instructions, and prior work suggests that model performance can be highly sensitive to such variations. Despite this, existing benchmarks do not systematically assess robustness to complex prompt interference, leaving open the question of whether strong performance on idealized inputs translates to reliable behavior in realistic settings. To address this gap, we introduce ***PRISM-Bench*** (Prompt Robustness under Instructional and Contextual Structured Modifications), a controlled evaluation framework designed to measure how different types of prompt distractions impact model performance, enabling deeper analysis of robustness, failure modes, and cross-model comparisons.
+## Abstract
 
----
+Recent advances in instruction-tuned Large Language Models (LLMs) have enabled strong performance across a wide range of NLP tasks with minimal supervision, yet these capabilities are typically evaluated under clean, well-structured input conditions that rarely reflect real-world usage. In practice, prompts often contain noise such as irrelevant context, inconsistent formatting, or conflicting instructions, and prior work suggests that model performance can be highly sensitive to such variations. Despite this, existing benchmarks do not systematically assess robustness to complex prompt interference, leaving open the question of whether strong performance on idealized inputs translates to reliable behavior in realistic settings. To address this gap, we introduce ***PRISM-Bench*** (Prompt Robustness under Instructional and Contextual Structured Modifications), a controlled evaluation framework designed to measure how different types of prompt distractions impact model performance, enabling deeper analysis of robustness, failure modes, and cross-model comparisons.
 
 ## Overview
 
@@ -56,8 +56,6 @@ Each base example is rendered in two forms:
    - 2 regimes x 8 distraction types = 16 prompt instances for each base example (250 x 16 = 4000 prompt instances)
    - fully annotated for analysis
 
----
-
 ## Research Goal
 
 The benchmark measures **robustness to prompt interference**, including:
@@ -66,8 +64,6 @@ The benchmark measures **robustness to prompt interference**, including:
    - failure modes by distraction type  
    - format/style deviations  
    - extractive faithfulness under noise  
-
----
 
 ## Repository Structure
 
@@ -110,8 +106,6 @@ The benchmark measures **robustness to prompt interference**, including:
     ├── templates.py
     └── validation.py
 ```
-
----
 
 ## Pipeline Usage
 
