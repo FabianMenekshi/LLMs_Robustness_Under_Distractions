@@ -4,13 +4,15 @@
     "gpu": "1x H100 80GB",
     "host_ram_gb": 50
   },
-  "shared_inference_settings": {
+  "inference_defaults": {
     "use_chat_template": true,
     "prompt_field": "prompt_text",
     "system_prompt": null,
     "temperature": 0.0,
     "do_sample": false,
     "top_p": 1.0,
+    "dtype": "bfloat16",
+    "max_new_tokens_default": 64,
     "max_new_tokens_by_task": {
       "single_label_classification": 64,
       "multi_label_classification": 64,
@@ -26,6 +28,7 @@
   },
   "models": [
     {
+      "model_key": "mistral_7b_instruct_v03",
       "name": "Mistral-7B-Instruct-v0.3",
       "hf_id": "mistralai/Mistral-7B-Instruct-v0.3",
       "family": "mistral",
@@ -36,6 +39,7 @@
       "output_path": "results/raw/mistral_7b_instruct_v03_predictions.jsonl"
     },
     {
+      "model_key": "qwen25_7b_instruct",
       "name": "Qwen2.5-7B-Instruct",
       "hf_id": "Qwen/Qwen2.5-7B-Instruct",
       "family": "qwen",
@@ -46,6 +50,7 @@
       "output_path": "results/raw/qwen25_7b_instruct_predictions.jsonl"
     },
     {
+      "model_key": "llama31_8b_instruct",
       "name": "Llama-3.1-8B-Instruct",
       "hf_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
       "family": "llama",
@@ -56,6 +61,7 @@
       "output_path": "results/raw/llama31_8b_instruct_predictions.jsonl"
     },
     {
+      "model_key": "gemma2_9b_it",
       "name": "Gemma-2-9b-it",
       "hf_id": "google/gemma-2-9b-it",
       "family": "gemma",
@@ -66,6 +72,7 @@
       "output_path": "results/raw/gemma2_9b_it_predictions.jsonl"
     },
     {
+      "model_key": "qwen25_14b_instruct",
       "name": "Qwen2.5-14B-Instruct",
       "hf_id": "Qwen/Qwen2.5-14B-Instruct",
       "family": "qwen",
