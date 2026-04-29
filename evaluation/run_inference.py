@@ -178,21 +178,64 @@ def set_determinism(seed: int) -> None:
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
+def get_json_schema_instruction(task_name: str) -> str:
+    if task_name == "single_label_classification":
+        return (
+            'Return ONLY valid JSON with exactly one key: "label". '
+            'Do not add any explanation, markdown, or extra text. '
+            'Example: {"label": "positive"}'
+        )
+    if task_name == "multi_label_classification":
+        return (
+            'Return ONLY valid JSON with exactly one key: "labels". '
+            'The value must be a JSON list of strings. '
+            'Do not add any explanation, markdown, or extra text. '
+            'Example: {"labels": ["health", "tech"]}'
+        )
+    if task_name == "information_extraction":
+        return (
+            'Return ONLY valid JSON with exactly these keys: '
+            '"person", "date", "location". '
+            'All values must be strings. '
+            'Do not add any explanation, markdown, or extra text. '
+            'Example: {"person": "Alice Smith", "date": "2025-04-30", "location": "Rome"}'
+        )
+    if task_name == "rule_based_transformation":
+        return (
+            'Return ONLY valid JSON with exactly one key: "text". '
+            'Do not add any explanation, markdown, or extra text. '
+            'Example: {"text": "alice visited rome"}'
+        )
+    if task_name == "extractive_qa":
+        return (
+            'Return ONLY valid JSON with exactly one key: "answer". '
+            'The answer must be an exact span from the passage when the task asks for that. '
+            'Do not add any explanation, markdown, or extra text. '
+            'Example: {"answer": "Rome"}'
+        )
+    raise ValueError(f"Unsupported task_name for JSON schema instruction: {task_name}")
 
 def build_model_input(
     tokenizer: Any,
     prompt_text: str,
+    task_name: str,
     use_chat_template: bool,
 ) -> str:
+    schema_instruction = get_json_schema_instruction(task_name)
+    wrapped_prompt = (
+        f"{schema_instruction}\n\n"
+        f"Your response must be valid JSON only.\n"
+        f"Do not include prose before or after the JSON object.\n\n"
+        f"{prompt_text}"
+    )
+
     if not use_chat_template:
-        return prompt_text
+        return wrapped_prompt
 
     if not hasattr(tokenizer, "apply_chat_template") or tokenizer.chat_template is None:
-        # Some tokenizers do not define a chat template. In that case, fall back
-        # to the raw prompt text rather than inventing a custom wrapper.
-        return prompt_text
+        return wrapped_prompt
 
-    messages = [{"role": "user", "content": prompt_text}]
+    messages = [{"role": "user", "content": wrapped_prompt}]
     return tokenizer.apply_chat_template(
         messages,
         tokenize=False,
@@ -226,10 +269,16 @@ def generate_one(
     model: Any,
     tokenizer: Any,
     prompt_text: str,
+    task_name: str,
     use_chat_template: bool,
     max_new_tokens: int,
 ) -> Dict[str, Any]:
-    rendered_input = build_model_input(tokenizer, prompt_text, use_chat_template)
+    rendered_input = build_model_input(
+    tokenizer=tokenizer,
+    prompt_text=prompt_text,
+    task_name=task_name,
+    use_chat_template=use_chat_template,
+)
 
     inputs = tokenizer(
         rendered_input,
@@ -382,6 +431,7 @@ def main() -> None:
                     model=model,
                     tokenizer=tokenizer,
                     prompt_text=record["prompt_text"],
+                    task_name=record["task_name"],
                     use_chat_template=settings.use_chat_template,
                     max_new_tokens=max_new_tokens,
                 )
