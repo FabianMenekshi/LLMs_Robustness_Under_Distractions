@@ -1,0 +1,119 @@
+{
+  "benchmark_name": "Instruction Distraction Robustness Benchmark",
+  "benchmark_version": "frozen_phase_0_v1",
+  "benchmark_input_path": "data/prompts/prompt_instances.jsonl",
+  "base_examples_path": "data/base/base_examples.jsonl",
+  "base_examples_summary_path": "data/base/dataset_summary.json",
+  "base_examples_validation_path": "data/base/validation_report.json",
+  "prompt_summary_path": "data/prompts/prompt_instance_summary.json",
+  "prompt_validation_path": "data/prompts/prompt_instance_validation.json",
+  "expected_counts": {
+    "total_base_examples": 250,
+    "base_examples_per_task": 50,
+    "total_prompt_instances": 4000,
+    "prompt_instances_per_base_example": 16,
+    "total_clean_prompt_instances": 500,
+    "total_distracted_prompt_instances": 3500,
+    "prompt_instances_per_task": 800,
+    "prompt_instances_per_regime": 2000,
+    "prompt_instances_per_distraction_type": 500
+  },
+  "tasks": [
+    {
+      "name": "single_label_classification",
+      "output_type": "json_object",
+      "expected_schema": {"label": "string"},
+      "scoring_rule": "exact_match_on_canonical_json",
+      "parsing_policy": {
+        "require_valid_json": true,
+        "allowed_top_level_keys": ["label"],
+        "allow_extra_keys": false,
+        "normalize_whitespace": true,
+        "canonicalize_label_whitespace": true
+      }
+    },
+    {
+      "name": "multi_label_classification",
+      "output_type": "json_object",
+      "expected_schema": {"labels": ["string"]},
+      "scoring_rule": "exact_match_on_canonical_json_after_label_sorting",
+      "parsing_policy": {
+        "require_valid_json": true,
+        "allowed_top_level_keys": ["labels"],
+        "allow_extra_keys": false,
+        "normalize_whitespace": true,
+        "deduplicate_labels": true,
+        "sort_labels": true
+      }
+    },
+    {
+      "name": "information_extraction",
+      "output_type": "json_object",
+      "expected_schema": {"person": "string", "date": "string", "location": "string"},
+      "scoring_rule": "exact_match_on_canonical_json",
+      "parsing_policy": {
+        "require_valid_json": true,
+        "allowed_top_level_keys": ["person", "date", "location"],
+        "allow_extra_keys": false,
+        "normalize_whitespace": true,
+        "require_all_keys": true
+      }
+    },
+    {
+      "name": "rule_based_transformation",
+      "output_type": "json_object",
+      "expected_schema": {"text": "string"},
+      "scoring_rule": "exact_match_on_canonical_json",
+      "parsing_policy": {
+        "require_valid_json": true,
+        "allowed_top_level_keys": ["text"],
+        "allow_extra_keys": false,
+        "normalize_whitespace": false
+      }
+    },
+    {
+      "name": "extractive_qa",
+      "output_type": "json_object",
+      "expected_schema": {"answer": "string"},
+      "scoring_rule": "exact_match_on_canonical_json",
+      "parsing_policy": {
+        "require_valid_json": true,
+        "allowed_top_level_keys": ["answer"],
+        "allow_extra_keys": false,
+        "normalize_whitespace": true,
+        "allow_paraphrase": false,
+        "require_exact_span_match": true
+      }
+    }
+  ],
+  "regimes": ["bounded", "unbounded"],
+  "distraction_types": [
+    "clean",
+    "irrelevant_prefix",
+    "irrelevant_suffix",
+    "instruction_in_the_middle",
+    "conflicting_instruction",
+    "negation_distraction",
+    "style_distraction",
+    "length_stress"
+  ],
+  "scoring_contract": {
+    "primary_metric": "exact_match_accuracy",
+    "score_unit": "prompt_instance",
+    "count_parse_failures_as_incorrect": true,
+    "count_schema_failures_as_incorrect": true,
+    "store_raw_model_output": true,
+    "store_parsed_output": true,
+    "store_parse_error_type": true,
+    "store_correctness_flag": true
+  },
+  "analysis_views_to_compute": [
+    "overall_accuracy_by_model",
+    "accuracy_by_task",
+    "accuracy_by_regime",
+    "accuracy_by_distraction_type",
+    "clean_vs_distracted_drop",
+    "bounded_vs_unbounded_gap",
+    "parse_failure_rate_by_task_and_model"
+  ]
+}
