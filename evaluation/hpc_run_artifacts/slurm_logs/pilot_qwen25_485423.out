@@ -1,0 +1,72 @@
+Python 3.10.20
+Wed Apr 29 13:59:58 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:17:00.0 Off |                   On |
+| N/A   40C    P0             66W /  300W |    1752MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:65:00.0 Off |                   On |
+| N/A   38C    P0             45W /  300W |     249MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100 80GB PCIe          On  |   00000000:CA:00.0 Off |                   On |
+| N/A   64C    P0            212W /  300W |    5020MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100 80GB PCIe          On  |   00000000:E3:00.0 Off |                   On |
+| N/A   34C    P0             43W /  300W |     249MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  1    1   0   0  |             142MiB / 40192MiB    | 56      0 |  4   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0    1    0          3035466      C   python                                 1494MiB |
+|    2    1    0          3045129      C   python                                 4762MiB |
++-----------------------------------------------------------------------------------------+
+Loaded benchmark records: 4000
+Selected records: 200
+Already completed: 0
+Pending records: 200
+Loading model: qwen25_7b_instruct (Qwen/Qwen2.5-7B-Instruct)
+Completed 25/200 pending records
+Completed 50/200 pending records
+Completed 75/200 pending records
+Completed 100/200 pending records
+Completed 125/200 pending records
+Completed 150/200 pending records
+Completed 175/200 pending records
+Completed 200/200 pending records
+Loaded benchmark records: 4000
+Selected records: 4000
+Loaded raw prediction rows: 200
+Scored records written: 25
+Scored records written: 50
+Scored records written: 75
+Scored records written: 100
+Scored records written: 125
+Scored records written: 150
+Scored records written: 175
+Scored records written: 200
+Finished scoring raw predictions. Newly written records: 200
+Loaded scored records: 200
+Wrote pilot metrics CSV: evaluation/results/pilot_metrics_qwen25_7b_instruct.csv

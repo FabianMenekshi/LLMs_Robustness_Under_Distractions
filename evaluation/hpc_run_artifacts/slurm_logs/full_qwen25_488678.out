@@ -1,0 +1,381 @@
+Python 3.10.20
+Tue May  5 10:36:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:17:00.0 Off |                   On |
+| N/A   54C    P0             77W /  300W |   19170MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:65:00.0 Off |                   On |
+| N/A   49C    P0             73W /  300W |    6312MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100 80GB PCIe          On  |   00000000:CA:00.0 Off |                   On |
+| N/A   55C    P0             93W /  300W |   16052MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100 80GB PCIe          On  |   00000000:E3:00.0 Off |                   On |
+| N/A   47C    P0             83W /  300W |    2130MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    1    1    0          4139778      C   python                                 6054MiB |
+|    2    1    0          4160234      C   ...ng-Research/.venv/bin/python3      15794MiB |
+|    3    1    0          4163425      C   python                                 1872MiB |
++-----------------------------------------------------------------------------------------+
+=== Starting FULL Qwen inference ===
+Loaded benchmark records: 4000
+Selected records: 4000
+Already completed: 0
+Pending records: 4000
+Loading model: qwen25_7b_instruct (Qwen/Qwen2.5-7B-Instruct)
+Completed 25/4000 pending records
+Completed 50/4000 pending records
+Completed 75/4000 pending records
+Completed 100/4000 pending records
+Completed 125/4000 pending records
+Completed 150/4000 pending records
+Completed 175/4000 pending records
+Completed 200/4000 pending records
+Completed 225/4000 pending records
+Completed 250/4000 pending records
+Completed 275/4000 pending records
+Completed 300/4000 pending records
+Completed 325/4000 pending records
+Completed 350/4000 pending records
+Completed 375/4000 pending records
+Completed 400/4000 pending records
+Completed 425/4000 pending records
+Completed 450/4000 pending records
+Completed 475/4000 pending records
+Completed 500/4000 pending records
+Completed 525/4000 pending records
+Completed 550/4000 pending records
+Completed 575/4000 pending records
+Completed 600/4000 pending records
+Completed 625/4000 pending records
+Completed 650/4000 pending records
+Completed 675/4000 pending records
+Completed 700/4000 pending records
+Completed 725/4000 pending records
+Completed 750/4000 pending records
+Completed 775/4000 pending records
+Completed 800/4000 pending records
+Completed 825/4000 pending records
+Completed 850/4000 pending records
+Completed 875/4000 pending records
+Completed 900/4000 pending records
+Completed 925/4000 pending records
+Completed 950/4000 pending records
+Completed 975/4000 pending records
+Completed 1000/4000 pending records
+Completed 1025/4000 pending records
+Completed 1050/4000 pending records
+Completed 1075/4000 pending records
+Completed 1100/4000 pending records
+Completed 1125/4000 pending records
+Completed 1150/4000 pending records
+Completed 1175/4000 pending records
+Completed 1200/4000 pending records
+Completed 1225/4000 pending records
+Completed 1250/4000 pending records
+Completed 1275/4000 pending records
+Completed 1300/4000 pending records
+Completed 1325/4000 pending records
+Completed 1350/4000 pending records
+Completed 1375/4000 pending records
+Completed 1400/4000 pending records
+Completed 1425/4000 pending records
+Completed 1450/4000 pending records
+Completed 1475/4000 pending records
+Completed 1500/4000 pending records
+Completed 1525/4000 pending records
+Completed 1550/4000 pending records
+Completed 1575/4000 pending records
+Completed 1600/4000 pending records
+Completed 1625/4000 pending records
+Completed 1650/4000 pending records
+Completed 1675/4000 pending records
+Completed 1700/4000 pending records
+Completed 1725/4000 pending records
+Completed 1750/4000 pending records
+Completed 1775/4000 pending records
+Completed 1800/4000 pending records
+Completed 1825/4000 pending records
+Completed 1850/4000 pending records
+Completed 1875/4000 pending records
+Completed 1900/4000 pending records
+Completed 1925/4000 pending records
+Completed 1950/4000 pending records
+Completed 1975/4000 pending records
+Completed 2000/4000 pending records
+Completed 2025/4000 pending records
+Completed 2050/4000 pending records
+Completed 2075/4000 pending records
+Completed 2100/4000 pending records
+Completed 2125/4000 pending records
+Completed 2150/4000 pending records
+Completed 2175/4000 pending records
+Completed 2200/4000 pending records
+Completed 2225/4000 pending records
+Completed 2250/4000 pending records
+Completed 2275/4000 pending records
+Completed 2300/4000 pending records
+Completed 2325/4000 pending records
+Completed 2350/4000 pending records
+Completed 2375/4000 pending records
+Completed 2400/4000 pending records
+Completed 2425/4000 pending records
+Completed 2450/4000 pending records
+Completed 2475/4000 pending records
+Completed 2500/4000 pending records
+Completed 2525/4000 pending records
+Completed 2550/4000 pending records
+Completed 2575/4000 pending records
+Completed 2600/4000 pending records
+Completed 2625/4000 pending records
+Completed 2650/4000 pending records
+Completed 2675/4000 pending records
+Completed 2700/4000 pending records
+Completed 2725/4000 pending records
+Completed 2750/4000 pending records
+Completed 2775/4000 pending records
+Completed 2800/4000 pending records
+Completed 2825/4000 pending records
+Completed 2850/4000 pending records
+Completed 2875/4000 pending records
+Completed 2900/4000 pending records
+Completed 2925/4000 pending records
+Completed 2950/4000 pending records
+Completed 2975/4000 pending records
+Completed 3000/4000 pending records
+Completed 3025/4000 pending records
+Completed 3050/4000 pending records
+Completed 3075/4000 pending records
+Completed 3100/4000 pending records
+Completed 3125/4000 pending records
+Completed 3150/4000 pending records
+Completed 3175/4000 pending records
+Completed 3200/4000 pending records
+Completed 3225/4000 pending records
+Completed 3250/4000 pending records
+Completed 3275/4000 pending records
+Completed 3300/4000 pending records
+Completed 3325/4000 pending records
+Completed 3350/4000 pending records
+Completed 3375/4000 pending records
+Completed 3400/4000 pending records
+Completed 3425/4000 pending records
+Completed 3450/4000 pending records
+Completed 3475/4000 pending records
+Completed 3500/4000 pending records
+Completed 3525/4000 pending records
+Completed 3550/4000 pending records
+Completed 3575/4000 pending records
+Completed 3600/4000 pending records
+Completed 3625/4000 pending records
+Completed 3650/4000 pending records
+Completed 3675/4000 pending records
+Completed 3700/4000 pending records
+Completed 3725/4000 pending records
+Completed 3750/4000 pending records
+Completed 3775/4000 pending records
+Completed 3800/4000 pending records
+Completed 3825/4000 pending records
+Completed 3850/4000 pending records
+Completed 3875/4000 pending records
+Completed 3900/4000 pending records
+Completed 3925/4000 pending records
+Completed 3950/4000 pending records
+Completed 3975/4000 pending records
+Completed 4000/4000 pending records
+=== Inference complete, starting scoring ===
+Loaded benchmark records: 4000
+Selected records: 4000
+Loaded raw prediction rows: 4000
+Scored records written: 25
+Scored records written: 50
+Scored records written: 75
+Scored records written: 100
+Scored records written: 125
+Scored records written: 150
+Scored records written: 175
+Scored records written: 200
+Scored records written: 225
+Scored records written: 250
+Scored records written: 275
+Scored records written: 300
+Scored records written: 325
+Scored records written: 350
+Scored records written: 375
+Scored records written: 400
+Scored records written: 425
+Scored records written: 450
+Scored records written: 475
+Scored records written: 500
+Scored records written: 525
+Scored records written: 550
+Scored records written: 575
+Scored records written: 600
+Scored records written: 625
+Scored records written: 650
+Scored records written: 675
+Scored records written: 700
+Scored records written: 725
+Scored records written: 750
+Scored records written: 775
+Scored records written: 800
+Scored records written: 825
+Scored records written: 850
+Scored records written: 875
+Scored records written: 900
+Scored records written: 925
+Scored records written: 950
+Scored records written: 975
+Scored records written: 1000
+Scored records written: 1025
+Scored records written: 1050
+Scored records written: 1075
+Scored records written: 1100
+Scored records written: 1125
+Scored records written: 1150
+Scored records written: 1175
+Scored records written: 1200
+Scored records written: 1225
+Scored records written: 1250
+Scored records written: 1275
+Scored records written: 1300
+Scored records written: 1325
+Scored records written: 1350
+Scored records written: 1375
+Scored records written: 1400
+Scored records written: 1425
+Scored records written: 1450
+Scored records written: 1475
+Scored records written: 1500
+Scored records written: 1525
+Scored records written: 1550
+Scored records written: 1575
+Scored records written: 1600
+Scored records written: 1625
+Scored records written: 1650
+Scored records written: 1675
+Scored records written: 1700
+Scored records written: 1725
+Scored records written: 1750
+Scored records written: 1775
+Scored records written: 1800
+Scored records written: 1825
+Scored records written: 1850
+Scored records written: 1875
+Scored records written: 1900
+Scored records written: 1925
+Scored records written: 1950
+Scored records written: 1975
+Scored records written: 2000
+Scored records written: 2025
+Scored records written: 2050
+Scored records written: 2075
+Scored records written: 2100
+Scored records written: 2125
+Scored records written: 2150
+Scored records written: 2175
+Scored records written: 2200
+Scored records written: 2225
+Scored records written: 2250
+Scored records written: 2275
+Scored records written: 2300
+Scored records written: 2325
+Scored records written: 2350
+Scored records written: 2375
+Scored records written: 2400
+Scored records written: 2425
+Scored records written: 2450
+Scored records written: 2475
+Scored records written: 2500
+Scored records written: 2525
+Scored records written: 2550
+Scored records written: 2575
+Scored records written: 2600
+Scored records written: 2625
+Scored records written: 2650
+Scored records written: 2675
+Scored records written: 2700
+Scored records written: 2725
+Scored records written: 2750
+Scored records written: 2775
+Scored records written: 2800
+Scored records written: 2825
+Scored records written: 2850
+Scored records written: 2875
+Scored records written: 2900
+Scored records written: 2925
+Scored records written: 2950
+Scored records written: 2975
+Scored records written: 3000
+Scored records written: 3025
+Scored records written: 3050
+Scored records written: 3075
+Scored records written: 3100
+Scored records written: 3125
+Scored records written: 3150
+Scored records written: 3175
+Scored records written: 3200
+Scored records written: 3225
+Scored records written: 3250
+Scored records written: 3275
+Scored records written: 3300
+Scored records written: 3325
+Scored records written: 3350
+Scored records written: 3375
+Scored records written: 3400
+Scored records written: 3425
+Scored records written: 3450
+Scored records written: 3475
+Scored records written: 3500
+Scored records written: 3525
+Scored records written: 3550
+Scored records written: 3575
+Scored records written: 3600
+Scored records written: 3625
+Scored records written: 3650
+Scored records written: 3675
+Scored records written: 3700
+Scored records written: 3725
+Scored records written: 3750
+Scored records written: 3775
+Scored records written: 3800
+Scored records written: 3825
+Scored records written: 3850
+Scored records written: 3875
+Scored records written: 3900
+Scored records written: 3925
+Scored records written: 3950
+Scored records written: 3975
+Scored records written: 4000
+Finished scoring raw predictions. Newly written records: 4000
+=== Scoring complete, building metrics ===
+Loaded scored records: 4000
+Wrote pilot metrics CSV: evaluation/results/full/full_metrics_qwen25_7b_instruct_jsonforced.csv
+=== FULL Qwen run complete ===
