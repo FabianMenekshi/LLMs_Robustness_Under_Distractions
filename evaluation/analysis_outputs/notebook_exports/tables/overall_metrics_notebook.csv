@@ -1,0 +1,1153 @@
+model,model_display,model_family,params_b,is_instruct_model,accuracy,parse_failure_rate,n
+gemma,Gemma-2-9B-it,Gemma,9,True,0.741,0.1505,4000
+qwen14b,Qwen2.5-14B-Instruct,Qwen,14,True,0.65975,0.16525,4000
+qwen7b,Qwen2.5-7B-Instruct,Qwen,7,True,0.65075,0.162,4000
+llama,Llama-3.1-8B-Instruct,Llama,8,True,0.635,0.15275,4000
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,7,True,0.568,0.245,4000
+mistral_base,Mistral-7B-v0.3 Base,Mistral,7,False,0.0,0.9995,4000
+gemma,Gemma-2-9B-it,Gemma,7,False,,,0
+gemma,Gemma-2-9B-it,Gemma,7,True,,,0
+gemma,Gemma-2-9B-it,Gemma,8,False,,,0
+gemma,Gemma-2-9B-it,Gemma,8,True,,,0
+gemma,Gemma-2-9B-it,Gemma,9,False,,,0
+gemma,Gemma-2-9B-it,Gemma,14,False,,,0
+gemma,Gemma-2-9B-it,Gemma,14,True,,,0
+gemma,Gemma-2-9B-it,Llama,7,False,,,0
+gemma,Gemma-2-9B-it,Llama,7,True,,,0
+gemma,Gemma-2-9B-it,Llama,8,False,,,0
+gemma,Gemma-2-9B-it,Llama,8,True,,,0
+gemma,Gemma-2-9B-it,Llama,9,False,,,0
+gemma,Gemma-2-9B-it,Llama,9,True,,,0
+gemma,Gemma-2-9B-it,Llama,14,False,,,0
+gemma,Gemma-2-9B-it,Llama,14,True,,,0
+gemma,Gemma-2-9B-it,Mistral,7,False,,,0
+gemma,Gemma-2-9B-it,Mistral,7,True,,,0
+gemma,Gemma-2-9B-it,Mistral,8,False,,,0
+gemma,Gemma-2-9B-it,Mistral,8,True,,,0
+gemma,Gemma-2-9B-it,Mistral,9,False,,,0
+gemma,Gemma-2-9B-it,Mistral,9,True,,,0
+gemma,Gemma-2-9B-it,Mistral,14,False,,,0
+gemma,Gemma-2-9B-it,Mistral,14,True,,,0
+gemma,Gemma-2-9B-it,Qwen,7,False,,,0
+gemma,Gemma-2-9B-it,Qwen,7,True,,,0
+gemma,Gemma-2-9B-it,Qwen,8,False,,,0
+gemma,Gemma-2-9B-it,Qwen,8,True,,,0
+gemma,Gemma-2-9B-it,Qwen,9,False,,,0
+gemma,Gemma-2-9B-it,Qwen,9,True,,,0
+gemma,Gemma-2-9B-it,Qwen,14,False,,,0
+gemma,Gemma-2-9B-it,Qwen,14,True,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+gemma,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,8,True,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+gemma,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+gemma,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+gemma,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,7,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+gemma,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+gemma,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+gemma,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,7,False,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+gemma,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+gemma,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+gemma,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+gemma,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+gemma,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+gemma,Qwen2.5-14B-Instruct,Qwen,14,True,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+gemma,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+gemma,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+gemma,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,7,True,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+gemma,Qwen2.5-7B-Instruct,Qwen,14,True,,,0
+qwen14b,Gemma-2-9B-it,Gemma,7,False,,,0
+qwen14b,Gemma-2-9B-it,Gemma,7,True,,,0
+qwen14b,Gemma-2-9B-it,Gemma,8,False,,,0
+qwen14b,Gemma-2-9B-it,Gemma,8,True,,,0
+qwen14b,Gemma-2-9B-it,Gemma,9,False,,,0
+qwen14b,Gemma-2-9B-it,Gemma,9,True,,,0
+qwen14b,Gemma-2-9B-it,Gemma,14,False,,,0
+qwen14b,Gemma-2-9B-it,Gemma,14,True,,,0
+qwen14b,Gemma-2-9B-it,Llama,7,False,,,0
+qwen14b,Gemma-2-9B-it,Llama,7,True,,,0
+qwen14b,Gemma-2-9B-it,Llama,8,False,,,0
+qwen14b,Gemma-2-9B-it,Llama,8,True,,,0
+qwen14b,Gemma-2-9B-it,Llama,9,False,,,0
+qwen14b,Gemma-2-9B-it,Llama,9,True,,,0
+qwen14b,Gemma-2-9B-it,Llama,14,False,,,0
+qwen14b,Gemma-2-9B-it,Llama,14,True,,,0
+qwen14b,Gemma-2-9B-it,Mistral,7,False,,,0
+qwen14b,Gemma-2-9B-it,Mistral,7,True,,,0
+qwen14b,Gemma-2-9B-it,Mistral,8,False,,,0
+qwen14b,Gemma-2-9B-it,Mistral,8,True,,,0
+qwen14b,Gemma-2-9B-it,Mistral,9,False,,,0
+qwen14b,Gemma-2-9B-it,Mistral,9,True,,,0
+qwen14b,Gemma-2-9B-it,Mistral,14,False,,,0
+qwen14b,Gemma-2-9B-it,Mistral,14,True,,,0
+qwen14b,Gemma-2-9B-it,Qwen,7,False,,,0
+qwen14b,Gemma-2-9B-it,Qwen,7,True,,,0
+qwen14b,Gemma-2-9B-it,Qwen,8,False,,,0
+qwen14b,Gemma-2-9B-it,Qwen,8,True,,,0
+qwen14b,Gemma-2-9B-it,Qwen,9,False,,,0
+qwen14b,Gemma-2-9B-it,Qwen,9,True,,,0
+qwen14b,Gemma-2-9B-it,Qwen,14,False,,,0
+qwen14b,Gemma-2-9B-it,Qwen,14,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,8,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+qwen14b,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,7,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,7,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+qwen14b,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+qwen14b,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,7,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+qwen14b,Qwen2.5-7B-Instruct,Qwen,14,True,,,0
+qwen7b,Gemma-2-9B-it,Gemma,7,False,,,0
+qwen7b,Gemma-2-9B-it,Gemma,7,True,,,0
+qwen7b,Gemma-2-9B-it,Gemma,8,False,,,0
+qwen7b,Gemma-2-9B-it,Gemma,8,True,,,0
+qwen7b,Gemma-2-9B-it,Gemma,9,False,,,0
+qwen7b,Gemma-2-9B-it,Gemma,9,True,,,0
+qwen7b,Gemma-2-9B-it,Gemma,14,False,,,0
+qwen7b,Gemma-2-9B-it,Gemma,14,True,,,0
+qwen7b,Gemma-2-9B-it,Llama,7,False,,,0
+qwen7b,Gemma-2-9B-it,Llama,7,True,,,0
+qwen7b,Gemma-2-9B-it,Llama,8,False,,,0
+qwen7b,Gemma-2-9B-it,Llama,8,True,,,0
+qwen7b,Gemma-2-9B-it,Llama,9,False,,,0
+qwen7b,Gemma-2-9B-it,Llama,9,True,,,0
+qwen7b,Gemma-2-9B-it,Llama,14,False,,,0
+qwen7b,Gemma-2-9B-it,Llama,14,True,,,0
+qwen7b,Gemma-2-9B-it,Mistral,7,False,,,0
+qwen7b,Gemma-2-9B-it,Mistral,7,True,,,0
+qwen7b,Gemma-2-9B-it,Mistral,8,False,,,0
+qwen7b,Gemma-2-9B-it,Mistral,8,True,,,0
+qwen7b,Gemma-2-9B-it,Mistral,9,False,,,0
+qwen7b,Gemma-2-9B-it,Mistral,9,True,,,0
+qwen7b,Gemma-2-9B-it,Mistral,14,False,,,0
+qwen7b,Gemma-2-9B-it,Mistral,14,True,,,0
+qwen7b,Gemma-2-9B-it,Qwen,7,False,,,0
+qwen7b,Gemma-2-9B-it,Qwen,7,True,,,0
+qwen7b,Gemma-2-9B-it,Qwen,8,False,,,0
+qwen7b,Gemma-2-9B-it,Qwen,8,True,,,0
+qwen7b,Gemma-2-9B-it,Qwen,9,False,,,0
+qwen7b,Gemma-2-9B-it,Qwen,9,True,,,0
+qwen7b,Gemma-2-9B-it,Qwen,14,False,,,0
+qwen7b,Gemma-2-9B-it,Qwen,14,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,8,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+qwen7b,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,7,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,7,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+qwen7b,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+qwen7b,Qwen2.5-14B-Instruct,Qwen,14,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+qwen7b,Qwen2.5-7B-Instruct,Qwen,14,True,,,0
+llama,Gemma-2-9B-it,Gemma,7,False,,,0
+llama,Gemma-2-9B-it,Gemma,7,True,,,0
+llama,Gemma-2-9B-it,Gemma,8,False,,,0
+llama,Gemma-2-9B-it,Gemma,8,True,,,0
+llama,Gemma-2-9B-it,Gemma,9,False,,,0
+llama,Gemma-2-9B-it,Gemma,9,True,,,0
+llama,Gemma-2-9B-it,Gemma,14,False,,,0
+llama,Gemma-2-9B-it,Gemma,14,True,,,0
+llama,Gemma-2-9B-it,Llama,7,False,,,0
+llama,Gemma-2-9B-it,Llama,7,True,,,0
+llama,Gemma-2-9B-it,Llama,8,False,,,0
+llama,Gemma-2-9B-it,Llama,8,True,,,0
+llama,Gemma-2-9B-it,Llama,9,False,,,0
+llama,Gemma-2-9B-it,Llama,9,True,,,0
+llama,Gemma-2-9B-it,Llama,14,False,,,0
+llama,Gemma-2-9B-it,Llama,14,True,,,0
+llama,Gemma-2-9B-it,Mistral,7,False,,,0
+llama,Gemma-2-9B-it,Mistral,7,True,,,0
+llama,Gemma-2-9B-it,Mistral,8,False,,,0
+llama,Gemma-2-9B-it,Mistral,8,True,,,0
+llama,Gemma-2-9B-it,Mistral,9,False,,,0
+llama,Gemma-2-9B-it,Mistral,9,True,,,0
+llama,Gemma-2-9B-it,Mistral,14,False,,,0
+llama,Gemma-2-9B-it,Mistral,14,True,,,0
+llama,Gemma-2-9B-it,Qwen,7,False,,,0
+llama,Gemma-2-9B-it,Qwen,7,True,,,0
+llama,Gemma-2-9B-it,Qwen,8,False,,,0
+llama,Gemma-2-9B-it,Qwen,8,True,,,0
+llama,Gemma-2-9B-it,Qwen,9,False,,,0
+llama,Gemma-2-9B-it,Qwen,9,True,,,0
+llama,Gemma-2-9B-it,Qwen,14,False,,,0
+llama,Gemma-2-9B-it,Qwen,14,True,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+llama,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+llama,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+llama,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+llama,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+llama,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+llama,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+llama,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+llama,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+llama,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+llama,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,7,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+llama,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+llama,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+llama,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+llama,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+llama,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+llama,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+llama,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+llama,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+llama,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+llama,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,7,False,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+llama,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+llama,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+llama,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+llama,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+llama,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+llama,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+llama,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+llama,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+llama,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+llama,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+llama,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+llama,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+llama,Qwen2.5-14B-Instruct,Qwen,14,True,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+llama,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+llama,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+llama,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+llama,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+llama,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+llama,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+llama,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+llama,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+llama,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+llama,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,7,True,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+llama,Qwen2.5-7B-Instruct,Qwen,14,True,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,7,False,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,7,True,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,8,False,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,8,True,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,9,False,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,9,True,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,14,False,,,0
+mistral_instruct,Gemma-2-9B-it,Gemma,14,True,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,7,False,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,7,True,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,8,False,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,8,True,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,9,False,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,9,True,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,14,False,,,0
+mistral_instruct,Gemma-2-9B-it,Llama,14,True,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,7,False,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,7,True,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,8,False,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,8,True,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,9,False,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,9,True,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,14,False,,,0
+mistral_instruct,Gemma-2-9B-it,Mistral,14,True,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,7,False,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,7,True,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,8,False,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,8,True,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,9,False,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,9,True,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,14,False,,,0
+mistral_instruct,Gemma-2-9B-it,Qwen,14,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,8,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,7,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,Qwen,14,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,7,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,Qwen,14,True,,,0
+mistral_base,Gemma-2-9B-it,Gemma,7,False,,,0
+mistral_base,Gemma-2-9B-it,Gemma,7,True,,,0
+mistral_base,Gemma-2-9B-it,Gemma,8,False,,,0
+mistral_base,Gemma-2-9B-it,Gemma,8,True,,,0
+mistral_base,Gemma-2-9B-it,Gemma,9,False,,,0
+mistral_base,Gemma-2-9B-it,Gemma,9,True,,,0
+mistral_base,Gemma-2-9B-it,Gemma,14,False,,,0
+mistral_base,Gemma-2-9B-it,Gemma,14,True,,,0
+mistral_base,Gemma-2-9B-it,Llama,7,False,,,0
+mistral_base,Gemma-2-9B-it,Llama,7,True,,,0
+mistral_base,Gemma-2-9B-it,Llama,8,False,,,0
+mistral_base,Gemma-2-9B-it,Llama,8,True,,,0
+mistral_base,Gemma-2-9B-it,Llama,9,False,,,0
+mistral_base,Gemma-2-9B-it,Llama,9,True,,,0
+mistral_base,Gemma-2-9B-it,Llama,14,False,,,0
+mistral_base,Gemma-2-9B-it,Llama,14,True,,,0
+mistral_base,Gemma-2-9B-it,Mistral,7,False,,,0
+mistral_base,Gemma-2-9B-it,Mistral,7,True,,,0
+mistral_base,Gemma-2-9B-it,Mistral,8,False,,,0
+mistral_base,Gemma-2-9B-it,Mistral,8,True,,,0
+mistral_base,Gemma-2-9B-it,Mistral,9,False,,,0
+mistral_base,Gemma-2-9B-it,Mistral,9,True,,,0
+mistral_base,Gemma-2-9B-it,Mistral,14,False,,,0
+mistral_base,Gemma-2-9B-it,Mistral,14,True,,,0
+mistral_base,Gemma-2-9B-it,Qwen,7,False,,,0
+mistral_base,Gemma-2-9B-it,Qwen,7,True,,,0
+mistral_base,Gemma-2-9B-it,Qwen,8,False,,,0
+mistral_base,Gemma-2-9B-it,Qwen,8,True,,,0
+mistral_base,Gemma-2-9B-it,Qwen,9,False,,,0
+mistral_base,Gemma-2-9B-it,Qwen,9,True,,,0
+mistral_base,Gemma-2-9B-it,Qwen,14,False,,,0
+mistral_base,Gemma-2-9B-it,Qwen,14,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,7,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,7,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,8,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,8,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,9,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,9,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,14,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Gemma,14,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,7,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,7,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,8,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,8,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,9,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,9,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,14,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Llama,14,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,7,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,7,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,8,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,8,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,9,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,9,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,14,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Mistral,14,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,7,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,7,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,8,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,8,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,9,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,9,True,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,14,False,,,0
+mistral_base,Llama-3.1-8B-Instruct,Qwen,14,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,7,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,7,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,8,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,8,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,9,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,9,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,14,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Gemma,14,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,7,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,7,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,8,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,8,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,9,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,9,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,14,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Llama,14,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,7,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,7,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,8,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,8,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,9,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,9,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,14,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Mistral,14,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,7,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,7,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,8,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,8,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,9,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,9,True,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,14,False,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,Qwen,14,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,7,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,7,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,8,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,8,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,9,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,9,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,14,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Gemma,14,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,7,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,7,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,8,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,8,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,9,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,9,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,14,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Llama,14,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,7,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,8,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,8,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,9,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,9,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,14,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Mistral,14,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,7,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,7,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,8,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,8,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,9,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,9,True,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,14,False,,,0
+mistral_base,Mistral-7B-v0.3 Base,Qwen,14,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,7,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,7,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,8,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,8,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,9,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,9,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,14,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Gemma,14,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,7,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,7,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,8,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,8,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,9,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,9,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,14,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Llama,14,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,7,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,7,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,8,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,8,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,9,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,9,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,14,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Mistral,14,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,7,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,7,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,8,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,8,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,9,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,9,True,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,14,False,,,0
+mistral_base,Qwen2.5-14B-Instruct,Qwen,14,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,7,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,7,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,8,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,8,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,9,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,9,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,14,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Gemma,14,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,7,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,7,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,8,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,8,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,9,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,9,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,14,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Llama,14,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,7,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,7,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,8,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,8,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,9,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,9,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,14,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Mistral,14,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,7,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,7,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,8,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,8,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,9,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,9,True,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,14,False,,,0
+mistral_base,Qwen2.5-7B-Instruct,Qwen,14,True,,,0

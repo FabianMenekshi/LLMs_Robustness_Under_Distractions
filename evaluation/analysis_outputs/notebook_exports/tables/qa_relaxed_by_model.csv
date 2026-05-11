@@ -1,0 +1,37 @@
+model,model_display,strict_qa_accuracy,relaxed_qa_accuracy,recovered_rate_within_qa,n
+gemma,Gemma-2-9B-it,0.92375,0.9725,0.04875,800
+llama,Llama-3.1-8B-Instruct,0.7475,0.91625,0.16875,800
+qwen14b,Qwen2.5-14B-Instruct,0.6925,0.86125,0.16875,800
+qwen7b,Qwen2.5-7B-Instruct,0.695,0.83125,0.13625,800
+mistral_instruct,Mistral-7B-Instruct-v0.3,0.77625,0.78625,0.01,800
+mistral_base,Mistral-7B-v0.3 Base,0.0,0.0,0.0,800
+gemma,Llama-3.1-8B-Instruct,,,,0
+gemma,Mistral-7B-Instruct-v0.3,,,,0
+gemma,Mistral-7B-v0.3 Base,,,,0
+gemma,Qwen2.5-14B-Instruct,,,,0
+gemma,Qwen2.5-7B-Instruct,,,,0
+qwen14b,Gemma-2-9B-it,,,,0
+qwen14b,Llama-3.1-8B-Instruct,,,,0
+qwen14b,Mistral-7B-Instruct-v0.3,,,,0
+qwen14b,Mistral-7B-v0.3 Base,,,,0
+qwen14b,Qwen2.5-7B-Instruct,,,,0
+qwen7b,Gemma-2-9B-it,,,,0
+qwen7b,Llama-3.1-8B-Instruct,,,,0
+qwen7b,Mistral-7B-Instruct-v0.3,,,,0
+qwen7b,Mistral-7B-v0.3 Base,,,,0
+qwen7b,Qwen2.5-14B-Instruct,,,,0
+llama,Gemma-2-9B-it,,,,0
+llama,Mistral-7B-Instruct-v0.3,,,,0
+llama,Mistral-7B-v0.3 Base,,,,0
+llama,Qwen2.5-14B-Instruct,,,,0
+llama,Qwen2.5-7B-Instruct,,,,0
+mistral_instruct,Gemma-2-9B-it,,,,0
+mistral_instruct,Llama-3.1-8B-Instruct,,,,0
+mistral_instruct,Mistral-7B-v0.3 Base,,,,0
+mistral_instruct,Qwen2.5-14B-Instruct,,,,0
+mistral_instruct,Qwen2.5-7B-Instruct,,,,0
+mistral_base,Gemma-2-9B-it,,,,0
+mistral_base,Llama-3.1-8B-Instruct,,,,0
+mistral_base,Mistral-7B-Instruct-v0.3,,,,0
+mistral_base,Qwen2.5-14B-Instruct,,,,0
+mistral_base,Qwen2.5-7B-Instruct,,,,0

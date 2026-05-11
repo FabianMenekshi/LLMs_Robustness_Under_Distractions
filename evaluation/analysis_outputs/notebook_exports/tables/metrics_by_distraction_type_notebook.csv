@@ -1,0 +1,49 @@
+model,model_display,distraction_type,accuracy,parse_failure_rate,n
+gemma,Gemma-2-9B-it,clean,0.818,0.086,500
+gemma,Gemma-2-9B-it,irrelevant_prefix,0.792,0.106,500
+gemma,Gemma-2-9B-it,irrelevant_suffix,0.738,0.132,500
+gemma,Gemma-2-9B-it,instruction_in_the_middle,0.724,0.142,500
+gemma,Gemma-2-9B-it,conflicting_instruction,0.518,0.384,500
+gemma,Gemma-2-9B-it,negation_distraction,0.802,0.088,500
+gemma,Gemma-2-9B-it,style_distraction,0.748,0.146,500
+gemma,Gemma-2-9B-it,length_stress,0.788,0.12,500
+qwen14b,Qwen2.5-14B-Instruct,clean,0.734,0.124,500
+qwen14b,Qwen2.5-14B-Instruct,irrelevant_prefix,0.698,0.142,500
+qwen14b,Qwen2.5-14B-Instruct,irrelevant_suffix,0.668,0.154,500
+qwen14b,Qwen2.5-14B-Instruct,instruction_in_the_middle,0.664,0.162,500
+qwen14b,Qwen2.5-14B-Instruct,conflicting_instruction,0.498,0.348,500
+qwen14b,Qwen2.5-14B-Instruct,negation_distraction,0.738,0.124,500
+qwen14b,Qwen2.5-14B-Instruct,style_distraction,0.54,0.132,500
+qwen14b,Qwen2.5-14B-Instruct,length_stress,0.738,0.136,500
+qwen7b,Qwen2.5-7B-Instruct,clean,0.74,0.124,500
+qwen7b,Qwen2.5-7B-Instruct,irrelevant_prefix,0.696,0.134,500
+qwen7b,Qwen2.5-7B-Instruct,irrelevant_suffix,0.69,0.144,500
+qwen7b,Qwen2.5-7B-Instruct,instruction_in_the_middle,0.606,0.176,500
+qwen7b,Qwen2.5-7B-Instruct,conflicting_instruction,0.544,0.292,500
+qwen7b,Qwen2.5-7B-Instruct,negation_distraction,0.692,0.136,500
+qwen7b,Qwen2.5-7B-Instruct,style_distraction,0.538,0.154,500
+qwen7b,Qwen2.5-7B-Instruct,length_stress,0.7,0.136,500
+llama,Llama-3.1-8B-Instruct,clean,0.682,0.118,500
+llama,Llama-3.1-8B-Instruct,irrelevant_prefix,0.642,0.134,500
+llama,Llama-3.1-8B-Instruct,irrelevant_suffix,0.646,0.126,500
+llama,Llama-3.1-8B-Instruct,instruction_in_the_middle,0.58,0.18,500
+llama,Llama-3.1-8B-Instruct,conflicting_instruction,0.592,0.234,500
+llama,Llama-3.1-8B-Instruct,negation_distraction,0.69,0.112,500
+llama,Llama-3.1-8B-Instruct,style_distraction,0.64,0.162,500
+llama,Llama-3.1-8B-Instruct,length_stress,0.608,0.156,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,clean,0.682,0.14,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,irrelevant_prefix,0.68,0.158,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,irrelevant_suffix,0.604,0.202,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,instruction_in_the_middle,0.634,0.184,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,conflicting_instruction,0.358,0.518,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,negation_distraction,0.676,0.138,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,style_distraction,0.236,0.454,500
+mistral_instruct,Mistral-7B-Instruct-v0.3,length_stress,0.674,0.166,500
+mistral_base,Mistral-7B-v0.3 Base,clean,0.0,0.998,500
+mistral_base,Mistral-7B-v0.3 Base,irrelevant_prefix,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,irrelevant_suffix,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,instruction_in_the_middle,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,conflicting_instruction,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,negation_distraction,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,style_distraction,0.0,1.0,500
+mistral_base,Mistral-7B-v0.3 Base,length_stress,0.0,0.998,500

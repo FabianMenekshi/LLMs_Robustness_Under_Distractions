@@ -1,0 +1,289 @@
+model,model_display,primary_error_code,count
+gemma,Gemma-2-9B-it,wrong_answer,434
+gemma,Gemma-2-9B-it,invalid_label,418
+gemma,Gemma-2-9B-it,invalid_json,166
+gemma,Gemma-2-9B-it,missing_key,9
+gemma,Gemma-2-9B-it,wrong_schema,8
+gemma,Gemma-2-9B-it,wrong_type,1
+gemma,Gemma-2-9B-it,empty_output,0
+gemma,Gemma-2-9B-it,extra_key,0
+gemma,Llama-3.1-8B-Instruct,empty_output,0
+gemma,Llama-3.1-8B-Instruct,extra_key,0
+gemma,Llama-3.1-8B-Instruct,invalid_json,0
+gemma,Llama-3.1-8B-Instruct,invalid_label,0
+gemma,Llama-3.1-8B-Instruct,missing_key,0
+gemma,Llama-3.1-8B-Instruct,wrong_answer,0
+gemma,Llama-3.1-8B-Instruct,wrong_schema,0
+gemma,Llama-3.1-8B-Instruct,wrong_type,0
+gemma,Mistral-7B-Instruct-v0.3,empty_output,0
+gemma,Mistral-7B-Instruct-v0.3,extra_key,0
+gemma,Mistral-7B-Instruct-v0.3,invalid_json,0
+gemma,Mistral-7B-Instruct-v0.3,invalid_label,0
+gemma,Mistral-7B-Instruct-v0.3,missing_key,0
+gemma,Mistral-7B-Instruct-v0.3,wrong_answer,0
+gemma,Mistral-7B-Instruct-v0.3,wrong_schema,0
+gemma,Mistral-7B-Instruct-v0.3,wrong_type,0
+gemma,Mistral-7B-v0.3 Base,empty_output,0
+gemma,Mistral-7B-v0.3 Base,extra_key,0
+gemma,Mistral-7B-v0.3 Base,invalid_json,0
+gemma,Mistral-7B-v0.3 Base,invalid_label,0
+gemma,Mistral-7B-v0.3 Base,missing_key,0
+gemma,Mistral-7B-v0.3 Base,wrong_answer,0
+gemma,Mistral-7B-v0.3 Base,wrong_schema,0
+gemma,Mistral-7B-v0.3 Base,wrong_type,0
+gemma,Qwen2.5-14B-Instruct,empty_output,0
+gemma,Qwen2.5-14B-Instruct,extra_key,0
+gemma,Qwen2.5-14B-Instruct,invalid_json,0
+gemma,Qwen2.5-14B-Instruct,invalid_label,0
+gemma,Qwen2.5-14B-Instruct,missing_key,0
+gemma,Qwen2.5-14B-Instruct,wrong_answer,0
+gemma,Qwen2.5-14B-Instruct,wrong_schema,0
+gemma,Qwen2.5-14B-Instruct,wrong_type,0
+gemma,Qwen2.5-7B-Instruct,empty_output,0
+gemma,Qwen2.5-7B-Instruct,extra_key,0
+gemma,Qwen2.5-7B-Instruct,invalid_json,0
+gemma,Qwen2.5-7B-Instruct,invalid_label,0
+gemma,Qwen2.5-7B-Instruct,missing_key,0
+gemma,Qwen2.5-7B-Instruct,wrong_answer,0
+gemma,Qwen2.5-7B-Instruct,wrong_schema,0
+gemma,Qwen2.5-7B-Instruct,wrong_type,0
+qwen14b,Qwen2.5-14B-Instruct,wrong_answer,700
+qwen14b,Qwen2.5-14B-Instruct,invalid_label,521
+qwen14b,Qwen2.5-14B-Instruct,invalid_json,91
+qwen14b,Qwen2.5-14B-Instruct,missing_key,35
+qwen14b,Qwen2.5-14B-Instruct,wrong_schema,8
+qwen14b,Qwen2.5-14B-Instruct,wrong_type,6
+qwen14b,Gemma-2-9B-it,empty_output,0
+qwen14b,Gemma-2-9B-it,extra_key,0
+qwen14b,Gemma-2-9B-it,invalid_json,0
+qwen14b,Gemma-2-9B-it,invalid_label,0
+qwen14b,Gemma-2-9B-it,missing_key,0
+qwen14b,Gemma-2-9B-it,wrong_answer,0
+qwen14b,Gemma-2-9B-it,wrong_schema,0
+qwen14b,Gemma-2-9B-it,wrong_type,0
+qwen14b,Llama-3.1-8B-Instruct,empty_output,0
+qwen14b,Llama-3.1-8B-Instruct,extra_key,0
+qwen14b,Llama-3.1-8B-Instruct,invalid_json,0
+qwen14b,Llama-3.1-8B-Instruct,invalid_label,0
+qwen14b,Llama-3.1-8B-Instruct,missing_key,0
+qwen14b,Llama-3.1-8B-Instruct,wrong_answer,0
+qwen14b,Llama-3.1-8B-Instruct,wrong_schema,0
+qwen14b,Llama-3.1-8B-Instruct,wrong_type,0
+qwen14b,Mistral-7B-Instruct-v0.3,empty_output,0
+qwen14b,Mistral-7B-Instruct-v0.3,extra_key,0
+qwen14b,Mistral-7B-Instruct-v0.3,invalid_json,0
+qwen14b,Mistral-7B-Instruct-v0.3,invalid_label,0
+qwen14b,Mistral-7B-Instruct-v0.3,missing_key,0
+qwen14b,Mistral-7B-Instruct-v0.3,wrong_answer,0
+qwen14b,Mistral-7B-Instruct-v0.3,wrong_schema,0
+qwen14b,Mistral-7B-Instruct-v0.3,wrong_type,0
+qwen14b,Mistral-7B-v0.3 Base,empty_output,0
+qwen14b,Mistral-7B-v0.3 Base,extra_key,0
+qwen14b,Mistral-7B-v0.3 Base,invalid_json,0
+qwen14b,Mistral-7B-v0.3 Base,invalid_label,0
+qwen14b,Mistral-7B-v0.3 Base,missing_key,0
+qwen14b,Mistral-7B-v0.3 Base,wrong_answer,0
+qwen14b,Mistral-7B-v0.3 Base,wrong_schema,0
+qwen14b,Mistral-7B-v0.3 Base,wrong_type,0
+qwen14b,Qwen2.5-14B-Instruct,empty_output,0
+qwen14b,Qwen2.5-14B-Instruct,extra_key,0
+qwen14b,Qwen2.5-7B-Instruct,empty_output,0
+qwen14b,Qwen2.5-7B-Instruct,extra_key,0
+qwen14b,Qwen2.5-7B-Instruct,invalid_json,0
+qwen14b,Qwen2.5-7B-Instruct,invalid_label,0
+qwen14b,Qwen2.5-7B-Instruct,missing_key,0
+qwen14b,Qwen2.5-7B-Instruct,wrong_answer,0
+qwen14b,Qwen2.5-7B-Instruct,wrong_schema,0
+qwen14b,Qwen2.5-7B-Instruct,wrong_type,0
+qwen7b,Qwen2.5-7B-Instruct,wrong_answer,749
+qwen7b,Qwen2.5-7B-Instruct,invalid_label,510
+qwen7b,Qwen2.5-7B-Instruct,invalid_json,80
+qwen7b,Qwen2.5-7B-Instruct,wrong_schema,32
+qwen7b,Qwen2.5-7B-Instruct,missing_key,24
+qwen7b,Qwen2.5-7B-Instruct,wrong_type,2
+qwen7b,Gemma-2-9B-it,empty_output,0
+qwen7b,Gemma-2-9B-it,extra_key,0
+qwen7b,Gemma-2-9B-it,invalid_json,0
+qwen7b,Gemma-2-9B-it,invalid_label,0
+qwen7b,Gemma-2-9B-it,missing_key,0
+qwen7b,Gemma-2-9B-it,wrong_answer,0
+qwen7b,Gemma-2-9B-it,wrong_schema,0
+qwen7b,Gemma-2-9B-it,wrong_type,0
+qwen7b,Llama-3.1-8B-Instruct,empty_output,0
+qwen7b,Llama-3.1-8B-Instruct,extra_key,0
+qwen7b,Llama-3.1-8B-Instruct,invalid_json,0
+qwen7b,Llama-3.1-8B-Instruct,invalid_label,0
+qwen7b,Llama-3.1-8B-Instruct,missing_key,0
+qwen7b,Llama-3.1-8B-Instruct,wrong_answer,0
+qwen7b,Llama-3.1-8B-Instruct,wrong_schema,0
+qwen7b,Llama-3.1-8B-Instruct,wrong_type,0
+qwen7b,Mistral-7B-Instruct-v0.3,empty_output,0
+qwen7b,Mistral-7B-Instruct-v0.3,extra_key,0
+qwen7b,Mistral-7B-Instruct-v0.3,invalid_json,0
+qwen7b,Mistral-7B-Instruct-v0.3,invalid_label,0
+qwen7b,Mistral-7B-Instruct-v0.3,missing_key,0
+qwen7b,Mistral-7B-Instruct-v0.3,wrong_answer,0
+qwen7b,Mistral-7B-Instruct-v0.3,wrong_schema,0
+qwen7b,Mistral-7B-Instruct-v0.3,wrong_type,0
+qwen7b,Mistral-7B-v0.3 Base,empty_output,0
+qwen7b,Mistral-7B-v0.3 Base,extra_key,0
+qwen7b,Mistral-7B-v0.3 Base,invalid_json,0
+qwen7b,Mistral-7B-v0.3 Base,invalid_label,0
+qwen7b,Mistral-7B-v0.3 Base,missing_key,0
+qwen7b,Mistral-7B-v0.3 Base,wrong_answer,0
+qwen7b,Mistral-7B-v0.3 Base,wrong_schema,0
+qwen7b,Mistral-7B-v0.3 Base,wrong_type,0
+qwen7b,Qwen2.5-14B-Instruct,empty_output,0
+qwen7b,Qwen2.5-14B-Instruct,extra_key,0
+qwen7b,Qwen2.5-14B-Instruct,invalid_json,0
+qwen7b,Qwen2.5-14B-Instruct,invalid_label,0
+qwen7b,Qwen2.5-14B-Instruct,missing_key,0
+qwen7b,Qwen2.5-14B-Instruct,wrong_answer,0
+qwen7b,Qwen2.5-14B-Instruct,wrong_schema,0
+qwen7b,Qwen2.5-14B-Instruct,wrong_type,0
+qwen7b,Qwen2.5-7B-Instruct,empty_output,0
+qwen7b,Qwen2.5-7B-Instruct,extra_key,0
+llama,Llama-3.1-8B-Instruct,wrong_answer,849
+llama,Llama-3.1-8B-Instruct,invalid_label,476
+llama,Llama-3.1-8B-Instruct,invalid_json,82
+llama,Llama-3.1-8B-Instruct,missing_key,42
+llama,Llama-3.1-8B-Instruct,wrong_schema,11
+llama,Gemma-2-9B-it,empty_output,0
+llama,Gemma-2-9B-it,extra_key,0
+llama,Gemma-2-9B-it,invalid_json,0
+llama,Gemma-2-9B-it,invalid_label,0
+llama,Gemma-2-9B-it,missing_key,0
+llama,Gemma-2-9B-it,wrong_answer,0
+llama,Gemma-2-9B-it,wrong_schema,0
+llama,Gemma-2-9B-it,wrong_type,0
+llama,Llama-3.1-8B-Instruct,empty_output,0
+llama,Llama-3.1-8B-Instruct,extra_key,0
+llama,Llama-3.1-8B-Instruct,wrong_type,0
+llama,Mistral-7B-Instruct-v0.3,empty_output,0
+llama,Mistral-7B-Instruct-v0.3,extra_key,0
+llama,Mistral-7B-Instruct-v0.3,invalid_json,0
+llama,Mistral-7B-Instruct-v0.3,invalid_label,0
+llama,Mistral-7B-Instruct-v0.3,missing_key,0
+llama,Mistral-7B-Instruct-v0.3,wrong_answer,0
+llama,Mistral-7B-Instruct-v0.3,wrong_schema,0
+llama,Mistral-7B-Instruct-v0.3,wrong_type,0
+llama,Mistral-7B-v0.3 Base,empty_output,0
+llama,Mistral-7B-v0.3 Base,extra_key,0
+llama,Mistral-7B-v0.3 Base,invalid_json,0
+llama,Mistral-7B-v0.3 Base,invalid_label,0
+llama,Mistral-7B-v0.3 Base,missing_key,0
+llama,Mistral-7B-v0.3 Base,wrong_answer,0
+llama,Mistral-7B-v0.3 Base,wrong_schema,0
+llama,Mistral-7B-v0.3 Base,wrong_type,0
+llama,Qwen2.5-14B-Instruct,empty_output,0
+llama,Qwen2.5-14B-Instruct,extra_key,0
+llama,Qwen2.5-14B-Instruct,invalid_json,0
+llama,Qwen2.5-14B-Instruct,invalid_label,0
+llama,Qwen2.5-14B-Instruct,missing_key,0
+llama,Qwen2.5-14B-Instruct,wrong_answer,0
+llama,Qwen2.5-14B-Instruct,wrong_schema,0
+llama,Qwen2.5-14B-Instruct,wrong_type,0
+llama,Qwen2.5-7B-Instruct,empty_output,0
+llama,Qwen2.5-7B-Instruct,extra_key,0
+llama,Qwen2.5-7B-Instruct,invalid_json,0
+llama,Qwen2.5-7B-Instruct,invalid_label,0
+llama,Qwen2.5-7B-Instruct,missing_key,0
+llama,Qwen2.5-7B-Instruct,wrong_answer,0
+llama,Qwen2.5-7B-Instruct,wrong_schema,0
+llama,Qwen2.5-7B-Instruct,wrong_type,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,wrong_answer,748
+mistral_instruct,Mistral-7B-Instruct-v0.3,invalid_label,572
+mistral_instruct,Mistral-7B-Instruct-v0.3,invalid_json,363
+mistral_instruct,Mistral-7B-Instruct-v0.3,extra_key,21
+mistral_instruct,Mistral-7B-Instruct-v0.3,missing_key,15
+mistral_instruct,Mistral-7B-Instruct-v0.3,wrong_schema,9
+mistral_instruct,Gemma-2-9B-it,empty_output,0
+mistral_instruct,Gemma-2-9B-it,extra_key,0
+mistral_instruct,Gemma-2-9B-it,invalid_json,0
+mistral_instruct,Gemma-2-9B-it,invalid_label,0
+mistral_instruct,Gemma-2-9B-it,missing_key,0
+mistral_instruct,Gemma-2-9B-it,wrong_answer,0
+mistral_instruct,Gemma-2-9B-it,wrong_schema,0
+mistral_instruct,Gemma-2-9B-it,wrong_type,0
+mistral_instruct,Llama-3.1-8B-Instruct,empty_output,0
+mistral_instruct,Llama-3.1-8B-Instruct,extra_key,0
+mistral_instruct,Llama-3.1-8B-Instruct,invalid_json,0
+mistral_instruct,Llama-3.1-8B-Instruct,invalid_label,0
+mistral_instruct,Llama-3.1-8B-Instruct,missing_key,0
+mistral_instruct,Llama-3.1-8B-Instruct,wrong_answer,0
+mistral_instruct,Llama-3.1-8B-Instruct,wrong_schema,0
+mistral_instruct,Llama-3.1-8B-Instruct,wrong_type,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,empty_output,0
+mistral_instruct,Mistral-7B-Instruct-v0.3,wrong_type,0
+mistral_instruct,Mistral-7B-v0.3 Base,empty_output,0
+mistral_instruct,Mistral-7B-v0.3 Base,extra_key,0
+mistral_instruct,Mistral-7B-v0.3 Base,invalid_json,0
+mistral_instruct,Mistral-7B-v0.3 Base,invalid_label,0
+mistral_instruct,Mistral-7B-v0.3 Base,missing_key,0
+mistral_instruct,Mistral-7B-v0.3 Base,wrong_answer,0
+mistral_instruct,Mistral-7B-v0.3 Base,wrong_schema,0
+mistral_instruct,Mistral-7B-v0.3 Base,wrong_type,0
+mistral_instruct,Qwen2.5-14B-Instruct,empty_output,0
+mistral_instruct,Qwen2.5-14B-Instruct,extra_key,0
+mistral_instruct,Qwen2.5-14B-Instruct,invalid_json,0
+mistral_instruct,Qwen2.5-14B-Instruct,invalid_label,0
+mistral_instruct,Qwen2.5-14B-Instruct,missing_key,0
+mistral_instruct,Qwen2.5-14B-Instruct,wrong_answer,0
+mistral_instruct,Qwen2.5-14B-Instruct,wrong_schema,0
+mistral_instruct,Qwen2.5-14B-Instruct,wrong_type,0
+mistral_instruct,Qwen2.5-7B-Instruct,empty_output,0
+mistral_instruct,Qwen2.5-7B-Instruct,extra_key,0
+mistral_instruct,Qwen2.5-7B-Instruct,invalid_json,0
+mistral_instruct,Qwen2.5-7B-Instruct,invalid_label,0
+mistral_instruct,Qwen2.5-7B-Instruct,missing_key,0
+mistral_instruct,Qwen2.5-7B-Instruct,wrong_answer,0
+mistral_instruct,Qwen2.5-7B-Instruct,wrong_schema,0
+mistral_instruct,Qwen2.5-7B-Instruct,wrong_type,0
+mistral_base,Mistral-7B-v0.3 Base,invalid_json,3886
+mistral_base,Mistral-7B-v0.3 Base,empty_output,112
+mistral_base,Mistral-7B-v0.3 Base,wrong_answer,2
+mistral_base,Gemma-2-9B-it,empty_output,0
+mistral_base,Gemma-2-9B-it,extra_key,0
+mistral_base,Gemma-2-9B-it,invalid_json,0
+mistral_base,Gemma-2-9B-it,invalid_label,0
+mistral_base,Gemma-2-9B-it,missing_key,0
+mistral_base,Gemma-2-9B-it,wrong_answer,0
+mistral_base,Gemma-2-9B-it,wrong_schema,0
+mistral_base,Gemma-2-9B-it,wrong_type,0
+mistral_base,Llama-3.1-8B-Instruct,empty_output,0
+mistral_base,Llama-3.1-8B-Instruct,extra_key,0
+mistral_base,Llama-3.1-8B-Instruct,invalid_json,0
+mistral_base,Llama-3.1-8B-Instruct,invalid_label,0
+mistral_base,Llama-3.1-8B-Instruct,missing_key,0
+mistral_base,Llama-3.1-8B-Instruct,wrong_answer,0
+mistral_base,Llama-3.1-8B-Instruct,wrong_schema,0
+mistral_base,Llama-3.1-8B-Instruct,wrong_type,0
+mistral_base,Mistral-7B-Instruct-v0.3,empty_output,0
+mistral_base,Mistral-7B-Instruct-v0.3,extra_key,0
+mistral_base,Mistral-7B-Instruct-v0.3,invalid_json,0
+mistral_base,Mistral-7B-Instruct-v0.3,invalid_label,0
+mistral_base,Mistral-7B-Instruct-v0.3,missing_key,0
+mistral_base,Mistral-7B-Instruct-v0.3,wrong_answer,0
+mistral_base,Mistral-7B-Instruct-v0.3,wrong_schema,0
+mistral_base,Mistral-7B-Instruct-v0.3,wrong_type,0
+mistral_base,Mistral-7B-v0.3 Base,extra_key,0
+mistral_base,Mistral-7B-v0.3 Base,invalid_label,0
+mistral_base,Mistral-7B-v0.3 Base,missing_key,0
+mistral_base,Mistral-7B-v0.3 Base,wrong_schema,0
+mistral_base,Mistral-7B-v0.3 Base,wrong_type,0
+mistral_base,Qwen2.5-14B-Instruct,empty_output,0
+mistral_base,Qwen2.5-14B-Instruct,extra_key,0
+mistral_base,Qwen2.5-14B-Instruct,invalid_json,0
+mistral_base,Qwen2.5-14B-Instruct,invalid_label,0
+mistral_base,Qwen2.5-14B-Instruct,missing_key,0
+mistral_base,Qwen2.5-14B-Instruct,wrong_answer,0
+mistral_base,Qwen2.5-14B-Instruct,wrong_schema,0
+mistral_base,Qwen2.5-14B-Instruct,wrong_type,0
+mistral_base,Qwen2.5-7B-Instruct,empty_output,0
+mistral_base,Qwen2.5-7B-Instruct,extra_key,0
+mistral_base,Qwen2.5-7B-Instruct,invalid_json,0
+mistral_base,Qwen2.5-7B-Instruct,invalid_label,0
+mistral_base,Qwen2.5-7B-Instruct,missing_key,0
+mistral_base,Qwen2.5-7B-Instruct,wrong_answer,0
+mistral_base,Qwen2.5-7B-Instruct,wrong_schema,0
+mistral_base,Qwen2.5-7B-Instruct,wrong_type,0

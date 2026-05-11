@@ -1,0 +1,13 @@
+model,model_display,is_clean_bool,accuracy,parse_failure_rate,n,condition
+gemma,Gemma-2-9B-it,False,0.73,0.15971428571428573,3500,distracted
+gemma,Gemma-2-9B-it,True,0.818,0.086,500,clean
+qwen14b,Qwen2.5-14B-Instruct,False,0.6491428571428571,0.17114285714285715,3500,distracted
+qwen14b,Qwen2.5-14B-Instruct,True,0.734,0.124,500,clean
+qwen7b,Qwen2.5-7B-Instruct,False,0.638,0.16742857142857143,3500,distracted
+qwen7b,Qwen2.5-7B-Instruct,True,0.74,0.124,500,clean
+llama,Llama-3.1-8B-Instruct,False,0.6282857142857143,0.15771428571428572,3500,distracted
+llama,Llama-3.1-8B-Instruct,True,0.682,0.118,500,clean
+mistral_instruct,Mistral-7B-Instruct-v0.3,False,0.5517142857142857,0.26,3500,distracted
+mistral_instruct,Mistral-7B-Instruct-v0.3,True,0.682,0.14,500,clean
+mistral_base,Mistral-7B-v0.3 Base,False,0.0,0.9997142857142857,3500,distracted
+mistral_base,Mistral-7B-v0.3 Base,True,0.0,0.998,500,clean

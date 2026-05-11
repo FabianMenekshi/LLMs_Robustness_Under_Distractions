@@ -1,0 +1,7 @@
+model,accuracy,parse_failure_rate,n
+gemma,0.741,0.1505,4000
+llama,0.635,0.15275,4000
+mistral_base,0.0,0.9995,4000
+mistral_instruct,0.568,0.245,4000
+qwen14b,0.65975,0.16525,4000
+qwen7b,0.65075,0.162,4000

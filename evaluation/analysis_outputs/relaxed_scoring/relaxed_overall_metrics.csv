@@ -1,0 +1,7 @@
+model,strict_accuracy,relaxed_accuracy,relaxed_gain,parse_failure_rate,n
+gemma,0.741,0.75075,0.00975,0.1505,4000
+llama,0.635,0.66875,0.03375,0.15275,4000
+mistral_base,0.0,0.0,0.0,0.9995,4000
+mistral_instruct,0.568,0.57,0.002,0.245,4000
+qwen14b,0.65975,0.6935,0.03375,0.16525,4000
+qwen7b,0.65075,0.678,0.02725,0.162,4000

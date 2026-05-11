@@ -1,0 +1,7 @@
+model,model_display,task_name,accuracy,parse_failure_rate
+gemma,Gemma-2-9B-it,rule_based_transformation,0.4725,0.05125
+qwen14b,Qwen2.5-14B-Instruct,multi_label_classification,0.385,0.6075
+qwen7b,Qwen2.5-7B-Instruct,rule_based_transformation,0.36,0.0775
+llama,Llama-3.1-8B-Instruct,rule_based_transformation,0.2425,0.05625
+mistral_instruct,Mistral-7B-Instruct-v0.3,multi_label_classification,0.19,0.78625
+mistral_base,Mistral-7B-v0.3 Base,single_label_classification,0.0,1.0

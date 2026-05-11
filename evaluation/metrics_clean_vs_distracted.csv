@@ -1,0 +1,13 @@
+model,is_clean,accuracy
+gemma,False,0.73
+gemma,True,0.818
+llama,False,0.6282857142857143
+llama,True,0.682
+mistral_base,False,0.0
+mistral_base,True,0.0
+mistral_instruct,False,0.5517142857142857
+mistral_instruct,True,0.682
+qwen14b,False,0.6491428571428571
+qwen14b,True,0.734
+qwen7b,False,0.638
+qwen7b,True,0.74
