@@ -4,34 +4,23 @@ qwen14b,Qwen2.5-14B-Instruct,0.65975,0.6935,0.03375,4000
 qwen7b,Qwen2.5-7B-Instruct,0.65075,0.678,0.02725,4000
 llama,Llama-3.1-8B-Instruct,0.635,0.66875,0.03375,4000
 mistral_instruct,Mistral-7B-Instruct-v0.3,0.568,0.57,0.002,4000
-mistral_base,Mistral-7B-v0.3 Base,0.0,0.0,0.0,4000
 gemma,Llama-3.1-8B-Instruct,,,,0
 gemma,Mistral-7B-Instruct-v0.3,,,,0
-gemma,Mistral-7B-v0.3 Base,,,,0
 gemma,Qwen2.5-14B-Instruct,,,,0
 gemma,Qwen2.5-7B-Instruct,,,,0
 qwen14b,Gemma-2-9B-it,,,,0
 qwen14b,Llama-3.1-8B-Instruct,,,,0
 qwen14b,Mistral-7B-Instruct-v0.3,,,,0
-qwen14b,Mistral-7B-v0.3 Base,,,,0
 qwen14b,Qwen2.5-7B-Instruct,,,,0
 qwen7b,Gemma-2-9B-it,,,,0
 qwen7b,Llama-3.1-8B-Instruct,,,,0
 qwen7b,Mistral-7B-Instruct-v0.3,,,,0
-qwen7b,Mistral-7B-v0.3 Base,,,,0
 qwen7b,Qwen2.5-14B-Instruct,,,,0
 llama,Gemma-2-9B-it,,,,0
 llama,Mistral-7B-Instruct-v0.3,,,,0
-llama,Mistral-7B-v0.3 Base,,,,0
 llama,Qwen2.5-14B-Instruct,,,,0
 llama,Qwen2.5-7B-Instruct,,,,0
 mistral_instruct,Gemma-2-9B-it,,,,0
 mistral_instruct,Llama-3.1-8B-Instruct,,,,0
-mistral_instruct,Mistral-7B-v0.3 Base,,,,0
 mistral_instruct,Qwen2.5-14B-Instruct,,,,0
 mistral_instruct,Qwen2.5-7B-Instruct,,,,0
-mistral_base,Gemma-2-9B-it,,,,0
-mistral_base,Llama-3.1-8B-Instruct,,,,0
-mistral_base,Mistral-7B-Instruct-v0.3,,,,0
-mistral_base,Qwen2.5-14B-Instruct,,,,0
-mistral_base,Qwen2.5-7B-Instruct,,,,0

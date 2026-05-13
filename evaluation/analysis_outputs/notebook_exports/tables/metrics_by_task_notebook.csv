@@ -24,8 +24,3 @@ mistral_instruct,Mistral-7B-Instruct-v0.3,multi_label_classification,0.19,0.7862
 mistral_instruct,Mistral-7B-Instruct-v0.3,information_extraction,0.8,0.17875,800
 mistral_instruct,Mistral-7B-Instruct-v0.3,rule_based_transformation,0.2025,0.075,800
 mistral_instruct,Mistral-7B-Instruct-v0.3,extractive_qa,0.77625,0.05625,800
-mistral_base,Mistral-7B-v0.3 Base,single_label_classification,0.0,1.0,800
-mistral_base,Mistral-7B-v0.3 Base,multi_label_classification,0.0,1.0,800
-mistral_base,Mistral-7B-v0.3 Base,information_extraction,0.0,1.0,800
-mistral_base,Mistral-7B-v0.3 Base,rule_based_transformation,0.0,0.9975,800
-mistral_base,Mistral-7B-v0.3 Base,extractive_qa,0.0,1.0,800

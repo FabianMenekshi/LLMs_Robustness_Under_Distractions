@@ -39,11 +39,3 @@ mistral_instruct,Mistral-7B-Instruct-v0.3,conflicting_instruction,0.358,0.518,50
 mistral_instruct,Mistral-7B-Instruct-v0.3,negation_distraction,0.676,0.138,500
 mistral_instruct,Mistral-7B-Instruct-v0.3,style_distraction,0.236,0.454,500
 mistral_instruct,Mistral-7B-Instruct-v0.3,length_stress,0.674,0.166,500
-mistral_base,Mistral-7B-v0.3 Base,clean,0.0,0.998,500
-mistral_base,Mistral-7B-v0.3 Base,irrelevant_prefix,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,irrelevant_suffix,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,instruction_in_the_middle,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,conflicting_instruction,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,negation_distraction,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,style_distraction,0.0,1.0,500
-mistral_base,Mistral-7B-v0.3 Base,length_stress,0.0,0.998,500

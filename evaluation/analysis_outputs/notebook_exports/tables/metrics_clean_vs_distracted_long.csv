@@ -9,5 +9,3 @@ llama,Llama-3.1-8B-Instruct,False,0.6282857142857143,0.15771428571428572,3500,di
 llama,Llama-3.1-8B-Instruct,True,0.682,0.118,500,clean
 mistral_instruct,Mistral-7B-Instruct-v0.3,False,0.5517142857142857,0.26,3500,distracted
 mistral_instruct,Mistral-7B-Instruct-v0.3,True,0.682,0.14,500,clean
-mistral_base,Mistral-7B-v0.3 Base,False,0.0,0.9997142857142857,3500,distracted
-mistral_base,Mistral-7B-v0.3 Base,True,0.0,0.998,500,clean

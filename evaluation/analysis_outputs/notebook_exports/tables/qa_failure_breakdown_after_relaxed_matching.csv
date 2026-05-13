@@ -4,7 +4,6 @@ gemma,Gemma-2-9B-it,article_case_punctuation_near_miss,39
 gemma,Gemma-2-9B-it,invalid_json,20
 gemma,Gemma-2-9B-it,missing_key,2
 gemma,Gemma-2-9B-it,empty_answer,0
-gemma,Gemma-2-9B-it,empty_output,0
 gemma,Gemma-2-9B-it,extra_key,0
 gemma,Gemma-2-9B-it,normalized_span_inflation_contains_gold,0
 gemma,Gemma-2-9B-it,span_inflation_contains_gold,0
@@ -13,7 +12,6 @@ gemma,Gemma-2-9B-it,wrong_span,0
 gemma,Gemma-2-9B-it,wrong_type,0
 gemma,Llama-3.1-8B-Instruct,article_case_punctuation_near_miss,0
 gemma,Llama-3.1-8B-Instruct,empty_answer,0
-gemma,Llama-3.1-8B-Instruct,empty_output,0
 gemma,Llama-3.1-8B-Instruct,extra_key,0
 gemma,Llama-3.1-8B-Instruct,invalid_json,0
 gemma,Llama-3.1-8B-Instruct,missing_key,0
@@ -25,7 +23,6 @@ gemma,Llama-3.1-8B-Instruct,wrong_span,0
 gemma,Llama-3.1-8B-Instruct,wrong_type,0
 gemma,Mistral-7B-Instruct-v0.3,article_case_punctuation_near_miss,0
 gemma,Mistral-7B-Instruct-v0.3,empty_answer,0
-gemma,Mistral-7B-Instruct-v0.3,empty_output,0
 gemma,Mistral-7B-Instruct-v0.3,extra_key,0
 gemma,Mistral-7B-Instruct-v0.3,invalid_json,0
 gemma,Mistral-7B-Instruct-v0.3,missing_key,0
@@ -35,21 +32,8 @@ gemma,Mistral-7B-Instruct-v0.3,strict_correct,0
 gemma,Mistral-7B-Instruct-v0.3,wrong_schema,0
 gemma,Mistral-7B-Instruct-v0.3,wrong_span,0
 gemma,Mistral-7B-Instruct-v0.3,wrong_type,0
-gemma,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-gemma,Mistral-7B-v0.3 Base,empty_answer,0
-gemma,Mistral-7B-v0.3 Base,empty_output,0
-gemma,Mistral-7B-v0.3 Base,extra_key,0
-gemma,Mistral-7B-v0.3 Base,invalid_json,0
-gemma,Mistral-7B-v0.3 Base,missing_key,0
-gemma,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-gemma,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-gemma,Mistral-7B-v0.3 Base,strict_correct,0
-gemma,Mistral-7B-v0.3 Base,wrong_schema,0
-gemma,Mistral-7B-v0.3 Base,wrong_span,0
-gemma,Mistral-7B-v0.3 Base,wrong_type,0
 gemma,Qwen2.5-14B-Instruct,article_case_punctuation_near_miss,0
 gemma,Qwen2.5-14B-Instruct,empty_answer,0
-gemma,Qwen2.5-14B-Instruct,empty_output,0
 gemma,Qwen2.5-14B-Instruct,extra_key,0
 gemma,Qwen2.5-14B-Instruct,invalid_json,0
 gemma,Qwen2.5-14B-Instruct,missing_key,0
@@ -61,7 +45,6 @@ gemma,Qwen2.5-14B-Instruct,wrong_span,0
 gemma,Qwen2.5-14B-Instruct,wrong_type,0
 gemma,Qwen2.5-7B-Instruct,article_case_punctuation_near_miss,0
 gemma,Qwen2.5-7B-Instruct,empty_answer,0
-gemma,Qwen2.5-7B-Instruct,empty_output,0
 gemma,Qwen2.5-7B-Instruct,extra_key,0
 gemma,Qwen2.5-7B-Instruct,invalid_json,0
 gemma,Qwen2.5-7B-Instruct,missing_key,0
@@ -80,7 +63,6 @@ qwen14b,Qwen2.5-14B-Instruct,wrong_type,4
 qwen14b,Qwen2.5-14B-Instruct,wrong_span,3
 qwen14b,Gemma-2-9B-it,article_case_punctuation_near_miss,0
 qwen14b,Gemma-2-9B-it,empty_answer,0
-qwen14b,Gemma-2-9B-it,empty_output,0
 qwen14b,Gemma-2-9B-it,extra_key,0
 qwen14b,Gemma-2-9B-it,invalid_json,0
 qwen14b,Gemma-2-9B-it,missing_key,0
@@ -92,7 +74,6 @@ qwen14b,Gemma-2-9B-it,wrong_span,0
 qwen14b,Gemma-2-9B-it,wrong_type,0
 qwen14b,Llama-3.1-8B-Instruct,article_case_punctuation_near_miss,0
 qwen14b,Llama-3.1-8B-Instruct,empty_answer,0
-qwen14b,Llama-3.1-8B-Instruct,empty_output,0
 qwen14b,Llama-3.1-8B-Instruct,extra_key,0
 qwen14b,Llama-3.1-8B-Instruct,invalid_json,0
 qwen14b,Llama-3.1-8B-Instruct,missing_key,0
@@ -104,7 +85,6 @@ qwen14b,Llama-3.1-8B-Instruct,wrong_span,0
 qwen14b,Llama-3.1-8B-Instruct,wrong_type,0
 qwen14b,Mistral-7B-Instruct-v0.3,article_case_punctuation_near_miss,0
 qwen14b,Mistral-7B-Instruct-v0.3,empty_answer,0
-qwen14b,Mistral-7B-Instruct-v0.3,empty_output,0
 qwen14b,Mistral-7B-Instruct-v0.3,extra_key,0
 qwen14b,Mistral-7B-Instruct-v0.3,invalid_json,0
 qwen14b,Mistral-7B-Instruct-v0.3,missing_key,0
@@ -114,26 +94,12 @@ qwen14b,Mistral-7B-Instruct-v0.3,strict_correct,0
 qwen14b,Mistral-7B-Instruct-v0.3,wrong_schema,0
 qwen14b,Mistral-7B-Instruct-v0.3,wrong_span,0
 qwen14b,Mistral-7B-Instruct-v0.3,wrong_type,0
-qwen14b,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-qwen14b,Mistral-7B-v0.3 Base,empty_answer,0
-qwen14b,Mistral-7B-v0.3 Base,empty_output,0
-qwen14b,Mistral-7B-v0.3 Base,extra_key,0
-qwen14b,Mistral-7B-v0.3 Base,invalid_json,0
-qwen14b,Mistral-7B-v0.3 Base,missing_key,0
-qwen14b,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-qwen14b,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-qwen14b,Mistral-7B-v0.3 Base,strict_correct,0
-qwen14b,Mistral-7B-v0.3 Base,wrong_schema,0
-qwen14b,Mistral-7B-v0.3 Base,wrong_span,0
-qwen14b,Mistral-7B-v0.3 Base,wrong_type,0
 qwen14b,Qwen2.5-14B-Instruct,empty_answer,0
-qwen14b,Qwen2.5-14B-Instruct,empty_output,0
 qwen14b,Qwen2.5-14B-Instruct,extra_key,0
 qwen14b,Qwen2.5-14B-Instruct,normalized_span_inflation_contains_gold,0
 qwen14b,Qwen2.5-14B-Instruct,wrong_schema,0
 qwen14b,Qwen2.5-7B-Instruct,article_case_punctuation_near_miss,0
 qwen14b,Qwen2.5-7B-Instruct,empty_answer,0
-qwen14b,Qwen2.5-7B-Instruct,empty_output,0
 qwen14b,Qwen2.5-7B-Instruct,extra_key,0
 qwen14b,Qwen2.5-7B-Instruct,invalid_json,0
 qwen14b,Qwen2.5-7B-Instruct,missing_key,0
@@ -154,7 +120,6 @@ qwen7b,Qwen2.5-7B-Instruct,missing_key,2
 qwen7b,Qwen2.5-7B-Instruct,normalized_span_inflation_contains_gold,2
 qwen7b,Gemma-2-9B-it,article_case_punctuation_near_miss,0
 qwen7b,Gemma-2-9B-it,empty_answer,0
-qwen7b,Gemma-2-9B-it,empty_output,0
 qwen7b,Gemma-2-9B-it,extra_key,0
 qwen7b,Gemma-2-9B-it,invalid_json,0
 qwen7b,Gemma-2-9B-it,missing_key,0
@@ -166,7 +131,6 @@ qwen7b,Gemma-2-9B-it,wrong_span,0
 qwen7b,Gemma-2-9B-it,wrong_type,0
 qwen7b,Llama-3.1-8B-Instruct,article_case_punctuation_near_miss,0
 qwen7b,Llama-3.1-8B-Instruct,empty_answer,0
-qwen7b,Llama-3.1-8B-Instruct,empty_output,0
 qwen7b,Llama-3.1-8B-Instruct,extra_key,0
 qwen7b,Llama-3.1-8B-Instruct,invalid_json,0
 qwen7b,Llama-3.1-8B-Instruct,missing_key,0
@@ -178,7 +142,6 @@ qwen7b,Llama-3.1-8B-Instruct,wrong_span,0
 qwen7b,Llama-3.1-8B-Instruct,wrong_type,0
 qwen7b,Mistral-7B-Instruct-v0.3,article_case_punctuation_near_miss,0
 qwen7b,Mistral-7B-Instruct-v0.3,empty_answer,0
-qwen7b,Mistral-7B-Instruct-v0.3,empty_output,0
 qwen7b,Mistral-7B-Instruct-v0.3,extra_key,0
 qwen7b,Mistral-7B-Instruct-v0.3,invalid_json,0
 qwen7b,Mistral-7B-Instruct-v0.3,missing_key,0
@@ -188,21 +151,8 @@ qwen7b,Mistral-7B-Instruct-v0.3,strict_correct,0
 qwen7b,Mistral-7B-Instruct-v0.3,wrong_schema,0
 qwen7b,Mistral-7B-Instruct-v0.3,wrong_span,0
 qwen7b,Mistral-7B-Instruct-v0.3,wrong_type,0
-qwen7b,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-qwen7b,Mistral-7B-v0.3 Base,empty_answer,0
-qwen7b,Mistral-7B-v0.3 Base,empty_output,0
-qwen7b,Mistral-7B-v0.3 Base,extra_key,0
-qwen7b,Mistral-7B-v0.3 Base,invalid_json,0
-qwen7b,Mistral-7B-v0.3 Base,missing_key,0
-qwen7b,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-qwen7b,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-qwen7b,Mistral-7B-v0.3 Base,strict_correct,0
-qwen7b,Mistral-7B-v0.3 Base,wrong_schema,0
-qwen7b,Mistral-7B-v0.3 Base,wrong_span,0
-qwen7b,Mistral-7B-v0.3 Base,wrong_type,0
 qwen7b,Qwen2.5-14B-Instruct,article_case_punctuation_near_miss,0
 qwen7b,Qwen2.5-14B-Instruct,empty_answer,0
-qwen7b,Qwen2.5-14B-Instruct,empty_output,0
 qwen7b,Qwen2.5-14B-Instruct,extra_key,0
 qwen7b,Qwen2.5-14B-Instruct,invalid_json,0
 qwen7b,Qwen2.5-14B-Instruct,missing_key,0
@@ -212,7 +162,6 @@ qwen7b,Qwen2.5-14B-Instruct,strict_correct,0
 qwen7b,Qwen2.5-14B-Instruct,wrong_schema,0
 qwen7b,Qwen2.5-14B-Instruct,wrong_span,0
 qwen7b,Qwen2.5-14B-Instruct,wrong_type,0
-qwen7b,Qwen2.5-7B-Instruct,empty_output,0
 qwen7b,Qwen2.5-7B-Instruct,extra_key,0
 qwen7b,Qwen2.5-7B-Instruct,wrong_type,0
 llama,Llama-3.1-8B-Instruct,strict_correct,598
@@ -224,7 +173,6 @@ llama,Llama-3.1-8B-Instruct,wrong_schema,1
 llama,Llama-3.1-8B-Instruct,wrong_span,1
 llama,Gemma-2-9B-it,article_case_punctuation_near_miss,0
 llama,Gemma-2-9B-it,empty_answer,0
-llama,Gemma-2-9B-it,empty_output,0
 llama,Gemma-2-9B-it,extra_key,0
 llama,Gemma-2-9B-it,invalid_json,0
 llama,Gemma-2-9B-it,missing_key,0
@@ -235,13 +183,11 @@ llama,Gemma-2-9B-it,wrong_schema,0
 llama,Gemma-2-9B-it,wrong_span,0
 llama,Gemma-2-9B-it,wrong_type,0
 llama,Llama-3.1-8B-Instruct,empty_answer,0
-llama,Llama-3.1-8B-Instruct,empty_output,0
 llama,Llama-3.1-8B-Instruct,extra_key,0
 llama,Llama-3.1-8B-Instruct,normalized_span_inflation_contains_gold,0
 llama,Llama-3.1-8B-Instruct,wrong_type,0
 llama,Mistral-7B-Instruct-v0.3,article_case_punctuation_near_miss,0
 llama,Mistral-7B-Instruct-v0.3,empty_answer,0
-llama,Mistral-7B-Instruct-v0.3,empty_output,0
 llama,Mistral-7B-Instruct-v0.3,extra_key,0
 llama,Mistral-7B-Instruct-v0.3,invalid_json,0
 llama,Mistral-7B-Instruct-v0.3,missing_key,0
@@ -251,21 +197,8 @@ llama,Mistral-7B-Instruct-v0.3,strict_correct,0
 llama,Mistral-7B-Instruct-v0.3,wrong_schema,0
 llama,Mistral-7B-Instruct-v0.3,wrong_span,0
 llama,Mistral-7B-Instruct-v0.3,wrong_type,0
-llama,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-llama,Mistral-7B-v0.3 Base,empty_answer,0
-llama,Mistral-7B-v0.3 Base,empty_output,0
-llama,Mistral-7B-v0.3 Base,extra_key,0
-llama,Mistral-7B-v0.3 Base,invalid_json,0
-llama,Mistral-7B-v0.3 Base,missing_key,0
-llama,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-llama,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-llama,Mistral-7B-v0.3 Base,strict_correct,0
-llama,Mistral-7B-v0.3 Base,wrong_schema,0
-llama,Mistral-7B-v0.3 Base,wrong_span,0
-llama,Mistral-7B-v0.3 Base,wrong_type,0
 llama,Qwen2.5-14B-Instruct,article_case_punctuation_near_miss,0
 llama,Qwen2.5-14B-Instruct,empty_answer,0
-llama,Qwen2.5-14B-Instruct,empty_output,0
 llama,Qwen2.5-14B-Instruct,extra_key,0
 llama,Qwen2.5-14B-Instruct,invalid_json,0
 llama,Qwen2.5-14B-Instruct,missing_key,0
@@ -277,7 +210,6 @@ llama,Qwen2.5-14B-Instruct,wrong_span,0
 llama,Qwen2.5-14B-Instruct,wrong_type,0
 llama,Qwen2.5-7B-Instruct,article_case_punctuation_near_miss,0
 llama,Qwen2.5-7B-Instruct,empty_answer,0
-llama,Qwen2.5-7B-Instruct,empty_output,0
 llama,Qwen2.5-7B-Instruct,extra_key,0
 llama,Qwen2.5-7B-Instruct,invalid_json,0
 llama,Qwen2.5-7B-Instruct,missing_key,0
@@ -297,7 +229,6 @@ mistral_instruct,Mistral-7B-Instruct-v0.3,missing_key,1
 mistral_instruct,Mistral-7B-Instruct-v0.3,wrong_schema,1
 mistral_instruct,Gemma-2-9B-it,article_case_punctuation_near_miss,0
 mistral_instruct,Gemma-2-9B-it,empty_answer,0
-mistral_instruct,Gemma-2-9B-it,empty_output,0
 mistral_instruct,Gemma-2-9B-it,extra_key,0
 mistral_instruct,Gemma-2-9B-it,invalid_json,0
 mistral_instruct,Gemma-2-9B-it,missing_key,0
@@ -309,7 +240,6 @@ mistral_instruct,Gemma-2-9B-it,wrong_span,0
 mistral_instruct,Gemma-2-9B-it,wrong_type,0
 mistral_instruct,Llama-3.1-8B-Instruct,article_case_punctuation_near_miss,0
 mistral_instruct,Llama-3.1-8B-Instruct,empty_answer,0
-mistral_instruct,Llama-3.1-8B-Instruct,empty_output,0
 mistral_instruct,Llama-3.1-8B-Instruct,extra_key,0
 mistral_instruct,Llama-3.1-8B-Instruct,invalid_json,0
 mistral_instruct,Llama-3.1-8B-Instruct,missing_key,0
@@ -320,24 +250,10 @@ mistral_instruct,Llama-3.1-8B-Instruct,wrong_schema,0
 mistral_instruct,Llama-3.1-8B-Instruct,wrong_span,0
 mistral_instruct,Llama-3.1-8B-Instruct,wrong_type,0
 mistral_instruct,Mistral-7B-Instruct-v0.3,empty_answer,0
-mistral_instruct,Mistral-7B-Instruct-v0.3,empty_output,0
 mistral_instruct,Mistral-7B-Instruct-v0.3,normalized_span_inflation_contains_gold,0
 mistral_instruct,Mistral-7B-Instruct-v0.3,wrong_type,0
-mistral_instruct,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-mistral_instruct,Mistral-7B-v0.3 Base,empty_answer,0
-mistral_instruct,Mistral-7B-v0.3 Base,empty_output,0
-mistral_instruct,Mistral-7B-v0.3 Base,extra_key,0
-mistral_instruct,Mistral-7B-v0.3 Base,invalid_json,0
-mistral_instruct,Mistral-7B-v0.3 Base,missing_key,0
-mistral_instruct,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-mistral_instruct,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-mistral_instruct,Mistral-7B-v0.3 Base,strict_correct,0
-mistral_instruct,Mistral-7B-v0.3 Base,wrong_schema,0
-mistral_instruct,Mistral-7B-v0.3 Base,wrong_span,0
-mistral_instruct,Mistral-7B-v0.3 Base,wrong_type,0
 mistral_instruct,Qwen2.5-14B-Instruct,article_case_punctuation_near_miss,0
 mistral_instruct,Qwen2.5-14B-Instruct,empty_answer,0
-mistral_instruct,Qwen2.5-14B-Instruct,empty_output,0
 mistral_instruct,Qwen2.5-14B-Instruct,extra_key,0
 mistral_instruct,Qwen2.5-14B-Instruct,invalid_json,0
 mistral_instruct,Qwen2.5-14B-Instruct,missing_key,0
@@ -349,7 +265,6 @@ mistral_instruct,Qwen2.5-14B-Instruct,wrong_span,0
 mistral_instruct,Qwen2.5-14B-Instruct,wrong_type,0
 mistral_instruct,Qwen2.5-7B-Instruct,article_case_punctuation_near_miss,0
 mistral_instruct,Qwen2.5-7B-Instruct,empty_answer,0
-mistral_instruct,Qwen2.5-7B-Instruct,empty_output,0
 mistral_instruct,Qwen2.5-7B-Instruct,extra_key,0
 mistral_instruct,Qwen2.5-7B-Instruct,invalid_json,0
 mistral_instruct,Qwen2.5-7B-Instruct,missing_key,0
@@ -359,75 +274,3 @@ mistral_instruct,Qwen2.5-7B-Instruct,strict_correct,0
 mistral_instruct,Qwen2.5-7B-Instruct,wrong_schema,0
 mistral_instruct,Qwen2.5-7B-Instruct,wrong_span,0
 mistral_instruct,Qwen2.5-7B-Instruct,wrong_type,0
-mistral_base,Mistral-7B-v0.3 Base,invalid_json,784
-mistral_base,Mistral-7B-v0.3 Base,empty_output,16
-mistral_base,Gemma-2-9B-it,article_case_punctuation_near_miss,0
-mistral_base,Gemma-2-9B-it,empty_answer,0
-mistral_base,Gemma-2-9B-it,empty_output,0
-mistral_base,Gemma-2-9B-it,extra_key,0
-mistral_base,Gemma-2-9B-it,invalid_json,0
-mistral_base,Gemma-2-9B-it,missing_key,0
-mistral_base,Gemma-2-9B-it,normalized_span_inflation_contains_gold,0
-mistral_base,Gemma-2-9B-it,span_inflation_contains_gold,0
-mistral_base,Gemma-2-9B-it,strict_correct,0
-mistral_base,Gemma-2-9B-it,wrong_schema,0
-mistral_base,Gemma-2-9B-it,wrong_span,0
-mistral_base,Gemma-2-9B-it,wrong_type,0
-mistral_base,Llama-3.1-8B-Instruct,article_case_punctuation_near_miss,0
-mistral_base,Llama-3.1-8B-Instruct,empty_answer,0
-mistral_base,Llama-3.1-8B-Instruct,empty_output,0
-mistral_base,Llama-3.1-8B-Instruct,extra_key,0
-mistral_base,Llama-3.1-8B-Instruct,invalid_json,0
-mistral_base,Llama-3.1-8B-Instruct,missing_key,0
-mistral_base,Llama-3.1-8B-Instruct,normalized_span_inflation_contains_gold,0
-mistral_base,Llama-3.1-8B-Instruct,span_inflation_contains_gold,0
-mistral_base,Llama-3.1-8B-Instruct,strict_correct,0
-mistral_base,Llama-3.1-8B-Instruct,wrong_schema,0
-mistral_base,Llama-3.1-8B-Instruct,wrong_span,0
-mistral_base,Llama-3.1-8B-Instruct,wrong_type,0
-mistral_base,Mistral-7B-Instruct-v0.3,article_case_punctuation_near_miss,0
-mistral_base,Mistral-7B-Instruct-v0.3,empty_answer,0
-mistral_base,Mistral-7B-Instruct-v0.3,empty_output,0
-mistral_base,Mistral-7B-Instruct-v0.3,extra_key,0
-mistral_base,Mistral-7B-Instruct-v0.3,invalid_json,0
-mistral_base,Mistral-7B-Instruct-v0.3,missing_key,0
-mistral_base,Mistral-7B-Instruct-v0.3,normalized_span_inflation_contains_gold,0
-mistral_base,Mistral-7B-Instruct-v0.3,span_inflation_contains_gold,0
-mistral_base,Mistral-7B-Instruct-v0.3,strict_correct,0
-mistral_base,Mistral-7B-Instruct-v0.3,wrong_schema,0
-mistral_base,Mistral-7B-Instruct-v0.3,wrong_span,0
-mistral_base,Mistral-7B-Instruct-v0.3,wrong_type,0
-mistral_base,Mistral-7B-v0.3 Base,article_case_punctuation_near_miss,0
-mistral_base,Mistral-7B-v0.3 Base,empty_answer,0
-mistral_base,Mistral-7B-v0.3 Base,extra_key,0
-mistral_base,Mistral-7B-v0.3 Base,missing_key,0
-mistral_base,Mistral-7B-v0.3 Base,normalized_span_inflation_contains_gold,0
-mistral_base,Mistral-7B-v0.3 Base,span_inflation_contains_gold,0
-mistral_base,Mistral-7B-v0.3 Base,strict_correct,0
-mistral_base,Mistral-7B-v0.3 Base,wrong_schema,0
-mistral_base,Mistral-7B-v0.3 Base,wrong_span,0
-mistral_base,Mistral-7B-v0.3 Base,wrong_type,0
-mistral_base,Qwen2.5-14B-Instruct,article_case_punctuation_near_miss,0
-mistral_base,Qwen2.5-14B-Instruct,empty_answer,0
-mistral_base,Qwen2.5-14B-Instruct,empty_output,0
-mistral_base,Qwen2.5-14B-Instruct,extra_key,0
-mistral_base,Qwen2.5-14B-Instruct,invalid_json,0
-mistral_base,Qwen2.5-14B-Instruct,missing_key,0
-mistral_base,Qwen2.5-14B-Instruct,normalized_span_inflation_contains_gold,0
-mistral_base,Qwen2.5-14B-Instruct,span_inflation_contains_gold,0
-mistral_base,Qwen2.5-14B-Instruct,strict_correct,0
-mistral_base,Qwen2.5-14B-Instruct,wrong_schema,0
-mistral_base,Qwen2.5-14B-Instruct,wrong_span,0
-mistral_base,Qwen2.5-14B-Instruct,wrong_type,0
-mistral_base,Qwen2.5-7B-Instruct,article_case_punctuation_near_miss,0
-mistral_base,Qwen2.5-7B-Instruct,empty_answer,0
-mistral_base,Qwen2.5-7B-Instruct,empty_output,0
-mistral_base,Qwen2.5-7B-Instruct,extra_key,0
-mistral_base,Qwen2.5-7B-Instruct,invalid_json,0
-mistral_base,Qwen2.5-7B-Instruct,missing_key,0
-mistral_base,Qwen2.5-7B-Instruct,normalized_span_inflation_contains_gold,0
-mistral_base,Qwen2.5-7B-Instruct,span_inflation_contains_gold,0
-mistral_base,Qwen2.5-7B-Instruct,strict_correct,0
-mistral_base,Qwen2.5-7B-Instruct,wrong_schema,0
-mistral_base,Qwen2.5-7B-Instruct,wrong_span,0
-mistral_base,Qwen2.5-7B-Instruct,wrong_type,0
